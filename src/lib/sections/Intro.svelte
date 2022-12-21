@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { draw } from 'svelte/transition';
-    import { quintOut } from 'svelte/easing';
     import Logo from "../components/icons/Logo.svelte"
 </script>
 
