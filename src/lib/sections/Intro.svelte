@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Logo from "../components/icons/Logo.svelte"
+    import Logo from "../components/icons/Logo.svelte";
 </script>
 
 <p><Logo /></p>

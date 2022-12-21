@@ -1,10 +1,13 @@
 <script lang="ts">
+    import { onMount, onDestroy } from 'svelte';
     import { draw, fade } from 'svelte/transition';
     let toDraw = false;
-    let visible = true
+    let visible = true;
 
-    setTimeout(drawIn, 500)
-    setTimeout(fadeOut, 3500)
+    onMount(() => {
+        setTimeout(drawIn, 500)
+        setTimeout(fadeOut, 3500)
+    });
 
     function drawIn (){
         toDraw = true
@@ -13,6 +16,8 @@
     function fadeOut (){
         visible = false
     }
+
+    onDestroy(() => clearInterval(4000));
 </script>
 
 {#if visible}

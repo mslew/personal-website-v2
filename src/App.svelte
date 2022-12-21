@@ -9,3 +9,9 @@
 <About />
 <Portfolio />
 <Contact />
+
+<style>
+  :global(body){
+    background-color: #18191A;
+  }
+</style>
