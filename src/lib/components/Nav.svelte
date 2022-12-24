@@ -71,14 +71,15 @@
 </nav>
 {/if}
 
-<style>
+<style lang="scss">
+    @import '../../variables.scss';
     .btn{
         margin-left: 2rem;
-        outline: #CC5500;
+        outline: $orange;
     }
 
     .btn:hover{
-        background-color: #CC5500;
+        background-color: $orange;
     }
 
     span{
@@ -87,15 +88,15 @@
     }
 
     .special{
-        color:#CC5500;
+        color:$orange;
     }
 
     .nav-item{
-        color: aliceblue;
+        color: $white;
     }
 
     .nav-item:hover{
-        color: #CC5500;
+        color: $orange;
     }
 
     .navbar-toggler{

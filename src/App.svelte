@@ -10,8 +10,9 @@
 <Portfolio />
 <Contact />
 
-<style>
+<style lang="scss">
+  @import './variables.scss';
   :global(body){
-    background-color: #18191A;
+    background-color: $background;
   }
 </style>
