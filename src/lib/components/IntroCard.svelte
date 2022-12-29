@@ -1,19 +1,67 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+    import { fly } from 'svelte/transition';
+    import '../../fonts.scss'
+    let nameVisible = false;
+    let subtitleVisible = false;
+    let contentVisible = false;
+
+    onMount(() => {
+        setTimeout(dropName, 6500)
+        setTimeout(dropSubtitle, 6750)
+        setTimeout(dropContent, 7000)
+    });
+
+    function dropName (){
+        nameVisible = true;
+    }
+    
+    function dropSubtitle (){
+        subtitleVisible = true;
+    }
+
+    function dropContent (){
+        contentVisible = true;
+    }
 
 </script>
 
-<div class="container">
-    <div class="card text-align-center">
-        <div class="card-body">
-        This is some text within a card body.
-        </div>
+<br><br><br><br><br><br>
+<div class="container mt-5">
+    <div class="card-body">
+        {#if nameVisible}
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="intro">Hi, I am</p>
+        {/if}
+        {#if nameVisible}
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-1 name">Maximus Lewis</h1>
+        {/if}
+        {#if subtitleVisible}
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-3 subtitle">Computer Science Student </h1>
+        {/if}
+        {#if contentVisible}
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="content mt-4">I am a software engineer finishing up my studies at Lewis University. </p>
+        {/if}
     </div>
 </div>
 
 <style lang="scss">
     @import '../../variables.scss';
-    .card{
-        background-color: $medium-gray;
+    @import '../../fonts.scss';
+    .card-body{
+        font-family: $font-regular;
+    }
+    .intro{
+        color: $orange;
+        font-size: 1.5rem;
+    }
+    .name{
         color: $light-gray;
+    }
+    .subtitle{
+        color: $light-gray;
+    }
+    .content{
+        font-size: 1rem;
+        color: $orange;
     }
 </style>
