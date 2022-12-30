@@ -32,13 +32,13 @@
         <p transition:fly="{{ y: -100, duration: 100 }}" class="intro">Hi, my name is</p>
         {/if}
         {#if nameVisible}
-        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-1 name">Maximus Lewis</h1>
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-1 name">Maximus Lewis.</h1>
         {/if}
         {#if subtitleVisible}
-        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-3 subtitle">Computer Science Student </h1>
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-3 subtitle">Computer Science Student</h1>
         {/if}
         {#if contentVisible}
-        <p transition:fly="{{ y: -100, duration: 100 }}" class="content mt-4">I am a software engineer finishing up my studies at Lewis University. </p>
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="content mt-4">I am a software engineer finishing up my studies at Lewis University.</p>
         {/if}
     </div>
 </div>

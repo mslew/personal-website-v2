@@ -105,8 +105,4 @@
     .navbar-toggler{
         margin-right: 4rem;
     }
-
-    .navbar-toggler-icon{
-        margin-right: 1rem;
-    }
 </style>
