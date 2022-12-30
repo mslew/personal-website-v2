@@ -5,7 +5,7 @@
     let visible = false;
 
     onMount(() => {
-        setTimeout(raiseBar, 7250);
+        setTimeout(raiseBar, 6750);
     });
 
     function raiseBar(){

@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import Logo from './icons/Logo.svelte';
+    let prevScrollpos = window.pageYOffset;
 	let visible = false;
     let link1 = false;
     let link2 = false;
@@ -11,7 +12,16 @@
     let i = 0; 
     onMount(() => {
         setTimeout(flyDown, 4000)
-        setTimeout(dropLinks, 5000)
+        setTimeout(dropLinks, 4500)
+        window.onscroll = () => {
+            var currentScrollPos = window.pageYOffset;
+            if (currentScrollPos < prevScrollpos) {
+                visible = true;
+            } else {
+                visible = false;
+            }
+            prevScrollpos = currentScrollPos;
+        }
     });
 
     function flyDown (){
@@ -44,7 +54,7 @@
 </script>
   
 {#if visible}
-<nav transition:fly="{{ y: -100, duration: 1250 }}" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav in:fly="{{ y: -100, duration: 1000 }}" class="navbar navbar-expand-lg navbar-dark bg-dark" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="navbar-brand" href="/"><Logo /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -73,6 +83,11 @@
 
 <style lang="scss">
     @import '../../variables.scss';
+    .navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
     .btn{
         margin-left: 1rem;
         margin-top: .5rem;

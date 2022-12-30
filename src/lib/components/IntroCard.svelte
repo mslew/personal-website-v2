@@ -7,9 +7,9 @@
     let contentVisible = false;
 
     onMount(() => {
-        setTimeout(dropName, 6500)
-        setTimeout(dropSubtitle, 6750)
-        setTimeout(dropContent, 7000)
+        setTimeout(dropName, 6000)
+        setTimeout(dropSubtitle, 6250)
+        setTimeout(dropContent, 6500)
     });
 
     function dropName (){
@@ -61,7 +61,7 @@
         color: $light-gray;
     }
     .content{
-        font-size: 1rem;
+        font-size: 1.25rem;
         color: $orange;
     }
 </style>
