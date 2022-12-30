@@ -47,7 +47,7 @@
     @import '../../variables.scss';
     @import '../../fonts.scss';
     .card-body{
-        margin-top: 12rem;
+        margin-top: 16rem;
         font-family: $font-regular;
     }
     .intro{
