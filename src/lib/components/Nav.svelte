@@ -52,16 +52,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav">
         {#if link1}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span><span class="special">00</span>Intro</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span class="special">00</span><span class="link align-text-bottom">Intro</span></a>
         {/if}
         {#if link2}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span><span class="special">01</span>About</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span class="special">01</span><span class="link align-text-bottom">About</span></a>
         {/if}
         {#if link3}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span><span class="special">02</span>Projects</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span class="special">02</span><span class="link align-text-bottom">Projects</span></a>
         {/if}
         {#if link4}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span><span class="special">03</span>Contact</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span class="special">03</span><span class="link align-text-bottom">Contact</span></a>
         {/if}
         {#if button}
         <a href="../../static/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="btn btn-outline-light">Resume</button></a>
@@ -74,7 +74,8 @@
 <style lang="scss">
     @import '../../variables.scss';
     .btn{
-        margin-left: 2rem;
+        margin-left: 1rem;
+        margin-top: .5rem;
         outline: $orange;
     }
 
@@ -82,13 +83,15 @@
         background-color: $orange;
     }
 
-    span{
-        margin-left: 1rem;
-        margin-right: .25rem; 
+    .link{
+        margin-bottom: 1rem;
+        margin-right: 1rem; 
     }
 
     .special{
         color:$orange;
+        margin-right: .3rem;
+        font-size: 1.6rem;
     }
 
     .nav-item{

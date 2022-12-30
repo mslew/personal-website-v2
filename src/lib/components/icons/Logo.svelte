@@ -1,5 +1,5 @@
 <svg width="100" height="50" style="stroke-width: 5;" viewBox="0 0 200 200">
-    <polygon points="5,100 100,195 195,100 100,5" style="stroke-width:8;stroke:#CC5500" fill-opacity="0"/>
+    <polygon class="logo"points="5,100 100,195 195,100 100,5" style="stroke-width:8;stroke:#CC5500" fill-opacity="1" fill="#292b2c"/>
     <svg x="50" y="50" id="m" xmlns="http://www.w3.org/2000/svg" 
     class=" icon icon-tabler icon-tabler-letter-m" 
     width="100" height="100" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="stroke:#CC5500" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
@@ -8,8 +8,15 @@
     </svg> 
 </svg>
 
-<style>
+<style lang="scss">
+    @import '../../../variables.scss';
     svg{
-        padding-left: 2rem;
+        margin-left: 2rem;
+        &:hover{
+            fill: $light-orange;
+            polygon{
+                fill: $light-orange;
+            }
+        }
     }
 </style>

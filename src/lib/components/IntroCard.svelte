@@ -26,7 +26,6 @@
 
 </script>
 
-<br><br><br><br><br><br>
 <div class="container mt-5">
     <div class="card-body">
         {#if nameVisible}
@@ -48,6 +47,7 @@
     @import '../../variables.scss';
     @import '../../fonts.scss';
     .card-body{
+        margin-top: 12rem;
         font-family: $font-regular;
     }
     .intro{
