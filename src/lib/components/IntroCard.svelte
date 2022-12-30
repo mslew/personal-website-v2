@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
-    import '../../fonts.scss'
+    import '../../fonts.scss';
     let nameVisible = false;
     let subtitleVisible = false;
     let contentVisible = false;
@@ -29,7 +29,7 @@
 <div class="container mt-5">
     <div class="card-body">
         {#if nameVisible}
-        <p transition:fly="{{ y: -100, duration: 100 }}" class="intro">Hi, I am</p>
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="intro">Hi, my name is</p>
         {/if}
         {#if nameVisible}
         <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-1 name">Maximus Lewis</h1>
