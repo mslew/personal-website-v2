@@ -3,8 +3,9 @@
     import { fade } from 'svelte/transition';
     import '../../fonts.scss';
     import viewport from '../../functions/useViewportAction';
+    import AboutPicture from '../components/AboutPicture.svelte';
     let visible = false;
-    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
+    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
     });
@@ -59,8 +60,8 @@
                 </div>
             </div>
         </div>
-        <div class="col" in:fade={{ delay: 500 }} out:fade>
-            <img class="rounded float-right" alt="this is me"/>
+        <div class="col picture-col" in:fade={{ delay: 500 }} out:fade>
+            <AboutPicture />
         </div>
         {/if}
     </div>
@@ -71,7 +72,6 @@
     @import '../../fonts.scss';
     .row{
         margin-top: 25rem;
-        height: 50rem;
         width: 100%;
         font-family: $font-regular;
         color: $white;
@@ -85,13 +85,13 @@
         padding-right: 1rem;
     }
     .sectionHeader{
-        color: $light-gray;
+        color: $white;
         font-size: 1.5rem;
     }
     hr{
         color: $white;
         border: .1rem solid $white;
-        width: 65%;
+        width: 50%;
         height: 100%;
         margin-left: 1rem;
     }
@@ -115,6 +115,11 @@
     }
     .card-body{
         font-family: $font-regular;
-        color: $white;
+        color: $light-gray;
+    }
+    .picture-col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>

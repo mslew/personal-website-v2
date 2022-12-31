@@ -74,7 +74,7 @@
         <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="/"><span class="special">03</span><span class="link align-text-bottom">Contact</span></a>
         {/if}
         {#if button}
-        <a href="../../static/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="btn btn-outline-light">Resume</button></a>
+        <a href="../../public/static/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="btn btn-outline-light">Resume</button></a>
         {/if}
       </div>
     </div>
