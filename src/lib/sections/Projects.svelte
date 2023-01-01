@@ -1,10 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { fade } from 'svelte/transition';
     import Project from '../components/Project.svelte';
     import ProjectSwitched from '../components/ProjectSwitched.svelte';
-    import viewport from '../../functions/useViewportAction';
-    import { each } from 'svelte/internal';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
@@ -29,9 +26,9 @@
         </div>
         {#each Array(4) as _, i}
             {#if i % 2 === 0}
-                <Project />
+                <Project title={'title'} techs={['Poggers', 'Bashk']} icons={true} github={'this is a link'} link={'this is a link'} description={'lorem'}/>
             {:else}
-                <ProjectSwitched />
+                <ProjectSwitched title={'title'} techs={['Poggers', 'Bashk']} icons={true} github={'this is a link'} link={'this is a link'} description={'lorem'} />
             {/if}
         {/each}
     </div>
