@@ -47,6 +47,7 @@
 
 <style lang="scss">
     @import '../../scss/variables.scss';
+    @import '../../scss/mixins.scss';
     .top-container{
         margin-bottom: 20rem;
     }
@@ -80,29 +81,10 @@
         margin-left: 1rem;
     }
     .credits{
-        position: relative;
         text-align: center;
         color: $light-gray;
         margin-bottom: 1rem;
-        text-decoration: none;
-        &::before{
-            content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: $orange;
-            transform: scaleX(0);
-            transition: transform 0.5s ease;
-        }
-        &:hover{
-            color: $orange;
-            &::before{
-                transform: scaleX(1);
-            }
-        }
+        @include underline-from-center;
     }
     .btn{
         margin-top: 3rem;

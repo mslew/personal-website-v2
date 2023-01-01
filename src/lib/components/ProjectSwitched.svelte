@@ -3,12 +3,14 @@
 
 <div class="row">
     <div class="col description">
+        <p>
         Research Conducted over the Summer and Fall of 2022.
         Worked with a partner and with guidance of two faculty advisors.
         Simulates the spread of C. difficile in a hospital ward.
         Agents: 30 patients, 10 nurses, 3 doctors. All of which contribute to spread.
         Model includes two different classes of touch surfaces (high and low-touch) in each hospital room. Both of which contribute to spread.
         This model is used to determine accurate control strategies of this infection.
+        </p>
     </div>
     <div class="col title">
         <div class="title-background">
@@ -31,6 +33,7 @@
 
 <style lang="scss">
     @import '../../scss/variables.scss';
+    @import '../../scss/mixins.scss';
     .row{
         margin-bottom: 4rem;
         padding: 2rem;
@@ -85,5 +88,9 @@
         padding-bottom: 1rem;
         padding-top: 1rem;
         color: $white;
+    }
+    a{
+        color: $orange;
+        @include underline-from-center;
     }
 </style>
