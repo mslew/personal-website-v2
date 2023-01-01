@@ -5,8 +5,9 @@
     import EmailSideBar from "../components/EmailSideBar.svelte";
 </script>
 
+<LogoAnim />
+
 <section id="intro">
-    <LogoAnim />
     <IntroCard />
     <SocialSideBar />
     <EmailSideBar />

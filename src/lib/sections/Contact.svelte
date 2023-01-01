@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
-    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
+    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
     });
@@ -98,7 +98,7 @@
             left: 0;
             background-color: $orange;
             transform: scaleX(0);
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
         }
         &:hover{
             color: $orange;
