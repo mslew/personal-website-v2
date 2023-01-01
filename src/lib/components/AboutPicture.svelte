@@ -10,7 +10,7 @@
 
 
 <style lang="scss">
-    @import '../../variables.scss';
+    @import '../../scss/variables.scss';
     .wrapper{
         display: flex;
         justify-content: center;

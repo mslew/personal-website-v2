@@ -2,7 +2,6 @@
     import { onMount } from 'svelte';
     onMount(() => {
     });
-    import '../../fonts.scss';
 </script>
 
 <div class="row">
@@ -34,15 +33,13 @@
 </div>
 
 <style lang="scss">
-    @import '../../variables.scss';
-    @import '../../fonts.scss';
+    @import '../../scss/variables.scss';
     .row{
         margin-bottom: 4rem;
         padding: 2rem;
         outline: .15rem solid $orange;
     }
     .col{
-        font-family: $font-regular;
         color: $light-gray;
     }
     .description{

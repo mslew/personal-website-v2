@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
-    import '../../fonts.scss';
     let nameVisible = false;
     let subtitleVisible = false;
     let contentVisible = false;
@@ -44,11 +43,10 @@
 </div>
 
 <style lang="scss">
-    @import '../../variables.scss';
-    @import '../../fonts.scss';
+    @import '../../scss/variables.scss';
+    @import '../../scss/fonts.scss';
     .card-body{
         margin-top: 16rem;
-        font-family: $font-regular;
     }
     .intro{
         color: $orange;

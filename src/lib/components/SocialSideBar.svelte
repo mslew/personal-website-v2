@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
-    import '../../fonts.scss';
     let visible = false;
 
     onMount(() => {
@@ -24,7 +23,7 @@
 {/if}
 
 <style lang="scss">
-    @import '../../variables.scss';
+    @import '../../scss/variables.scss';
     path{
         fill: $light-gray;
     }

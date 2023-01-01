@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
-    import '../../fonts.scss';
     let visible = false;
 
     onMount(() => {
@@ -21,8 +20,7 @@
 {/if}
 
 <style lang="scss">
-    @import '../../variables.scss';
-    @import '../../fonts.scss';
+    @import '../../scss/variables.scss';
     .email{
         display: flex;
         position: fixed;
@@ -38,7 +36,6 @@
     }
     .text{
         color: $light-gray;
-        font-family: $font-regular;
         writing-mode: vertical-rl;
         font-size: 1.1rem;
         text-decoration: none;

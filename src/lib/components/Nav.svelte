@@ -82,7 +82,7 @@
 {/if}
 
 <style lang="scss">
-    @import '../../variables.scss';
+    @import '../../scss/variables.scss';
     .navbar{
         position: fixed;
         top: 0;

@@ -8,7 +8,7 @@ export default {
     vitePreprocess(),
     preprocess({
       scss: {
-        prependData: '@use "src/variables.scss" as *;',
+        prependData: '@use "src/scss/variables.scss" as *;',
       },
     }),
   ],

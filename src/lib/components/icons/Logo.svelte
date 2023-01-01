@@ -9,7 +9,7 @@
 </svg>
 
 <style lang="scss">
-    @import '../../../variables.scss';
+    @import '../../../scss/variables.scss';
     svg{
         margin-left: 2rem;
         &:hover{

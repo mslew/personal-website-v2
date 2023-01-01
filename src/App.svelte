@@ -13,8 +13,10 @@
 <Contact />
 
 <style lang="scss">
-  @import './variables.scss';
+  @import './scss/variables.scss';
+  @import './scss/fonts.scss';
   :global(body){
     background-color: $background;
+    font-family: $font-regular;
   }
 </style>

@@ -3,7 +3,6 @@
     import { fade } from 'svelte/transition';
     import Project from '../components/Project.svelte';
     import ProjectSwitched from '../components/ProjectSwitched.svelte';
-    import '../../fonts.scss';
     import viewport from '../../functions/useViewportAction';
     import { each } from 'svelte/internal';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
@@ -40,12 +39,10 @@
 {/if}
 
 <style lang="scss">
-    @import '../../variables.scss';
-    @import '../../fonts.scss';
+    @import '../../scss/variables.scss';
     .top{
         margin-top: 25rem;
         width: 100%;
-        font-family: $font-regular;
         color: $white;
     }
     .intro{

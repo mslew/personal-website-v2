@@ -37,7 +37,7 @@
         <div class="row justify-content-center">
             <div class="col-sm-6">
                 <div class="wrapper">
-                    <a href="https://github.com/mslew/personal-website-v2" target="_blank" rel="noreferrer"><p class="credits">Designed and Built by Maximus Lewis</p></a>
+                    <a href="https://github.com/mslew/personal-website-v2" target="_blank" rel="noreferrer" aria-label="Repo" title="Repo"><p class="credits">Designed and Built by Maximus Lewis</p></a>
                 </div>
             </div>
         </div>
@@ -46,15 +46,13 @@
 {/if}
 
 <style lang="scss">
-    @import '../../variables.scss';
-    @import '../../fonts.scss';
+    @import '../../scss/variables.scss';
     .top-container{
         margin-bottom: 20rem;
     }
     .top{
         margin-top: 25rem;
         width: 100%;
-        font-family: $font-regular;
         color: $white;
     }
     .intro{
@@ -83,7 +81,6 @@
     }
     .credits{
         position: relative;
-        font-family: $font-regular;
         text-align: center;
         color: $light-gray;
         margin-bottom: 1rem;

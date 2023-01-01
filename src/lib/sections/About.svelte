@@ -1,7 +1,6 @@
 <script>
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
-    import '../../fonts.scss';
     import viewport from '../../functions/useViewportAction';
     import AboutPicture from '../components/AboutPicture.svelte';
     let opacity = '';
@@ -68,15 +67,13 @@
 {/if}
 
 <style lang="scss">
-    @import '../../variables.scss';
-    @import '../../fonts.scss';
+    @import '../../scss/variables.scss';
     section{
         background-color: var(--background-color);
     }
     .row{
         margin-top: 25rem;
         width: 100%;
-        font-family: $font-regular;
         color: $white;
     }
     .intro{
@@ -117,7 +114,6 @@
         display: inline-block;
     }
     .card-body{
-        font-family: $font-regular;
         color: $light-gray;
     }
     .picture-col{
