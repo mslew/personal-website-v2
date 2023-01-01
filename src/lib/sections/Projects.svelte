@@ -1,7 +1,14 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import projects from '../../../content/projects.json'
     import Project from '../components/Project.svelte';
     import ProjectSwitched from '../components/ProjectSwitched.svelte';
+    let title : string;
+    let techs : string[];
+    let icons : boolean;
+    let github : string;
+    let link : string;
+    let description : string;
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
@@ -24,11 +31,13 @@
                 </div>
             </div>
         </div>
-        {#each Array(4) as _, i}
+        {#each projects.projects as project, i}
             {#if i % 2 === 0}
-                <Project title={'title'} techs={['Poggers', 'Bashk']} icons={true} github={'this is a link'} link={'this is a link'} description={'lorem'}/>
+                <Project title={project.title} techs={project.techs} icons={project.icons} 
+                github={project.github} link={project.link} description={project.description}/>
             {:else}
-                <ProjectSwitched title={'title'} techs={['Poggers', 'Bashk']} icons={true} github={'this is a link'} link={'this is a link'} description={'lorem'} />
+                <ProjectSwitched title={project.title} techs={project.techs} icons={project.icons} 
+                github={project.github} link={project.link} description={project.description}/>
             {/if}
         {/each}
     </div>
