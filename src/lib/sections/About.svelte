@@ -4,7 +4,7 @@
     import '../../fonts.scss';
     import viewport from '../../functions/useViewportAction';
     import AboutPicture from '../components/AboutPicture.svelte';
-    let visible = false;
+    let opacity = '';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
@@ -15,13 +15,11 @@
     }
 </script>
 
-<scetion id="about">
+{#if onLoadVisible}
+<section id="about">
     <div class="container mt-5">
-        <div class="row" use:viewport 
-            on:enterViewport={() => (visible = true)}
-            on:exitViewport={() => (visible = false)}>
-            {#if visible && onLoadVisible}
-            <div class="col" in:fade={{ delay: 500 }} out:fade>
+        <div class="row">
+            <div class="col">
                 <div class="intro">
                     <p class="sectionNumberHeader">01.</p>
                     <p class="sectionHeader">About Me</p>
@@ -61,17 +59,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col picture-col" in:fade={{ delay: 500 }} out:fade>
+            <div class="col picture-col">
                 <AboutPicture />
             </div>
-            {/if}
         </div>
     </div>
-</scetion>
+</section>
+{/if}
 
 <style lang="scss">
     @import '../../variables.scss';
     @import '../../fonts.scss';
+    section{
+        background-color: var(--background-color);
+    }
     .row{
         margin-top: 25rem;
         width: 100%;

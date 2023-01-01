@@ -1,8 +1,11 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+    onMount(() => {
+    });
     import '../../fonts.scss';
 </script>
 
-<div class="row">
+<div class="row project-row">
     <div class="col title">
         <div class="title-background">
             <h1 class="display-6 title-text">An Agent-Based Model of Environmental Transmission of Clostridioides difficile in Healthcare Settings</h1>
@@ -22,13 +25,6 @@
         </div>
     </div>
     <div class="col description">
-        Winner: The Janet L. Andersen Award for Undergraduate Research in Mathematical or Computational Biology
-            Issued by The Special Interest Group of the Mathematical Association of America on Mathematical and Computational Biology.
-            This was awarded to me after I presented this research project during the undergraduate poster session at the Mathematical Association of America’s 2022 MathFest in Philadelphia, PA.
-        Winner: 2022 MAA MathFest Undergraduate Student Poster Session Outstanding Poster
-            Issued by The Mathematical Association of America.
-            This was awarded to me after I presented this research project during the undergraduate poster session at the Mathematical Association of America’s 2022 MathFest in Philadelphia, PA.
-        Written in NetLogo.
         Research Conducted over the Summer and Fall of 2022.
         Worked with a partner and with guidance of two faculty advisors.
         Simulates the spread of C. difficile in a hospital ward.
@@ -42,11 +38,18 @@
     @import '../../variables.scss';
     @import '../../fonts.scss';
     .row{
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
+        padding: 2rem;
+        outline: .15rem solid $orange;
     }
     .col{
         font-family: $font-regular;
         color: $light-gray;
+    }
+    .description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .technologies{
         padding-top: 2rem;
@@ -62,6 +65,7 @@
         fill: $light-gray;
     }
     .links{
+        float: left;
         margin-top: 2rem;
     }
     .iconlink{
@@ -73,11 +77,16 @@
         }
     }
     .title-background{
+        border-radius: 10px;
         background-color: $medium-gray;
         box-shadow: 3px 3px 3px black;
+        margin-right: 2rem;
     }
     .title-text{
+        font-size: 2rem;
+        text-align: center;
         padding-left: 2rem;
+        padding-right: 2rem;
         padding-bottom: 1rem;
         padding-top: 1rem;
         color: $white;
