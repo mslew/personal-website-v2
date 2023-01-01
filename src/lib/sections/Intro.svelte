@@ -5,10 +5,12 @@
     import EmailSideBar from "../components/EmailSideBar.svelte";
 </script>
 
-<LogoAnim />
-<IntroCard />
-<SocialSideBar />
-<EmailSideBar />
+<section id="intro">
+    <LogoAnim />
+    <IntroCard />
+    <SocialSideBar />
+    <EmailSideBar />
+</section>
 
 <style lang="scss">
 </style>

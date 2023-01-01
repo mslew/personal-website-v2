@@ -87,6 +87,7 @@
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 1000000;
     }
     .btn{
         margin-left: 1rem;

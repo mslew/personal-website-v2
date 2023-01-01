@@ -15,57 +15,59 @@
     }
 </script>
 
-<div class="container mt-5">
-    <div class="row" use:viewport 
-        on:enterViewport={() => (visible = true)}
-        on:exitViewport={() => (visible = false)}>
-        {#if visible && onLoadVisible}
-        <div class="col" in:fade={{ delay: 500 }} out:fade>
-            <div class="intro">
-                <p class="sectionNumberHeader">01.</p>
-                <p class="sectionHeader">About Me</p>
-                <hr class="line" />
-            </div>
-            <div class="card-body content">
-                <p>Growing up in Lockport, Illinois I have always enjoyed
-                    technology. In high school I decided to take a couple coding classes
-                    because it would be fun. Who would have thought the impact it would
-                    have had on my life. I decided to major in Computer Science!
-                </p>
-                <p> Studying Computer Science and Mathematics at Lewis University
-                    has been a mentally challenging, but equally intellectually 
-                    stimulating time of my life. I have really enjoyed my studies so far and 
-                    cannot wait to graduate in May of 2023 to pursue Software Engineering as a career! 
-                </p>
-                <p>
-                    Here are a few technologies that I know and some I have been working with recently: 
-                </p>
-                <div class="lists">
-                    <div class="list">
-                        <ul>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>JavaScript</li>
-                            <li>Go</li>
-                        </ul>
-                    </div>
-                    <div class="list">
-                        <ul>
-                            <li>Vue.js</li>
-                            <li>Bootstrap 5</li>
-                            <li>Sass</li>
-                            <li>Node.js / Express.js</li>
-                        </ul>
+<scetion id="about">
+    <div class="container mt-5">
+        <div class="row" use:viewport 
+            on:enterViewport={() => (visible = true)}
+            on:exitViewport={() => (visible = false)}>
+            {#if visible && onLoadVisible}
+            <div class="col" in:fade={{ delay: 500 }} out:fade>
+                <div class="intro">
+                    <p class="sectionNumberHeader">01.</p>
+                    <p class="sectionHeader">About Me</p>
+                    <hr class="line" />
+                </div>
+                <div class="card-body content">
+                    <p>Growing up in Lockport, Illinois I have always enjoyed
+                        technology. In high school I decided to take a couple coding classes
+                        because it would be fun. Who would have thought the impact it would
+                        have had on my life. I decided to major in Computer Science!
+                    </p>
+                    <p> Studying Computer Science and Mathematics at Lewis University
+                        has been a mentally challenging, but equally intellectually 
+                        stimulating time of my life. I have really enjoyed my studies so far and 
+                        cannot wait to graduate in May of 2023 to pursue Software Engineering as a career! 
+                    </p>
+                    <p>
+                        Here are a few technologies that I know and some I have been working with recently: 
+                    </p>
+                    <div class="lists">
+                        <div class="list">
+                            <ul>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>Go</li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>Vue.js</li>
+                                <li>Bootstrap 5</li>
+                                <li>Sass</li>
+                                <li>Node.js / Express.js</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col picture-col" in:fade={{ delay: 500 }} out:fade>
+                <AboutPicture />
+            </div>
+            {/if}
         </div>
-        <div class="col picture-col" in:fade={{ delay: 500 }} out:fade>
-            <AboutPicture />
-        </div>
-        {/if}
     </div>
-</div>
+</scetion>
 
 <style lang="scss">
     @import '../../variables.scss';
