@@ -13,10 +13,9 @@
     </div>
     <div class="col title">
         <div class="title-background">
-            <h1 class="title-text">An Agent-Based Model of Environmental Transmission of Clostridioides difficile in Healthcare Settings</h1>
+            <p class="title-text">An Agent-Based Model of Environmental Transmission of Clostridioides difficile in Healthcare Settings</p>
         </div>
         <div class="technologies">
-            <span class="technology">Java</span>
             <span class="technology">Java</span>
             <span class="technology">Java</span>
             <span class="technology">Java</span>
@@ -49,7 +48,9 @@
         align-items: center;
     }
     .technologies{
+        margin-left: 2rem;
         padding-top: 2rem;
+        justify-content: center;
     }
     .technology{
         color: $orange;
@@ -80,7 +81,7 @@
         margin-left: 2rem;
     }
     .title-text{
-        font-size: 2rem;
+        font-size: 1.75rem;
         text-align: center;
         padding-left: 2rem;
         padding-right: 2rem;

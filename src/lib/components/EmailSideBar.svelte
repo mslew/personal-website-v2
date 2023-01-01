@@ -15,7 +15,7 @@
 
 {#if visible}
 <div transition:fly="{{ y: 100, duration: 200 }}" class="email">
-    <a class="text" href = "mailto:max@maximuslewis.com" target = "_blank" aria-label="Email" title="Email">mlew3223@gmail.com</a>
+    <a class="text" href = "mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email">mlew3223@gmail.com</a>
     <hr />
 </div>
 {/if}

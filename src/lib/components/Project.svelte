@@ -5,13 +5,12 @@
     import '../../fonts.scss';
 </script>
 
-<div class="row project-row">
+<div class="row">
     <div class="col title">
         <div class="title-background">
-            <h1 class="display-6 title-text">An Agent-Based Model of Environmental Transmission of Clostridioides difficile in Healthcare Settings</h1>
+            <p class="display-6 title-text">An Agent-Based Model of Environmental Transmission of Clostridioides difficile in Healthcare Settings</p>
         </div>
         <div class="technologies">
-            <span class="technology">Java</span>
             <span class="technology">Java</span>
             <span class="technology">Java</span>
             <span class="technology">Java</span>
@@ -53,6 +52,7 @@
     }
     .technologies{
         padding-top: 2rem;
+        justify-content: center;
     }
     .technology{
         color: $orange;
@@ -83,7 +83,7 @@
         margin-right: 2rem;
     }
     .title-text{
-        font-size: 2rem;
+        font-size: 1.75rem;
         text-align: center;
         padding-left: 2rem;
         padding-right: 2rem;
