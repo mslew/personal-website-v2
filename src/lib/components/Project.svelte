@@ -86,8 +86,4 @@
         padding-top: 1rem;
         color: $white;
     }
-    .desc-link{
-        color: $orange;
-        @include underline-from-center;
-    }
 </style>
