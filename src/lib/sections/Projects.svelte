@@ -3,12 +3,6 @@
     import projects from '../../../content/projects.json'
     import Project from '../components/Project.svelte';
     import ProjectSwitched from '../components/ProjectSwitched.svelte';
-    let title : string;
-    let techs : string[];
-    let icons : boolean;
-    let github : string;
-    let link : string;
-    let description : string;
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);

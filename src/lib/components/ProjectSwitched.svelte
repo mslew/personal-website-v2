@@ -4,12 +4,16 @@
     export let icons : boolean;
     export let github : string;
     export let link : string;
-    export let description : string;
+    export let description : string[];
 </script>
 
 <div class="row">
     <div class="col description">
-        <p>{@html description}</p>
+        <p>
+            {#each description as line}
+            {@html line}
+            {/each}
+        </p>
     </div>
     <div class="col title">
         <div class="title-background">
