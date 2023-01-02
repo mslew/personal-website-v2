@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col title">
         <div class="title-background">
-            <p class="display-6 title-text">{title}</p>
+            <p class="display-6 title-text">{@html title}</p>
         </div>
         <div class="technologies">
             {#each techs as tech}
@@ -25,7 +25,7 @@
         {/if}
     </div>
     <div class="col description">
-        <p>{description}</p>
+        <p>{@html description}</p>
     </div>
 </div>
 

@@ -9,7 +9,7 @@
     let github : string;
     let link : string;
     let description : string;
-    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
+    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
     });
