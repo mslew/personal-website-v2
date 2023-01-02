@@ -18,19 +18,16 @@
 
 {#if visible}
 <div transition:fly="{{ y: 100, duration: 200 }}" class="socials">
-<a class="item" href="https://github.com/mslew" target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub height={30}/></a>
-<a class="item" href = "https://www.linkedin.com/in/maximus-lewis-50ba47203/" target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn height={30}/></a>
-<a class="item" href = "https://lewisu.joinhandshake.com/users/20583963" target = "_blank" rel="noreferrer" aria-label="Handshake" title="Handshake"><Handshake height={30}/></a>
-<a class="item" href = "https://www.instagram.com/maxslewis/" target = "_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Instagram height={30}/></a>
+<a class="item" href="https://github.com/mslew" target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub class="icon" height={30}/></a>
+<a class="item" href = "https://www.linkedin.com/in/maximus-lewis-50ba47203/" target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn class="icon" height={30}/></a>
+<a class="item" href = "https://lewisu.joinhandshake.com/users/20583963" target = "_blank" rel="noreferrer" aria-label="Handshake" title="Handshake"><Handshake class="icon" height={30}/></a>
+<a class="item" href = "https://www.instagram.com/maxslewis/" target = "_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Instagram class="icon" height={30}/></a>
 <hr />
 </div>
 {/if}
 
 <style lang="scss">
     @import '../../scss/variables.scss';
-    path{
-        fill: $light-gray;
-    }
     .socials{
         display: flex;
         position: fixed;
@@ -53,7 +50,7 @@
         &:hover{
             animation: raise .25s linear;
             animation-fill-mode: forwards;
-            path{
+            :global(.icon){
                 fill: $orange;
             }
         }

@@ -21,8 +21,8 @@
         </div>
         {#if icons}
         <div class=links>
-            <a class="iconlink" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub height={30}/></a>
-            <a class="iconlink" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External height={30}/></a>
+            <a class="iconlink" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
+            <a class="iconlink" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
         </div>
         {/if}
     </div>
@@ -62,9 +62,6 @@
         font-size: 1.25rem;
         padding-right: 2rem;
     }
-    path{
-        fill: $light-gray;
-    }
     .links{
         float: left;
         margin-top: 2rem;
@@ -72,7 +69,7 @@
     .iconlink{
         padding-left: 1rem;
         &:hover{
-            path{
+            :global(.icon){
                 fill: $orange;
             }
         }
