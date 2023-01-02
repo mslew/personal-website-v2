@@ -58,7 +58,7 @@
         " This allows users to sign in and write blogs on their favorite topics."]
     },
     {"title":"Movie Deck", 
-    "techs":["Vue.js", "Bootstrap", "Sass"], 
+    "techs":["Vue.js", "Bootstrap", "Sass", "Firebase"], 
     "icons":true,
     "github": "https://github.com/mslew/movie-deck",
     "link": "https://movie-deck-1847e.web.app/#/",
