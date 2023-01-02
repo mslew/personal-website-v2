@@ -27,11 +27,11 @@
         </div>
         {#each projects.projects as project, i}
             {#if i % 2 === 0}
-                <Project title={project.title} techs={project.techs} icons={project.icons} 
-                github={project.github} link={project.link} description={project.description}/>
+                <Project title={project.title} techs={project.techs} githubIcon={project.githubIcon}
+                externalIcon={project.externalIcon} github={project.github} link={project.link} description={project.description}/>
             {:else}
-                <ProjectSwitched title={project.title} techs={project.techs} icons={project.icons} 
-                github={project.github} link={project.link} description={project.description}/>
+                <ProjectSwitched title={project.title} techs={project.techs} githubIcon={project.githubIcon}
+                externalIcon={project.externalIcon} github={project.github} link={project.link} description={project.description}/>
             {/if}
         {/each}
     </div>

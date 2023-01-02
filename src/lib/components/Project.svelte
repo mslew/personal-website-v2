@@ -3,7 +3,8 @@
     import External from "./icons/External.svelte";
     export let title : string;
     export let techs : string[];
-    export let icons : boolean;
+    export let githubIcon : boolean;
+    export let externalIcon : boolean; 
     export let github : string;
     export let link : string;
     export let description : string[];
@@ -19,12 +20,14 @@
             <span class="technology">{tech}</span>
             {/each}
         </div>
-        {#if icons}
         <div class=links>
+            {#if githubIcon}
             <a class="iconlink" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
+            {/if}
+            {#if externalIcon}
             <a class="iconlink" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
+            {/if}
         </div>
-        {/if}
     </div>
     <div class="col description">
         <p>
