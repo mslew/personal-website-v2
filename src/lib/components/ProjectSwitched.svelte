@@ -18,7 +18,7 @@
             {/each}
         </p>
     </div>
-    <div class="col title order-1">
+    <div class="col title order-1 order-xl-2">
         <div class="title-background">
             <p class="title-text">{@html title}</p>
         </div>
