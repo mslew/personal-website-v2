@@ -3,8 +3,8 @@
     import { fly } from 'svelte/transition';
     import Logo from './icons/Logo.svelte';
     let prevScrollpos = window.pageYOffset;
-	let visible = false;
-    let sideVisible = false;
+	let visible = true;
+    let sideVisible = true;
     let link1 = false;
     let link2 = false;
     let link3 = false;
@@ -92,11 +92,11 @@
 {/if}
 {#if sideVisible}
 <div in:fly="{{ x: 100, duration: 500 }}" class="nav flex-column bg-dark pb-2" out:fly="{{ x: 100, duration: 500 }}">
-    <a class="nav-item nav-link" href="#intro"><span class="special">00</span><span class="link align-text-bottom">Intro</span></a>
-    <a class="nav-item nav-link" href="#about"><span class="special">01</span><span class="link align-text-bottom">About</span></a>
-    <a class="nav-item nav-link" href="#projects"><span class="special">02</span><span class="link align-text-bottom">Projects</span></a>
-    <a class="nav-item nav-link" href="#contact"><span class="special">03</span><span class="link align-text-bottom">Contact</span></a>
-    <a href="../../public/static/Resume.pdf" target="_blank"><button type="button" class="btn btn-outline-light">Resume</button></a>
+    <a class="nav-item nav-link" href="#intro"><span class="special">00</span><span class="link">Intro</span></a>
+    <a class="nav-item nav-link" href="#about"><span class="special">01</span><span class="link">About</span></a>
+    <a class="nav-item nav-link" href="#projects"><span class="special">02</span><span class="link">Projects</span></a>
+    <a class="nav-item nav-link" href="#contact"><span class="special">03</span><span class="link">Contact</span></a>
+    <a href="../../public/static/Resume.pdf" target="_blank"><button type="button" class="btn btn-outline-light side-btn">Resume</button></a>
 </div>
 {/if}
 
@@ -135,13 +135,19 @@
 
     .link{
         margin-bottom: 1rem;
-        margin-right: 1rem; 
+        margin-right: 1rem;
+        @include media-breakpoint-down(lg){
+            font-size: 1.5rem;
+        } 
     }
 
     .special{
         color:$orange;
         margin-right: .3rem;
         font-size: 1.6rem;
+        @include media-breakpoint-down(lg){
+            font-size: 1.75rem;
+        } 
     }
 
     .nav-item{
@@ -155,5 +161,9 @@
 
     .navbar-toggler{
         margin-right: 4rem;
+    }
+    .side-btn{
+        height: 3rem;
+        width: 8rem;
     }
 </style>
