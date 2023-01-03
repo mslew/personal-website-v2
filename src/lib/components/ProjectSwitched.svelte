@@ -117,7 +117,8 @@
             font-size: 1.25rem;
         }
         @include media-breakpoint-down(sm){
-            font-size: 1.1rem;
+            font-size: .8rem;
+            text-align: center;
         }
     }
 </style>

@@ -3,8 +3,8 @@
     import { fly } from 'svelte/transition';
     import Logo from './icons/Logo.svelte';
     let prevScrollpos = window.pageYOffset;
-	let visible = true;
-    let sideVisible = true;
+	let visible = false;
+    let sideVisible = false;
     let link1 = false;
     let link2 = false;
     let link3 = false;
@@ -20,7 +20,6 @@
                 visible = true;
             } else {
                 visible = false;
-                sideVisible = false;
             }
             prevScrollpos = currentScrollPos;
         }
@@ -84,7 +83,7 @@
         <a transition:fly="{{ y: -100, duration: 250 }}" class="nav-item nav-link" href="#contact"><span class="special">03</span><span class="link align-text-bottom">Contact</span></a>
         {/if}
         {#if button}
-        <a href="../../public/static/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="btn btn-outline-light">Resume</button></a>
+        <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="btn btn-outline-light">Resume</button></a>
         {/if}
       </div>
     </div>
@@ -96,7 +95,7 @@
     <a class="nav-item nav-link" href="#about"><span class="special">01</span><span class="link">About</span></a>
     <a class="nav-item nav-link" href="#projects"><span class="special">02</span><span class="link">Projects</span></a>
     <a class="nav-item nav-link" href="#contact"><span class="special">03</span><span class="link">Contact</span></a>
-    <a href="../../public/static/Resume.pdf" target="_blank"><button type="button" class="btn btn-outline-light side-btn">Resume</button></a>
+    <a href="content/Resume.pdf" target="_blank"><button type="button" class="btn btn-outline-light side-btn">Resume</button></a>
 </div>
 {/if}
 
