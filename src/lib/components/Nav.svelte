@@ -18,8 +18,10 @@
             var currentScrollPos = window.pageYOffset;
             if (currentScrollPos < prevScrollpos) {
                 visible = true;
+                sideVisible = false;
             } else {
                 visible = false;
+                sideVisible = false;
             }
             prevScrollpos = currentScrollPos;
         }

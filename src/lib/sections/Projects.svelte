@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { fade } from 'svelte/transition';
     import projects from '../../../content/projects.json'
     import Project from '../components/Project.svelte';
     import ProjectSwitched from '../components/ProjectSwitched.svelte';
@@ -14,7 +15,7 @@
 </script>
 
 {#if onLoadVisible}
-<section id="projects">
+<section id="projects" in:fade>
     <div class="container mt-5">
         <div class="row top">
             <div class="col">
@@ -41,7 +42,7 @@
 <style lang="scss">
     @import '../../scss/variables.scss';
     .top{
-        margin-top: 25rem;
+        margin-top: 15rem;
         width: 100%;
         color: $white;
         margin-left: 2rem;
