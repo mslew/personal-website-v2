@@ -72,6 +72,9 @@
         margin-top: 25rem;
         width: 100%;
         color: $white;
+        @include media-breakpoint-down(md){
+            margin-top: 15rem;
+        }
     }
     .intro{
         display: flex;
@@ -112,6 +115,10 @@
     }
     .card-body{
         color: $light-gray;
+        @include media-breakpoint-down(md){
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
     }
     .picture-col{
         display: flex;
