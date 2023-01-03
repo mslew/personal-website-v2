@@ -40,6 +40,9 @@
         left: 3%;
         padding-bottom: 1rem;
         height: 18rem;
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
     }
     hr{
         border-left: .25rem solid black;

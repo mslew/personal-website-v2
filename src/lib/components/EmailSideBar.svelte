@@ -33,6 +33,9 @@
         right: 3%;
         padding-bottom: 1rem;
         height: 18rem;
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
     }
     .text{
         color: $light-gray;
