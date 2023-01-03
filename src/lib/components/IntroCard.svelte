@@ -47,6 +47,10 @@
     @import '../../scss/fonts.scss';
     .card-body{
         margin-top: 16rem;
+        @include media-breakpoint-up(sm){
+            opacity: .25;
+            font-size: .75rem;
+        }
     }
     .intro{
         color: $orange;

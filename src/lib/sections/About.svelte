@@ -1,9 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { fade } from 'svelte/transition';
-    import viewport from '../../functions/useViewportAction';
     import AboutPicture from '../components/AboutPicture.svelte';
-    let opacity = '';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);

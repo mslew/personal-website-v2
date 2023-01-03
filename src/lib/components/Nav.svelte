@@ -4,6 +4,7 @@
     import Logo from './icons/Logo.svelte';
     let prevScrollpos = window.pageYOffset;
 	let visible = false;
+    let sideVisible = false;
     let link1 = false;
     let link2 = false;
     let link3 = false;
@@ -19,6 +20,7 @@
                 visible = true;
             } else {
                 visible = false;
+                sideVisible = false;
             }
             prevScrollpos = currentScrollPos;
         }
@@ -51,12 +53,20 @@
         }                      
     }, 200)
     }
+    function makeSideVisible() {
+        if(sideVisible){
+            sideVisible = false;
+        }else{
+            sideVisible = true;
+        }
+    }
 </script>
   
 {#if visible}
 <nav in:fly="{{ y: -100, duration: 1000 }}" class="navbar navbar-expand-lg navbar-dark bg-dark" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="navbar-brand" href="/"><Logo /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" on:click={makeSideVisible}>
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -80,6 +90,15 @@
     </div>
 </nav>
 {/if}
+{#if sideVisible}
+<div in:fly="{{ x: 100, duration: 500 }}" class="nav flex-column bg-dark pb-2" out:fly="{{ x: 100, duration: 500 }}">
+    <a class="nav-item nav-link" href="#intro"><span class="special">00</span><span class="link align-text-bottom">Intro</span></a>
+    <a class="nav-item nav-link" href="#about"><span class="special">01</span><span class="link align-text-bottom">About</span></a>
+    <a class="nav-item nav-link" href="#projects"><span class="special">02</span><span class="link align-text-bottom">Projects</span></a>
+    <a class="nav-item nav-link" href="#contact"><span class="special">03</span><span class="link align-text-bottom">Contact</span></a>
+    <a href="../../public/static/Resume.pdf" target="_blank"><button type="button" class="btn btn-outline-light">Resume</button></a>
+</div>
+{/if}
 
 <style lang="scss">
     @import '../../scss/variables.scss';
@@ -88,6 +107,21 @@
         top: 0;
         width: 100%;
         z-index: 1000000;
+    }
+    .nav{
+        position: fixed;
+        right: 0;
+        top: 8%;
+        margin: auto;
+        z-index: 1000000;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        padding-top: 25%;
+        background-color: $background;
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
     }
     .btn{
         margin-left: 1rem;
@@ -112,6 +146,7 @@
 
     .nav-item{
         color: $white;
+        z-index: 10000000000000;
     }
 
     .nav-item:hover{
