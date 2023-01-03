@@ -44,6 +44,7 @@
         margin-top: 25rem;
         width: 100%;
         color: $white;
+        margin-left: 2rem;
     }
     .intro{
         display: flex;

@@ -55,7 +55,7 @@
         " The project had a separate client website and external API that does the calculations for determining health insurance risk."]
     },
     {"title":"Live Blog", 
-    "techs":["HTML", "CSS", "Handlebars", "Bootstrap", "Express", "Firebase"], 
+    "techs":["Bootstrap", "CSS", "Handlebars", "Express", "Firebase"], 
     "githubIcon":true,
     "externalIcon":true,
     "github": "https://github.com/software-engineering-team-fun/blog-project",

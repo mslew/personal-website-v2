@@ -75,6 +75,7 @@
         @include media-breakpoint-down(md){
             margin-top: 15rem;
         }
+        margin-left: 2rem;
     }
     .intro{
         display: flex;
