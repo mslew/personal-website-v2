@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
+    import BottomSocials from '../components/BottomSocials.svelte';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
@@ -35,7 +36,8 @@
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-6">
+            <div class="col-lg-6">
+                <BottomSocials />
                 <div class="wrapper">
                     <a href="https://github.com/mslew/personal-website-v2" target="_blank" rel="noreferrer" aria-label="Repo" title="Repo"><p class="credits">Designed and Built by Maximus Lewis</p></a>
                 </div>
@@ -50,11 +52,17 @@
     @import '../../scss/mixins.scss';
     .top-container{
         margin-bottom: 20rem;
+        @include media-breakpoint-down(md){
+            margin-bottom: 15rem;
+        }
     }
     .top{
         margin-top: 25rem;
         width: 100%;
         color: $white;
+        @include media-breakpoint-down(md){
+            margin-top: 15rem;
+        }
     }
     .intro{
         display: flex;

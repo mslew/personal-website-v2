@@ -45,6 +45,9 @@
         width: 100%;
         color: $white;
         margin-left: 2rem;
+        @include media-breakpoint-down(md){
+            margin-top: 10rem;
+        }
     }
     .intro{
         display: flex;

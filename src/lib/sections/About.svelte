@@ -65,9 +65,6 @@
 
 <style lang="scss">
     @import '../../scss/variables.scss';
-    section{
-        background-color: var(--background-color);
-    }
     .row{
         margin-top: 25rem;
         width: 100%;
@@ -75,7 +72,7 @@
         @include media-breakpoint-down(md){
             margin-top: 15rem;
         }
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
     .intro{
         display: flex;
