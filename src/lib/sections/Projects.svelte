@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
-    import projects from '../../../content/projects.json'
+    import projects from '../content/index'
     import Project from '../components/Project.svelte';
     import ProjectSwitched from '../components/ProjectSwitched.svelte';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
@@ -12,6 +12,8 @@
     function makeVisible(){
         onLoadVisible = true;
     }
+    console.log(projects)
+    const projectList : string[] = projects;
 </script>
 
 {#if onLoadVisible}
@@ -26,7 +28,7 @@
                 </div>
             </div>
         </div>
-        {#each projects.projects as project, i}
+        {#each projectList as project, i}
             {#if i % 2 === 0}
                 <Project title={project.title} techs={project.techs} githubIcon={project.githubIcon}
                 externalIcon={project.externalIcon} github={project.github} link={project.link} description={project.description}/>

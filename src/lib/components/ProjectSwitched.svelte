@@ -7,15 +7,13 @@
     export let externalIcon : boolean; 
     export let github : string;
     export let link : string;
-    export let description : string[];
+    export let description : string;
 </script>
 
 <div class="row">
     <div class="col-lg-6 description order-2">
         <p>
-            {#each description as line}
-            {@html line}
-            {/each}
+            {@html description}
         </p>
     </div>
     <div class="col title order-1 order-xl-2">

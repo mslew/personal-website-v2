@@ -1,4 +1,5 @@
 ---
+layout: project
 title: 'An Agent-Based Model of Envionmental Transmission of Clostridioides difficile in Healthcare Settings' 
 tech: 
     - NetLogo 
