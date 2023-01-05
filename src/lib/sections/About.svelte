@@ -16,7 +16,7 @@
 <section id="about" in:fade>
     <div class="container mt-5">
         <div class="row">
-            <div class="col">
+            <div class="col content">
                 <div class="intro">
                     <p class="sectionNumberHeader">01.</p>
                     <p class="sectionHeader">About Me</p>
@@ -73,7 +73,7 @@
         @include media-breakpoint-down(md){
             margin-top: 15rem;
         }
-        margin-left: 1rem;
+        margin-left: 4rem;
     }
     .intro{
         display: flex;
@@ -123,5 +123,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .content{
+        @include media-breakpoint-down(xxl){
+            margin-right: 5rem;
+        }
     }
 </style>

@@ -25,7 +25,7 @@
 
 </script>
 
-<div class="container mt-5">
+<div class="container mt-5 d-flex">
     <div class="card-body">
         {#if nameVisible}
         <p transition:fly="{{ y: -100, duration: 100 }}" class="intro">Hi, my name is</p>
@@ -47,6 +47,7 @@
     @import '../../scss/fonts.scss';
     .card-body{
         margin-top: 16rem;
+        margin-left: 5rem;
         @include media-breakpoint-down(md){
             margin-top: 8rem;
             margin-left: 1rem;

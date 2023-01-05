@@ -13,7 +13,9 @@
 <div class="row">
     <div class="col-lg-6 description order-2">
         <p>
-            {@html description}
+            {#each description as line}
+            {@html line}
+            {/each}
         </p>
     </div>
     <div class="col title order-1 order-xl-2">

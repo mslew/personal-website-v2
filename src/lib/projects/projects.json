@@ -42,7 +42,7 @@
     "externalIcon":true,
     "github": "https://github.com/mslew/math-tutor",
     "link": "https://yellow-ocean-02e8fd010.1.azurestaticapps.net/",
-    "description": ["Final project for my Applied Programming Languages class. It was me and my partner's first web application.",
+    "description": ["Math Tutor was my final project for the Applied Programming Languages class. It was my partner and I's first web application.",
         " It tutors students on mathematics with a dynamic leveling and points system."]
     },
     {"title":"Health Insurance Risk Calculator", 
