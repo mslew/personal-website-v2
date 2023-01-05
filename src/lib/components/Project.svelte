@@ -7,7 +7,7 @@
     export let externalIcon : boolean; 
     export let github : string;
     export let link : string;
-    export let description : string;
+    export let description : string[];
 </script>
 
 <div class="row">
@@ -55,6 +55,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include media-breakpoint-down(sm){
+            font-size: .75rem;
+            text-align: center;
+        }
     }
     .technologies{
         display: flex;
@@ -77,6 +81,7 @@
         @include media-breakpoint-down(sm){
             display: block;
             text-align: center;
+            font-size: .8rem;
         }
     }
     .tech{

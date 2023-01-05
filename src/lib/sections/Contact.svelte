@@ -13,7 +13,7 @@
 </script>
 
 {#if onLoadVisible}
-<section id="contact" in:fade>
+<section id="contact">
     <div class="container top-container">
         <div class="row top justify-content-center">
             <div class="col">
@@ -51,13 +51,13 @@
     @import '../../scss/variables.scss';
     @import '../../scss/mixins.scss';
     .top-container{
-        margin-bottom: 15rem;
+        margin-bottom: 20rem;
         @include media-breakpoint-down(md){
             margin-bottom: 15rem;
         }
     }
     .top{
-        margin-top: 15rem;
+        margin-top: 25rem;
         width: 100%;
         color: $white;
         @include media-breakpoint-down(md){
