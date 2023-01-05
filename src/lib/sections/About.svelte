@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import { fade } from 'svelte/transition';
     import AboutPicture from '../components/AboutPicture.svelte';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
@@ -12,7 +13,7 @@
 </script>
 
 {#if onLoadVisible}
-<section id="about">
+<section id="about" in:fade>
     <div class="container mt-5">
         <div class="row">
             <div class="col">
@@ -66,7 +67,7 @@
 <style lang="scss">
     @import '../../scss/variables.scss';
     .row{
-        margin-top: 25rem;
+        margin-top: 20rem;
         width: 100%;
         color: $white;
         @include media-breakpoint-down(md){
