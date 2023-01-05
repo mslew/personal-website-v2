@@ -67,7 +67,7 @@
 <style lang="scss">
     @import '../../scss/variables.scss';
     .row{
-        margin-top: 20rem;
+        margin-top: 15rem;
         width: 100%;
         color: $white;
         @include media-breakpoint-down(md){

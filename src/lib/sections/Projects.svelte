@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
-    import projects from '../content/projects.json'
+    import projects from '../projects/projects.json'
     import Project from '../components/Project.svelte';
     import ProjectSwitched from '../components/ProjectSwitched.svelte';
     let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
