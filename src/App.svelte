@@ -4,6 +4,8 @@
   import Projects from './lib/sections/Projects.svelte';
   import Contact from './lib/sections/Contact.svelte'; 
   import Nav from './lib/components/Nav.svelte'
+  import Logo from './lib/components/icons/Logo.svelte';
+
 </script>
 
 <Nav />
