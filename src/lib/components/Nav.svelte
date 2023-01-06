@@ -107,14 +107,14 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1000000;
+        z-index: 2;
     }
     .nav{
         position: fixed;
         right: 0;
         top: 8%;
         margin: auto;
-        z-index: 1000000;
+        z-index: 1;
         height: 100%;
         width: 50%;
         align-items: center;
@@ -162,6 +162,7 @@
 
     .navbar-toggler{
         margin-right: 4rem;
+        z-index: 3;
     }
     .side-btn{
         height: 3rem;

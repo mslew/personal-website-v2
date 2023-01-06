@@ -53,6 +53,9 @@
     .intro{
         display: flex;
         margin-bottom: 1rem;
+        @include media-breakpoint-down(md){
+            margin-right: 5rem;
+        }
     }
     .sectionNumberHeader{
         color: $orange;

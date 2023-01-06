@@ -17,6 +17,10 @@
         align-items: center;
         height: 100%;
         width: auto;
+        @include media-breakpoint-down(sm){
+            font-size: .8rem;
+            margin-right: 8rem;
+        } 
     }
     .square{
         position: absolute;
@@ -97,7 +101,7 @@
     .img{
         height: 60%;
         width: auto;
-        z-index: 100;
+        z-index: 0;
         box-shadow: 3px 3px 3px black;
         &:hover ~ .left{
             animation: leftSlideIn .3s linear;

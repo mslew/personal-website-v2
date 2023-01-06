@@ -61,6 +61,11 @@
     .intro{
         display: flex;
         justify-content: center;
+        @include media-breakpoint-down(sm){
+            font-size: .8rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        } 
     }
     .contact-text{
         text-align: center;

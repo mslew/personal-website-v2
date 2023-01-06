@@ -50,7 +50,7 @@
         margin-left: 5rem;
         @include media-breakpoint-down(md){
             margin-top: 8rem;
-            margin-left: 1rem;
+            margin-left: 6rem;
             margin-right: 1rem;
         }
     }

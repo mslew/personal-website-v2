@@ -70,13 +70,20 @@
         margin-top: 15rem;
         width: 100%;
         color: $white;
+        margin-left: 4rem;
         @include media-breakpoint-down(md){
             margin-top: 15rem;
         }
-        margin-left: 4rem;
+        @include media-breakpoint-down(sm){
+            margin-top: 8rem;
+        }
     }
     .intro{
         display: flex;
+        @include media-breakpoint-down(sm){
+            font-size: .8rem;
+            margin-right: 5rem;
+        } 
     }
     .sectionNumberHeader{
         color: $orange;
@@ -104,6 +111,9 @@
             content: "\25B7";
             color: $orange;
         }
+        @include media-breakpoint-down(md){
+            font-size: .8rem;
+        } 
     }
     .lists{
         display: flex;
@@ -128,5 +138,8 @@
         @include media-breakpoint-down(xxl){
             margin-right: 5rem;
         }
+        @include media-breakpoint-down(sm){
+            font-size: .75rem;
+        } 
     }
 </style>
