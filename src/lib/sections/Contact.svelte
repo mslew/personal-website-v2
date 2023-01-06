@@ -27,7 +27,7 @@
                 <div class="col-sm-6">
                     <p class="contact-text">
                         I am looking for full time software engineering opportunities.  
-                        If you are interested, do not be afraid to contact me!
+                        If you are interested, do not hesitate to contact me!
                     </p>
                     <a href="mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email"><button class="btn btn-outline-light">Contact</button></a>
                 </div>
