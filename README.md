@@ -1,5 +1,3 @@
 # Personal Website V2
 
-I am trying to learn Svelte and TypeScript.
-
-This should be fun :)
+This is the second version of my personal website. 
