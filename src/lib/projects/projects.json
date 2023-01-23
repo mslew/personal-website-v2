@@ -26,6 +26,16 @@
         " This is the second version of my personal website.", 
         " I am trying to use more front-end technologies. I had a lot of fun creating it!"]
     },
+    {"title":"QuizMaster", 
+    "techs":["React", "Go", "TailwindCSS", "Firebase"], 
+    "githubIcon":true,
+    "externalIcon":true,
+    "github": "https://github.com/QuizMasterInc/QuizMaster",
+    "link": "https://quizmaster-c66a2.web.app/",
+    "description": ["Software systems capstone project for the computer science degree.", 
+        " This will quiz users on a variety of topics.", 
+        " This is currently a work in progress!"]
+    },
     {"title":"In Theaters", 
     "techs":["Java", "Android Studio"], 
     "githubIcon":true,
