@@ -16,16 +16,6 @@
         " <a href='https://www.maa.org/sites/default/files/pdf/students/undergrad/2022%20Outstanding%20Posters%20-%20FINAL.pdf' target='_blank' style='text-decoration: none; color: #CC5500;'>Outstanding Poster Award</a>", 
         " at MathFest. Paper coming soon!"]
     },
-    {"title":"Personal Website", 
-    "techs":["Svelte", "TypeScript", "Sass", "Bootstrap"], 
-    "githubIcon":true,
-    "externalIcon":true,
-    "github": "https://github.com/mslew/personal-website-v2",
-    "link": "https://maximuslewis.com/",
-    "description": ["You are looking at it!", 
-        " This is the second version of my personal website.", 
-        " I am trying to use more front-end technologies. I had a lot of fun creating it!"]
-    },
     {"title":"QuizMaster", 
     "techs":["React", "Go", "TailwindCSS", "Firebase"], 
     "githubIcon":true,
@@ -35,6 +25,16 @@
     "description": ["Software systems capstone project for the computer science degree.", 
         " This will quiz users on a variety of topics.", 
         " This is currently a work in progress!"]
+    },
+    {"title":"Personal Website", 
+    "techs":["Svelte", "TypeScript", "Sass", "Bootstrap"], 
+    "githubIcon":true,
+    "externalIcon":true,
+    "github": "https://github.com/mslew/personal-website-v2",
+    "link": "https://maximuslewis.com/",
+    "description": ["You are looking at it!", 
+        " This is the second version of my personal website.", 
+        " I am trying to use more front-end technologies. I had a lot of fun creating it!"]
     },
     {"title":"In Theaters", 
     "techs":["Java", "Android Studio"], 
