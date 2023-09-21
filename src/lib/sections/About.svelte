@@ -23,15 +23,14 @@
                     <hr class="line" />
                 </div>
                 <div class="card-body content">
-                    <p>Growing up in Lockport, Illinois I have always enjoyed
-                        technology. In high school I decided to take a couple coding classes
-                        because it would be fun. Who would have thought the impact it would
-                        have had on my life. I decided to major in Computer Science!
+                    <p>Growing up in Lockport, Illinois, I have always enjoyed technology. 
+                        In high school, I decided to take a couple of coding classes because it would be fun. 
+                        Who would have thought the impact it would have had on my life? 
+                        I decided to major in Computer Science!
                     </p>
-                    <p> Studying Computer Science and Mathematics at Lewis University
-                        has been a mentally challenging, but equally intellectually 
-                        stimulating time of my life. I have really enjoyed my studies so far and 
-                        cannot wait to graduate in May of 2023 to pursue Software Engineering as a career! 
+                    <p> Studying Computer Science and Mathematics at Lewis University 
+                        has been a mentally challenging, but equally intellectually stimulating time of my life. 
+                        I have enjoyed my studies so far and I am extremely excited to be a recent graduate and eager to start my career!
                     </p>
                     <p>
                         Here are a few technologies that I know and some I have been working with recently: 
@@ -47,10 +46,10 @@
                         </div>
                         <div class="list">
                             <ul>
-                                <li>Vue.js</li>
+                                <li>React</li>
                                 <li>Bootstrap 5</li>
                                 <li>Sass</li>
-                                <li>Node.js / Express.js</li>
+                                <li>Tailwind CSS</li>
                             </ul>
                         </div>
                     </div>
