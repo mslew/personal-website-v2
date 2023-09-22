@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
-    let nameVisible = false;
-    let subtitleVisible = false;
-    let contentVisible = false;
+    let nameVisible = true; //change this back
+    let subtitleVisible = true; //change this back
+    let contentVisible = true; //change this back
 
     onMount(() => {
         setTimeout(dropName, 6000)

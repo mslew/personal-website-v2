@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
     import AboutPicture from '../components/AboutPicture.svelte';
-    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
+    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
     });

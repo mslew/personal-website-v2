@@ -5,7 +5,7 @@
     import EmailSideBar from "../components/EmailSideBar.svelte";
 </script>
 
-<LogoAnim />
+<!-- <LogoAnim /> take this back when ready :)-->
 
 <section id="intro">
     <IntroCard />
