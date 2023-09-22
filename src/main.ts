@@ -1,5 +1,3 @@
-import "./app.scss";
-import "./scss/app.scss";
 import App from "./App.svelte";
 
 const app = new App({
