@@ -26,41 +26,5 @@
 </div>
 {/if}
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    .socials{
-        display: flex;
-        position: fixed;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0;
-        list-style: none;
-        bottom: 0;
-        left: 3%;
-        padding-bottom: 1rem;
-        height: 18rem;
-        @include media-breakpoint-down(xl){
-            display: none;
-        }
-    }
-    hr{
-        border-left: .25rem solid black;
-        height: 8rem;
-    }
-    .item{
-        margin-bottom: .5rem;
-        &:hover{
-            animation: raise .25s linear;
-            animation-fill-mode: forwards;
-            :global(.icon){
-                fill: $orange;
-            }
-        }
-    }
-    @keyframes raise {
-        to {
-            transform: translateY(-3px);
-        }
-    }
+<style>
 </style>

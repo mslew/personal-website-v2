@@ -14,34 +14,5 @@
     <hr />
 </div>
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    .socials{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: .5rem;
-        @include media-breakpoint-up(xl){
-            display: none;
-        }
-    }
-    hr{
-        margin-left: 1rem;
-        margin-right: 1rem;
-        color: $white;
-        border: .1rem solid $white;
-        width: 2rem;
-        height: 100%;
-    }
-    .item{
-        padding-left: .5rem;
-        padding-right: .5rem;
-        &:hover{
-            animation: raise .25s linear;
-            animation-fill-mode: forwards;
-            :global(.icon){
-                fill: $orange;
-            }
-        }
-    }
+<style>
 </style>

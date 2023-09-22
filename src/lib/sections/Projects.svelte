@@ -39,38 +39,5 @@
 </section>
 {/if}
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    .top{
-        margin-top: 15rem;
-        width: 100%;
-        color: $white;
-        margin-left: 2rem;
-        @include media-breakpoint-down(md){
-            margin-top: 10rem;
-        }
-    }
-    .intro{
-        display: flex;
-        margin-bottom: 1rem;
-        @include media-breakpoint-down(md){
-            margin-right: 5rem;
-        }
-    }
-    .sectionNumberHeader{
-        color: $orange;
-        font-size: 1.5rem;
-        padding-right: 1rem;
-    }
-    .sectionHeader{
-        color: $white;
-        font-size: 1.5rem;
-    }
-    hr{
-        color: $white;
-        border: .1rem solid $white;
-        width: 50%;
-        height: 100%;
-        margin-left: 1rem;
-    }
+<style>
 </style>

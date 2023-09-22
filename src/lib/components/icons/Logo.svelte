@@ -8,15 +8,5 @@
     </svg> 
 </svg>
 
-<style lang="scss">
-    @import '../../../scss/variables.scss';
-    svg{
-        margin-left: 2rem;
-        &:hover{
-            fill: $light-orange;
-            polygon{
-                fill: $light-orange;
-            }
-        }
-    }
+<style>
 </style>

@@ -42,42 +42,5 @@
     </div>
 </div>
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    @import '../../scss/fonts.scss';
-    .card-body{
-        margin-top: 16rem;
-        margin-left: 5rem;
-        @include media-breakpoint-down(md){
-            margin-top: 8rem;
-            margin-left: 6rem;
-            margin-right: 1rem;
-        }
-    }
-    .intro{
-        color: $orange;
-        font-size: 1.5rem;
-        @include media-breakpoint-down(md){
-            font-size: 1rem;
-        }
-    }
-    .name{
-        color: $light-gray;
-        @include media-breakpoint-down(md){
-            font-size: 2rem;
-        }
-    }
-    .subtitle{
-        color: $light-gray;
-        @include media-breakpoint-down(md){
-            font-size: 2rem;
-        }
-    }
-    .content{
-        font-size: 1.25rem;
-        color: $orange;
-        @include media-breakpoint-down(md){
-            font-size: 1rem;
-        }
-    }
+<style>
 </style>

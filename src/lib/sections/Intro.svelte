@@ -13,5 +13,5 @@
     <EmailSideBar />
 </section>
 
-<style lang="scss">
+<style>
 </style>
