@@ -1,4 +1,5 @@
 <script lang="ts">
+  let themeName: string = 'dark';
   import Intro from './lib/sections/Intro.svelte';
   import About from './lib/sections/About.svelte';
   import Projects from './lib/sections/Projects.svelte';
@@ -11,6 +12,3 @@
 <About />
 <Projects />
 <Contact />
-
-<style>
-</style>
