@@ -58,16 +58,16 @@
     <button class="" type="button" on:click={makeSideVisible}>sideButton</button>
     <div class="flex gap-10">
         {#if link1}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="" href="#intro"><span class="">00</span><span class="">Intro</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#intro"><span class="num">00</span><span class="link-text">Intro</span></a>
         {/if}
         {#if link2}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="" href="#about"><span class="">01</span><span class="">About</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#about"><span class="num">01</span><span class="link-text">About</span></a>
         {/if}
         {#if link3}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="" href="#projects"><span class="">02</span><span class="">Projects</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#projects"><span class="num">02</span><span class="link-text">Projects</span></a>
         {/if}
         {#if link4}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="" href="#contact"><span class="">03</span><span class="">Contact</span></a>
+        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#contact"><span class="num">03</span><span class="link-text">Contact</span></a>
         {/if}
         {#if button}
         <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="">Resume</button></a>
@@ -78,13 +78,22 @@
 {/if}
 {#if sideVisible}
 <div in:fly="{{ x: 100, duration: 500 }}" class="" out:fly="{{ x: 100, duration: 500 }}">
-    <a class="" href="#intro"><span class="special">00</span><span class="link">Intro</span></a>
-    <a class="" href="#about"><span class="special">01</span><span class="link">About</span></a>
-    <a class="" href="#projects"><span class="special">02</span><span class="link">Projects</span></a>
-    <a class="" href="#contact"><span class="special">03</span><span class="link">Contact</span></a>
+    <a class="link" href="#intro"><span class="num">00</span><span class="link-text">Intro</span></a>
+    <a class="link" href="#about"><span class="num">01</span><span class="link-text">About</span></a>
+    <a class="link" href="#projects"><span class="num">02</span><span class="link-text">Projects</span></a>
+    <a class="link" href="#contact"><span class="num">03</span><span class="link-text">Contact</span></a>
     <a href="content/Resume.pdf" target="_blank"><button type="button" class="">Resume</button></a>
 </div>
 {/if}
 
-<style>
+<style lang="postcss">
+    .link{
+        @apply bg-transparent
+    }
+    .num{
+        @apply text-2xl text-purple-900 p-1
+    }
+    .link-text{
+        @apply bg-transparent
+    }
 </style>
