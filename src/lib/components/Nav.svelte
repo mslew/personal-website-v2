@@ -53,11 +53,10 @@
 </script>
   
 {#if visible}
-<nav in:fly="{{ y: -100, duration: 1000 }}" class="border-b border-purple-600" out:fly="{{ y: -100, duration: 1000 }}">
+<div in:fly="{{ y: -100, duration: 1000 }}" class="flex border-b border-purple-600" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="" href="/"><Logo /></a>
     <button class="" type="button" on:click={makeSideVisible}>sideButton</button>
-    <div class="">
-      <div class="">
+    <div class="flex gap-10">
         {#if link1}
         <a transition:fly="{{ y: -100, duration: 250 }}" class="" href="#intro"><span class="">00</span><span class="">Intro</span></a>
         {/if}
@@ -73,10 +72,9 @@
         {#if button}
         <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="">Resume</button></a>
         {/if}
-      </div>
-      <ThemeSwitch />
     </div>
-</nav>
+    <ThemeSwitch />
+</div>
 {/if}
 {#if sideVisible}
 <div in:fly="{{ x: 100, duration: 500 }}" class="" out:fly="{{ x: 100, duration: 500 }}">
