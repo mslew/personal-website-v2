@@ -53,7 +53,7 @@
 </script>
   
 {#if visible}
-<nav in:fly="{{ y: -100, duration: 1000 }}" class="bg-red-500" out:fly="{{ y: -100, duration: 1000 }}">
+<nav in:fly="{{ y: -100, duration: 1000 }}" class="border-b border-purple-600" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="bg-red-500" href="/"><Logo /></a>
     <button class="" type="button" on:click={makeSideVisible}>bashk</button>
     <div class="">

@@ -17,11 +17,11 @@
             opacity: 0,
             duration: 2000
         }
-        ScrollReveal().reveal(".row", options);
+        ScrollReveal().reveal(".project", options);
     })
 </script>
 
-<div class="row">
+<div class="project">
     <div class="col title order-1">
         <div class="title-background">
             <p class="display-6 title-text">{@html title}</p>

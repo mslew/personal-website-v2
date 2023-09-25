@@ -1,14 +1,19 @@
 <script lang="ts">
   let themeName: string = 'dark';
-  import Intro from './lib/sections/Intro.svelte';
-  import About from './lib/sections/About.svelte';
-  import Projects from './lib/sections/Projects.svelte';
-  import Contact from './lib/sections/Contact.svelte'; 
-  import Nav from './lib/components/Nav.svelte'
+  import Intro from '@sections/Intro.svelte';
+  import About from '@sections/About.svelte';
+  import Projects from '@sections/Projects.svelte';
+  import Contact from '@sections/Contact.svelte'; 
+  import Nav from '@components/Nav.svelte'
+  import Logo from '@components/icons/Logo.svelte';
 </script>
+
+<svelte:head>
+  <link rel="icon" type="image/svg" sizes="any" href="public/logo.ico" />
+</svelte:head>
 
 <Nav />
 <Intro />
-<About />
-<Projects />
-<Contact />
+<!--<About />-->
+<!--<Projects />-->
+<!--<Contact />-->

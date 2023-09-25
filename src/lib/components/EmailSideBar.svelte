@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
-    let visible = false;
+    let visible = true;
 
     onMount(() => {
         setTimeout(raiseBar, 6750);
