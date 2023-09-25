@@ -1,6 +1,8 @@
 <script lang="ts">
     import GitHub from "./icons/GitHub.svelte";
     import External from "./icons/External.svelte";
+    import ScrollReveal from 'scrollreveal'
+    import { onMount } from "svelte";
     export let title : string;
     export let techs : string[];
     export let githubIcon : boolean;
@@ -8,6 +10,15 @@
     export let github : string;
     export let link : string;
     export let description : string[];
+    onMount(() => {
+        let options = {
+            show: 50, 
+            threshold: 100,
+            opacity: 0,
+            duration: 2000
+        }
+        ScrollReveal().reveal(".row", options);
+    })
 </script>
 
 <div class="row">
