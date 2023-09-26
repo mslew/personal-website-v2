@@ -5,7 +5,7 @@
     import LinkedIn from './icons/LinkedIn.svelte';
     import Handshake from './icons/Handshake.svelte';
     import Instagram from './icons/Instagram.svelte';
-    let visible = true;
+    let visible = false;
 
     onMount(() => {
         setTimeout(raiseBar, 6750);

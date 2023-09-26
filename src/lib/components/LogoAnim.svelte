@@ -20,7 +20,7 @@
 </script>
 
 {#if visible}
-<svg width="200" height="200" style="stroke-width: 5;" out:fade>
+<svg class="absolute m-auto left-0 right-0 top-0 bottom-0" width="200" height="200" style="stroke-width: 5;" out:fade>
     {#if toDraw}
     <polygon in:draw="{{duration: 2000}}" class="fill-black stroke-purple-800" points="5,100 100,195 195,100 100,5" style="stroke-width:8" fill-opacity="0" out:fade/>
     <svg x="50" y="50" id="m" xmlns="http://www.w3.org/2000/svg" 

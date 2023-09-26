@@ -25,19 +25,19 @@
 
 </script>
 
-<div class="container mt-5 d-flex">
-    <div class="card-body">
+<div class="">
+    <div class="">
         {#if nameVisible}
-        <p transition:fly="{{ y: -100, duration: 100 }}" class="intro">Hi, my name is</p>
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="">Hi, my name is</p>
         {/if}
         {#if nameVisible}
-        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-1 name">Maximus Lewis.</h1>
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="">Maximus Lewis.</h1>
         {/if}
         {#if subtitleVisible}
-        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-3 subtitle">Software Engineer</h1>
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="">Software Engineer</h1>
         {/if}
         {#if contentVisible}
-        <p transition:fly="{{ y: -100, duration: 100 }}" class="content mt-4">I am a recent Lewis University Computer Science graduate.</p>
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="">I am a recent Lewis University Computer Science graduate.</p>
         {/if}
     </div>
 </div>
