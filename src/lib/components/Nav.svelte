@@ -1,20 +1,20 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { fly } from 'svelte/transition';
+    import { fly, slide } from 'svelte/transition';
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
 	let visible = true; //change this back dog
-    let sideVisible = false; //change this back dog
+    let sideVisible = true; //change this back dog
     let link1 = true;
     let link2 = true;
     let link3 = true;
     let link4 = true;
     let button = true;
-    let smLink1 = false;
-    let smLink2 = false;
-    let smLink3 = false;
-    let smLink4 = false;
-    let smButton = false;
+    let smLink1 = true;
+    let smLink2 = true;
+    let smLink3 = true;
+    let smLink4 = true;
+    let smButton = true;
     let i = 0; 
     onMount(() => {
         setTimeout(flyDown, 4000)
@@ -79,9 +79,15 @@
 </script>
   
 {#if visible}
-<div in:fly="{{ y: -100, duration: 1000 }}" class="flex border-b border-purple-600 pb-3" out:fly="{{ y: -100, duration: 1000 }}">
+<div in:fly="{{ y: -100, duration: 1000 }}" class="flex border-b border-purple-600 pb-3 -sm:w-min -sm:border-r shadow-lg rounded-lg" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="mt-3" href="/"><Logo /></a>
-    <button class="sm:hidden" type="button" on:click={makeSideVisible}>sideButton</button>
+    <button class="group sm:hidden border rounded-lg mt-4 ml-8 dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black mr-6" type="button" on:click={makeSideVisible}>
+        <div class="ml-1">
+            <div class="border-b border-2 pl-6 mr-1 dark:border-gray-300 border-black"></div>
+            <div class="border-b border-2 pl-5 mt-2 mr-2 dark:border-gray-300 border-black"></div>
+            <div class="border-b border-2 pl-4 mt-2 mr-4 dark:border-gray-300 border-black"></div>
+        </div>
+    </button>
     <div class="flex gap-14 flex-row justify-items-center mt-4 -sm:hidden">
         {#if link1}
         <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#intro"><span class="num">00</span><span class="link-text">Intro</span></a>
@@ -102,32 +108,30 @@
     </div>
 </div>
 {/if}
-{#if sideVisible}
-<div class="sm:hidden">
+<div class="pl-2 sm:hidden flex flex-col w-min shadow-lg z-10 fixed bg-gray-800 rounded-lg">
     {#if smLink1}
-    <a in:fly="{{ x: 100, duration: 100 }}" class="link" href="#intro" out:fly="{{ x: 100, duration: 100 }}"><span class="num">00</span><span class="link-text">Intro</span></a>
+    <a in:fly="{{ x: -100, duration: 100 }}" class="link" href="#intro" out:fly="{{ x: 100, duration: 100 }}"><span class="num">00</span><span class="link-text">Intro</span></a>
     {/if}
     {#if smLink2}
-    <a in:fly="{{ x: 100, duration: 100 }}" class="link" href="#about" out:fly="{{ x: 100, duration: 100 }}"><span class="num">01</span><span class="link-text">About</span></a>
+    <a in:fly="{{ x: -100, duration: 100 }}" class="link" href="#about" out:fly="{{ x: 100, duration: 100 }}"><span class="num">01</span><span class="link-text">About</span></a>
     {/if}
     {#if smLink3}
-    <a in:fly="{{ x: 100, duration: 100 }}" class="link" href="#projects" out:fly="{{ x: 100, duration: 100 }}"><span class="num">02</span><span class="link-text">Projects</span></a>
+    <a in:fly="{{ x: -100, duration: 100 }}" class="link" href="#projects" out:fly="{{ x: 100, duration: 100 }}"><span class="num">02</span><span class="link-text">Projects</span></a>
     {/if}
     {#if smLink4}
-    <a in:fly="{{ x: 100, duration: 100 }}" class="link" href="#contact" out:fly="{{ x: 100, duration: 100 }}"><span class="num">03</span><span class="link-text">Contact</span></a>
+    <a in:fly="{{ x: -100, duration: 100 }}" class="link" href="#contact" out:fly="{{ x: 100, duration: 100 }}"><span class="num">03</span><span class="link-text">Contact</span></a>
     {/if}
     {#if smButton}
-    <div in:fly="{{ x: 100, duration: 100 }}" class="flex flex-row gap-3 ml-2" out:fly="{{ x: 100, duration: 100 }}">
+    <div in:fly="{{ x: -100, duration: 100 }}" class="flex flex-row gap-3 ml-1 pb-2 pr-2 pt-2" out:fly="{{ x: 100, duration: 100 }}">
         <a href="content/Resume.pdf" target="_blank"><button type="button" class="border p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Resume</button></a>
         <ThemeSwitch />
     </div> 
     {/if}
 </div>
-{/if}
 
 <style lang="postcss">
     .link{
-        @apply flex bg-transparent dark:hover:text-purple-900 hover:text-purple-600
+        @apply flex bg-transparent dark:hover:text-purple-900 hover:text-purple-600 w-min
     }
     .num{
         @apply text-2xl dark:text-purple-900 p-1 object-bottom text-purple-600
