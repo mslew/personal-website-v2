@@ -9,8 +9,10 @@
 
 <section id="intro">
     <!--<IntroCard />-->
-    <!--<SocialSideBar />-->
-    <!--<EmailSideBar />-->
+    <div class="flex justify-between">
+        <SocialSideBar />
+        <EmailSideBar />
+    </div>  
 </section>
 
 <style>
