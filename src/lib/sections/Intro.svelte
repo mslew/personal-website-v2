@@ -5,12 +5,14 @@
     import EmailSideBar from "../components/EmailSideBar.svelte";
 </script>
 
-<!-- <LogoAnim /> take this back when ready :)-->
+<!--<LogoAnim />-->
 
 <section id="intro">
-    <IntroCard />
-    <SocialSideBar />
-    <EmailSideBar />
+    <!--<IntroCard />-->
+    <div class="flex justify-between">
+        <SocialSideBar />
+        <EmailSideBar />
+    </div>  
 </section>
 
 <style>

@@ -6,4 +6,10 @@
 body {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     @apply bg-slate-300 dark:bg-gray-900 text-black dark:text-white;
+    font-family: 'Source Code Pro';
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('./fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf');
 }
