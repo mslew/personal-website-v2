@@ -12,6 +12,10 @@ const config = {
         '-sm': {max: '640px'},
       }
     },
+    listStyleType: {
+      none: 'none',
+      square: 'square'
+    }
   },
   plugins: [],
 };

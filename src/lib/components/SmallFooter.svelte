@@ -16,7 +16,7 @@
 </script>
 
 {#if visible}
-<div transition:fly="{{ y: 100, duration: 200 }}" class="lg:hidden fixed bottom-0 h-1/6 w-full border-t border-purple-600 grid grid-cols-6 grid-rows-2 justify-items-center place-items-center shadow-lg">
+<div transition:fly="{{ y: 100, duration: 200 }}" class="lg:hidden fixed bottom-0 h-1/6 w-full border-t dark:bg-gray-900 bg-slate-300 border-purple-600 grid grid-cols-6 grid-rows-2 justify-items-center place-items-center shadow-lg">
     <div>
         <div class="border dark:border-white pr-32 ml-4 border-black -md:pr-16"></div>
     </div>

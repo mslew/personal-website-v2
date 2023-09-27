@@ -45,7 +45,7 @@
 </script>
   
 {#if visible}
-<div in:fly="{{ y: -100, duration: 1000 }}" class="flex border-b border-purple-600 pb-3 shadow-lg rounded-lg -lg:hidden overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
+<div in:fly="{{ y: -100, duration: 1000 }}" class="flex dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg -lg:hidden overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="mt-3" href="/"><Logo /></a>
     <div class="flex gap-14 flex-row justify-items-center mt-4 -sm:hidden overflow-x-hidden">
         {#if link1}
@@ -66,7 +66,7 @@
         {/if}
     </div>
 </div>
-<div transition:fly="{{ y: -100, duration: 1000 }}" class="lg:hidden border-b border-purple-600 grid grid-cols-4 grid-rows-2 justify-items-center place-items-center fixed w-full shadow-lg">
+<div transition:fly="{{ y: -100, duration: 1000 }}" class="lg:hidden dark:bg-gray-900 bg-slate-300 border-b border-purple-600 grid grid-cols-4 grid-rows-2 justify-items-center place-items-center fixed w-full shadow-lg">
     {#if link1}
     <div transition:fly="{{ y: -100, duration: 250 }}">
         <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="border p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Resume</button></a>

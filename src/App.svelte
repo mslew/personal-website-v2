@@ -14,6 +14,6 @@
 
 <Nav />
 <Intro />
-<!--<About />-->
+<About />
 <!--<Projects />-->
 <!--<Contact />-->
