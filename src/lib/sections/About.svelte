@@ -35,7 +35,7 @@
                 Here are a few technologies that I know and some I have been working with recently: 
             </p>
         </div>
-        <div class="grid grid-cols-2 grid-rows-1 justify-items-center place-items-center text-xl">
+        <div class="grid grid-cols-2 grid-rows-1 justify-items-center place-items-center text-xl mt-6">
             <div class="">
                 <ul class="list-square">
                     <li>Java</li>
@@ -55,7 +55,7 @@
     </div>
     </div>
     <div>
-        <div><AboutPicture /></div>
+        <div class="w-3/4 h-auto"><AboutPicture /></div>
         <p>Me in San Diego!</p>
     </div>
 </section>
