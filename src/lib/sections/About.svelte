@@ -17,7 +17,7 @@
         <div class="flex flex-row items-center gap-4">
             <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">01.</p>
             <p class="text-2xl -lg:text-lg">About Me</p>
-            <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-44 -sm:pr-32"></div>
+            <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
         </div>
         <div class="text-xl flex flex-col gap-4 -xl:text-lg -md:text-sm">
             <p>
@@ -27,7 +27,7 @@
                 I decided to major in Computer Science!
             </p>
             <p> 
-                Studying Computer Science and Mathematics at Lewis University 
+                Studying Computer Science at Lewis University 
                 has been a mentally challenging, but equally intellectually stimulating time of my life. 
                 I have enjoyed my studies so far and I am extremely excited to be a recent graduate and eager to start my career!
             </p>
@@ -54,7 +54,7 @@
         </div>
     </div>
     </div>
-    <div class="flex flex-col items-center -xl:ml-10 -lg:ml-0 -lg:col-span-2 -lg:mt-24 -md:mt-10">
+    <div class="flex flex-col items-center xl:ml-10 lg:ml-0 -lg:mr-10 -md:mr-0 -lg:col-span-2 -lg:mt-24 -md:mt-10 -sm:mt-8">
         <AboutPicture />
         <p class="mt-2">Me in San Diego!</p>
     </div>

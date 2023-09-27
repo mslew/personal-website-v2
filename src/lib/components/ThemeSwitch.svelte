@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-
+    import { onMount } from "svelte";
     let darkMode: boolean = false;
     function handleSwitchDarkMode(){
         darkMode = !darkMode;
@@ -11,7 +10,6 @@
             ? document.documentElement.classList.add('dark')
             : document.documentElement.classList.remove('dark')
     }
-
     onMount(() =>{
         if (
                 localStorage.theme === 'dark' ||
