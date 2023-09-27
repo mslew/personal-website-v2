@@ -10,7 +10,7 @@
 
 <section id="intro">
     <IntroCard />
-    <div class="-lg:hidden fixed bottom-4 h-1/4 w-full flex flex-row justify-between">
+    <div class="fixed tall:portrait:hidden -lg:hidden wide:landscape:bottom-36 bottom-4 h-1/4 w-full flex flex-row justify-between">
         <SocialSideBar />
         <EmailSideBar />
     </div>

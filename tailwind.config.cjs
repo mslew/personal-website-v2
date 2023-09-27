@@ -10,6 +10,10 @@ const config = {
         '-lg': {max: '1024px'},
         '-md': {max: '768px'},
         '-sm': {max: '640px'},
+        'tall': {'raw': `only screen and (max-height: 960px) and (max-width: 480px)`},
+        'wide': {'raw': `only screen and (max-height: 480px) and (max-width: 960px)`},
+        'portrait': {'raw': '(orientation: portrait)'},
+        'landscape': {'raw': '(orientation: landscape)'},
       }
     },
     listStyleType: {

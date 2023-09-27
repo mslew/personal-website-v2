@@ -17,7 +17,7 @@
 </script>
 
 {#if visible}
-<div transition:fly="{{ y: 100, duration: 200 }}" class="flex flex-col items-center ml-16">
+<div transition:fly="{{ y: 100, duration: 200 }}" class="flex flex-col items-center ml-16 wide:landscape:ml-4">
     <a class="item" href="https://github.com/mslew" target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub class="icon" height={30}/></a>
     <a class="item" href = "https://www.linkedin.com/in/maximuslewis/" target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn class="icon" height={30}/></a>
     <a class="item" href = "https://lewisu.joinhandshake.com/users/20583963" target = "_blank" rel="noreferrer" aria-label="Handshake" title="Handshake"><Handshake class="icon" height={30}/></a>

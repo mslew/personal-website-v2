@@ -12,14 +12,14 @@
 </script>
 
 {#if onLoadVisible}
-<section class="h-screen pl-44 pr-44 w-full grid grid-cols-2 grid-rows-1 justify-items-center gap-10" id="about">
-    <div class="ml-10">
+<section class="h-screen pl-44 pr-44 w-full grid grid-cols-2 grid-rows-1 justify-items-center gap-10 -lg:justify-items-center -lg:place-items-center" id="about">
+    <div class="ml-10 -lg:col-span-2 -xl:ml-0">
         <div class="flex flex-row items-center gap-4">
-            <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600">01.</p>
-            <p class="text-2xl">About Me</p>
-            <div class="border dark:border-white border-black ml-2 pr-72"></div>
+            <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">01.</p>
+            <p class="text-2xl -lg:text-lg">About Me</p>
+            <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-44 -sm:pr-32"></div>
         </div>
-        <div class="text-xl flex flex-col gap-4">
+        <div class="text-xl flex flex-col gap-4 -xl:text-lg -md:text-sm">
             <p>
                 Growing up in Lockport, Illinois, I have always enjoyed technology. 
                 In high school, I decided to take a couple of coding classes because it would be fun. 
@@ -35,7 +35,7 @@
                 Here are a few technologies that I know and some I have been working with recently: 
             </p>
         </div>
-        <div class="grid grid-cols-2 grid-rows-1 justify-items-center place-items-center text-xl mt-6">
+        <div class="grid grid-cols-2 grid-rows-1 justify-items-center place-items-center text-xl mt-6 -lg:text-lg -md:text-base">
             <div class="">
                 <ul class="list-square">
                     <li>Java</li>
@@ -54,9 +54,9 @@
         </div>
     </div>
     </div>
-    <div>
-        <div class="w-3/4 h-auto"><AboutPicture /></div>
-        <p>Me in San Diego!</p>
+    <div class="flex flex-col items-center -xl:ml-10 -lg:ml-0 -lg:col-span-2 -lg:mt-24 -md:mt-10">
+        <AboutPicture />
+        <p class="mt-2">Me in San Diego!</p>
     </div>
 </section>
 {/if}
