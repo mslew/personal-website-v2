@@ -62,11 +62,11 @@
         {/if}
         {#if button}
         <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="border p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Resume</button></a>
-        <div class="mr-4" transition:fly="{{ y: -100, duration: 250 }}"><ThemeSwitch /></div>
+        <div class="mr-4 " transition:fly="{{ y: -100, duration: 250 }}"><ThemeSwitch /></div>
         {/if}
     </div>
 </div>
-<div transition:fly="{{ y: -100, duration: 1000 }}" class="lg:hidden border-b border-purple-600 grid grid-cols-4 grid-rows-2 justify-items-center place-items-center fixed w-full">
+<div transition:fly="{{ y: -100, duration: 1000 }}" class="lg:hidden border-b border-purple-600 grid grid-cols-4 grid-rows-2 justify-items-center place-items-center fixed w-full shadow-lg">
     {#if link1}
     <div transition:fly="{{ y: -100, duration: 250 }}">
         <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="border p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Resume</button></a>
@@ -101,10 +101,10 @@
 
 <style lang="postcss">
     .link{
-        @apply flex flex-auto flex-shrink overflow-x-hidden bg-transparent dark:hover:text-purple-900 hover:text-purple-600 w-min 
+        @apply flex flex-auto flex-shrink overflow-x-hidden bg-transparent dark:hover:text-purple-900 hover:text-purple-600 w-min  
     }
     .num{
-        @apply text-2xl dark:text-purple-900 p-1 object-bottom text-purple-600
+        @apply text-2xl dark:text-purple-900 p-1 object-bottom text-purple-600 
     }
     .sm-num{
         @apply text-sm dark:text-purple-900 text-purple-600
