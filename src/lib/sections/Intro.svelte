@@ -9,10 +9,10 @@
 
 <section id="intro">
     <!--<IntroCard />-->
-    <div class="flex justify-between">
+    <div class="-lg:hidden fixed bottom-4 h-1/4 w-full flex flex-row justify-between">
         <SocialSideBar />
         <EmailSideBar />
-    </div>  
+    </div>
 </section>
 
 <style>
