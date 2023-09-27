@@ -9,7 +9,7 @@
 <!--<LogoAnim />-->
 
 <section id="intro">
-    <!--<IntroCard />-->
+    <IntroCard />
     <div class="-lg:hidden fixed bottom-4 h-1/4 w-full flex flex-row justify-between">
         <SocialSideBar />
         <EmailSideBar />
