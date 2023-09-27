@@ -36,13 +36,13 @@
         <div class="border dark:border-white pr-32 mr-4 border-black -md:pr-16"></div>
     </div>
     <div class="col-span-2">
-        <div class="border dark:border-white pr-72 ml-10 border-black -md:pr-52 -sm:pr-14"></div>
+        <div class="border dark:border-white pr-72 -lg:ml-10 border-black -md:pr-52 -sm:pr-14 -sm:ml-3"></div>
     </div>
     <div class="col-span-2">
         <a class="email mr-2 ml-2 -sm:pl-2" href = "mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email">mlew3223@gmail.com</a>
     </div>
     <div class="col-span-2">
-        <div class="flex border dark:border-white pr-72 mr-10 border-black -md:pr-52 -sm:pr-14"></div>
+        <div class="flex border dark:border-white pr-72 -lg:mr-10 border-black -md:pr-52 -sm:pr-14 -sm:mr-0"></div>
     </div>
 </div>
 {/if}
