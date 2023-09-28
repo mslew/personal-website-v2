@@ -26,10 +26,10 @@
 <div class={"flex flex-col " + orientation}>
     <div class={"mb-6 " + headerTextAlign}>
         <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
-        <p class="text-2xl mt-2">{@html title}</p>
+        <p class="text-2xl mt-2 -sm:text-xl">{@html title}</p>
     </div>
-    <div class="lmb-4 rounded-lg dark:bg-gray-800 bg-slate-400 w-1/2 p-4 shadow-lg">
-        <p>
+    <div class="lmb-4 rounded-lg dark:bg-gray-800 bg-slate-400 w-1/2 p-4 shadow-lg -lg:w-full">
+        <p class="-sm:text-sm">
             {#each description as line}
             {@html line}
             {/each}
