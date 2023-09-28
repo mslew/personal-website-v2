@@ -27,12 +27,12 @@
     "description": ["Research project started in June 2022. This is an Agent-Based model of <i>C. difficile</i> developed in NetLogo.",
         " The research has been conducted with a partner and two faculty advisors.",
         " I have presented the research at the Mathematical Association of America's",
-        " <a class='dark:text-purple-900 p-1 object-bottom text-purple-600' href='https://www.maa.org/sites/default/files/pdf/students/undergrad/PosterSess22%20%282%29.pdf' target='_blank'>MathFest</a>", 
-        " in Philadelphia, PA and the <a class='dark:text-purple-900 p-1 object-bottom text-purple-600' href='https://ir.library.illinoisstate.edu/cgi/viewcontent.cgi?article=1625&context=beer' target='_blank'>Symposium on Biomathematics</a>", 
+        " <a class='text-purple-600' href='https://www.maa.org/sites/default/files/pdf/students/undergrad/PosterSess22%20%282%29.pdf' target='_blank'>MathFest</a>", 
+        " in Philadelphia, PA and the <a class='text-purple-600' href='https://ir.library.illinoisstate.edu/cgi/viewcontent.cgi?article=1625&context=beer' target='_blank'>Symposium on Biomathematics</a>", 
         " and Ecology Education and Research at Illinois State University.",
-        " I have won <a class='dark:text-purple-900 p-1 object-bottom text-purple-600' href='https://qubeshub.org/community/groups/biosigmaa/andersen_prize' target='_blank'>The Janet L. Andersen Award</a>",
+        " I have won <a class='text-purple-600' href='https://qubeshub.org/community/groups/biosigmaa/andersen_prize' target='_blank'>The Janet L. Andersen Award</a>",
         " for Undergraduate Research in Mathematical or Computational Biology, and the Undergraduate Student Poster Session",
-        " <a class='dark:text-purple-900 p-1 object-bottom text-purple-600' href='https://www.maa.org/sites/default/files/pdf/students/undergrad/2022%20Outstanding%20Posters%20-%20FINAL.pdf' target='_blank'>Outstanding Poster Award</a>", 
+        " <a class='text-purple-600' href='https://www.maa.org/sites/default/files/pdf/students/undergrad/2022%20Outstanding%20Posters%20-%20FINAL.pdf' target='_blank'>Outstanding Poster Award</a>", 
         " at MathFest. Manuscript coming soon!"]
     }
 ]}
