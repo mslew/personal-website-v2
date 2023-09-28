@@ -10,11 +10,11 @@
 
 <section id="intro">
     <IntroCard />
-    <div class="fixed tall:portrait:hidden -lg:hidden wide:landscape:bottom-36 bottom-4 h-1/4 w-full flex flex-row justify-between">
+    <div class="fixed wide:landscape:bottom-36 -md:hidden bottom-4 h-1/4 w-full flex flex-row justify-between">
         <SocialSideBar />
         <EmailSideBar />
     </div>
-    <SmallFooter />
+    <!--<SmallFooter />-->
 </section>
 
 <style>
