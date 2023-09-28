@@ -43,7 +43,7 @@
             <p class="text-2xl -lg:text-lg">Other Projects</p>
             <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
         </div>
-        <div class="w-1/2 grid grid-cols-3 gap-3">
+        <div class="w-1/2 tall:portrait:w-3/4 grid grid-cols-3 gap-3">
             {#each otherprojects.otherprojects as project}
                 <OtherProject title={project.title} techs={project.techs} githubIcon={project.githubIcon} 
                 externalIcon={project.externalIcon} github={project.github} 

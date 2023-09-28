@@ -1,6 +1,6 @@
 {"otherprojects":[
     {"title":"Personal Website", 
-    "techs":["Svelte", "TypeScript", "Sass", "Bootstrap"], 
+    "techs":["Svelte", "TypeScript", "Tailwind CSS"], 
     "githubIcon":true,
     "externalIcon":true,
     "github": "https://github.com/mslew/personal-website-v2",
