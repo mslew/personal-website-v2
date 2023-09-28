@@ -25,7 +25,7 @@
 
 </script>
 
-<div class="h-screen w-full grid grid-cols-3 grid-rows-2 justify-items-center place-items-center">
+<div class="h-screen w-full grid grid-cols-3 grid-rows-2 justify-items-center place-items-center tall:portrait:mb-14 wide:landscape:mb-80 wide:landscape:pt-20">
     <div class="row-span-2 col-span-2 -2xl:col-span-3">
         {#if nameVisible}
         <p transition:fly="{{ y: -100, duration: 100 }}" class="text-2xl p-6 dark:text-purple-900 text-purple-600 -lg:text-xl -sm:pb-0">Hi, my name is</p>
