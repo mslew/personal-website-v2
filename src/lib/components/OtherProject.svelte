@@ -34,10 +34,10 @@
             {/if}
         </div>
     </div>
-    <div class="title">
+    <div class="title text-xl">
         {@html title}
     </div>
-    <div class="mt-2">
+    <div class="mt-2 text-sm">
         {#each description as line}
         {@html line}
         {/each}
