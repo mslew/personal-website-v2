@@ -10,6 +10,7 @@
     export let github : string;
     export let link : string;
     export let description : string[];
+    export let orientation : string;
     onMount(() => {
         let options = {
             show: 50, 
@@ -21,35 +22,35 @@
     })
 </script>
 
-<div class="project">
-    <div class="col title order-1">
-        <div class="title-background">
-            <p class="display-6 title-text">{@html title}</p>
-        </div>
-        <div class="technologies">
-            <p class="technology">
-                {#each techs as tech}
-                <p class = "tech">{tech}</p>
-                {/each}
-            </p>
-        </div>
+<div class={"flex flex-col items-start|items-end " + orientation}>
+    <div class="mb-6">
+        <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
+        <p class="text-2xl mt-2">{@html title}</p>
     </div>
-    <div class="col-lg-6 description order-2">
+    <div class="lmb-4 rounded-lg bg-gray-800 w-1/2 p-4 shadow-lg">
         <p>
             {#each description as line}
             {@html line}
             {/each}
         </p>
     </div>
-    <div class="links order-3">
+    <div class="flex flex-row gap-10 mt-6">
+        {#each techs as tech}
+            <p class="">{tech}</p>
+        {/each}
+    </div>
+    <div class="flex flex-row gap-8 mt-6">
         {#if githubIcon}
-        <a class="iconlink" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
+            <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
         {/if}
         {#if externalIcon}
-        <a class="iconlink" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
+            <a class="icon" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
         {/if}
     </div>
 </div>
 
-<style>
+<style lang="postcss">
+    .icon{
+        @apply dark:hover:fill-purple-900 pb-3 hover:fill-purple-600 dark:fill-white fill-black transition ease-in-out hover:-translate-y-1 duration-300
+    }
 </style>

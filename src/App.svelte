@@ -14,5 +14,5 @@
 <Nav />
 <Intro />
 <About />
-<!--<Projects />-->
+<Projects />
 <!--<Contact />-->
