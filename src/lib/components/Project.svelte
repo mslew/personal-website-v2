@@ -11,6 +11,7 @@
     export let link : string;
     export let description : string[];
     export let orientation : string;
+    export let headerTextAlign: string;
     onMount(() => {
         let options = {
             show: 50, 
@@ -22,12 +23,12 @@
     })
 </script>
 
-<div class={"flex flex-col items-start|items-end " + orientation}>
-    <div class="mb-6">
+<div class={"flex flex-col " + orientation}>
+    <div class={"mb-6 " + headerTextAlign}>
         <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
         <p class="text-2xl mt-2">{@html title}</p>
     </div>
-    <div class="lmb-4 rounded-lg bg-gray-800 w-1/2 p-4 shadow-lg">
+    <div class="lmb-4 rounded-lg dark:bg-gray-800 bg-slate-400 w-1/2 p-4 shadow-lg">
         <p>
             {#each description as line}
             {@html line}
