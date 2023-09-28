@@ -4,7 +4,6 @@
   import Projects from '@sections/Projects.svelte';
   import Contact from '@sections/Contact.svelte'; 
   import Nav from '@components/Nav.svelte'
-  console.log(window.screen.orientation.type)
 </script>
 
 <svelte:head>
@@ -15,4 +14,4 @@
 <Intro />
 <About />
 <Projects />
-<!--<Contact />-->
+<Contact />
