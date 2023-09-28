@@ -38,21 +38,17 @@
             </div>
         </div>
     </div>
-    <div class="w-1/2 grid grid-rows-2 grid-cols-3 gap-2">
-        <div class="bg-red-500 rounded-lg">
-            aa
+    <div class="w-full grid justify-items-center place-items-center">
+        <div class="flex flex-row items-center gap-4 mb-8 mt-8 tall:portrait:mt-16">
+            <p class="text-2xl -lg:text-lg">Other Projects</p>
+            <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
         </div>
-        <div class="bg-blue-500 row-span-2 rounded-lg">
-            aa
-        </div>
-        <div class="bg-yellow-500 rounded-lg">
-            aa
-        </div>
-        <div class="bg-green-500 rounded-lg">
-            aa
-        </div>
-        <div class="bg-purple-500 rounded-lg">
-            aa
+        <div class="w-1/2 grid grid-cols-3 gap-3">
+            {#each otherprojects.otherprojects as project}
+                <OtherProject title={project.title} techs={project.techs} githubIcon={project.githubIcon} 
+                externalIcon={project.externalIcon} github={project.github} 
+                link={project.link} description={project.description}/>
+            {/each}
         </div>
     </div>
 </section>
