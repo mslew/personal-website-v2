@@ -22,7 +22,7 @@
     })
 </script>
 
-<div class="other-project dark:bg-gray-800 bg-slate-400 rounded-lg p-6 transition ease-in-out hover:-translate-y-2 duration-300 z-10 -2xl:col-span-3">
+<div class="other-project dark:bg-gray-800 bg-slate-400 rounded-lg p-6 transform ease-in-out hover:-translate-y-2 duration-300 z-10 -2xl:col-span-3">
     <div class="flex flex-row justify-between">
         <File class="dark:fill-white fill-black mb-2" height={50}/>
         <div class="flex flex-row gap-4">
