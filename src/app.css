@@ -9,6 +9,10 @@ body {
     font-family: 'Source Code Pro';
 }
 
+.underline-hover{
+    @apply block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 dark:bg-purple-900 bg-purple-600;
+}
+
 @font-face {
     font-family: 'Source Code Pro';
     src: url('./fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf');

@@ -23,15 +23,17 @@
             I am looking for full time software engineering opportunities.  
             If you are interested, do not hesitate to contact me!
         </p>
-        <a href="mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email"><button class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Contact</button></a>
+        <a class="mb-20 z-0 wide:landscape:mb-12" href="mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email"><div class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Contact</div></a>
     </div>
-    <div class="">
-        <div class="md:hidden wide:landscape:hidden">
-            <BottomSocials />
-        </div>
-        <div class="">
-            <a href="https://github.com/mslew/personal-website-v2" target="_blank" rel="noreferrer" aria-label="Repo" title="Repo"><p class="credits">Designed and Built by Maximus Lewis</p></a>
-        </div>
+    <div class="md:hidden wide:landscape:hidden">
+        <BottomSocials />
+    </div>
+    <div class="z-0 mb-6">
+        <a class=" dark:hover:text-purple-900 hover:text-purple-600 group" href="https://github.com/mslew/personal-website-v2" 
+        target="_blank" rel="noreferrer" aria-label="Repo" title="Repo">
+            Designed and Built by Maximus Lewis
+            <span class="underline-hover"></span> 
+        </a>
     </div>
 </section>
 {/if}
