@@ -42,7 +42,7 @@
         <div class="flex flex-row items-center gap-4 mb-8 mt-8 tall:portrait:mt-16">
             <div class="border dark:border-white border-black ml-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
                 <p class="text-2xl -lg:text-lg">Other Projects</p>
-            <div class="border dark:border-white border-black ml-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
+            <div class="border dark:border-white border-black mr-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
         </div>
         <div class="w-1/2 tall:portrait:w-3/4 grid grid-cols-3 gap-3">
             {#each otherprojects.otherprojects as project}
