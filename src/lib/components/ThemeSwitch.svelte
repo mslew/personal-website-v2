@@ -10,18 +10,25 @@
             ? document.documentElement.classList.add('dark')
             : document.documentElement.classList.remove('dark')
     }
-    onMount(() =>{
+
+    function checkLocal(){
         if (
-                localStorage.theme === 'dark' ||
-                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+            localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
             document.documentElement.classList.add('dark')
             darkMode = true;
         }else{
             document.documentElement.classList.remove('dark')
             darkMode = false;
         }
+    }
+
+    onMount(() =>{
+        checkLocal()
     })
 </script>
+
+<svelte:window on:resize={checkLocal}/>
 
 <div>
     <button class="flex flex-row rounded-2xl border-2 dark:border-gray-300 border-black mt-1 dark:hover:bg-purple-900 hover:bg-purple-400" on:click={handleSwitchDarkMode}>
