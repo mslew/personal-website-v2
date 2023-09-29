@@ -2,16 +2,17 @@
     import { onMount } from 'svelte';
     import AboutPicture from '../components/AboutPicture.svelte';
     import ScrollReveal from "scrollreveal"
-    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
+    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
         let options = {
             show: 50, 
             threshold: 100,
             opacity: 0,
-            duration: 2000
+            duration: 2000,
+            delay: 500,
         }
-        ScrollReveal().reveal(".about", options);
+        ScrollReveal().reveal(".reveal", options);
     });
 
     function makeVisible(){
