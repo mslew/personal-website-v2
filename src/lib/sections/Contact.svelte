@@ -18,12 +18,16 @@
         <p class="text-2xl -lg:text-lg">Contact</p>
         <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
     </div>
-    <div class="grid justify-items-center w-1/4 gap-8 wide:landscape:w-1/2 tall:portrait:w-3/4">
+    <div class="grid justify-items-center w-1/4 gap-8 wide:landscape:w-1/2 -md:w-3/4">
         <p class="text-center">
             I am looking for full time software engineering opportunities.  
             If you are interested, do not hesitate to contact me!
         </p>
-        <a class="mb-20 z-0 wide:landscape:mb-12" href="mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email"><div class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Contact</div></a>
+        <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150 mb-20 z-0">
+            <a class="mb-20 z-0 wide:landscape:mb-12" href="mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email">
+                <div class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Contact</div>
+            </a>
+        </div>
     </div>
     <div class="md:hidden wide:landscape:hidden">
         <BottomSocials />

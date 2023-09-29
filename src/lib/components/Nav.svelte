@@ -61,7 +61,11 @@
         <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#contact"><span class="num">03</span><span class="link-text">Contact</span></a>
         {/if}
         {#if button}
-        <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Resume</button></a>
+        <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150">
+            <a href="content/Resume.pdf" target="_blank">
+                <div transition:fly="{{ y: -100, duration: 250 }}" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
+            </a>
+        </div>
         <div class="mr-4 " transition:fly="{{ y: -100, duration: 250 }}"><ThemeSwitch /></div>
         {/if}
     </div>

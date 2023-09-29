@@ -3,7 +3,6 @@
     import IntroCard from "@components/IntroCard.svelte";
     import SocialSideBar from "@components/SocialSideBar.svelte";
     import EmailSideBar from "@components/EmailSideBar.svelte";
-    import SmallFooter from "@components/SmallFooter.svelte";
 </script>
 
 <!--<LogoAnim />-->
@@ -14,7 +13,6 @@
         <SocialSideBar />
         <EmailSideBar />
     </div>
-    <!--<SmallFooter />-->
 </section>
 
 <style>
