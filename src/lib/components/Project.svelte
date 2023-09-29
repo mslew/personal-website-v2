@@ -19,11 +19,11 @@
             opacity: 0,
             duration: 2000
         }
-        ScrollReveal().reveal(".project", options);
+        ScrollReveal().reveal(".featured-project", options);
     })
 </script>
 
-<div class={"flex flex-col " + orientation}>
+<div class={"flex flex-col featured-project " + orientation}>
     <div class={"mb-6 " + headerTextAlign}>
         <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
         <p class="text-2xl mt-2 -sm:text-xl">{@html title}</p>

@@ -1,9 +1,17 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import BottomSocials from '../components/BottomSocials.svelte';
+    import ScrollReveal from 'scrollreveal'
     let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
+        let options = {
+            show: 50, 
+            threshold: 100,
+            opacity: 0,
+            duration: 2000
+        }
+        ScrollReveal().reveal(".reveal", options);
     });
 
     function makeVisible(){
@@ -13,12 +21,12 @@
 
 {#if onLoadVisible}
 <section class="h-full w-full grid justify-items-center" id="contact">
-    <div class="flex flex-row items-center gap-4 mb-8 mt-8">
+    <div class="reveal flex flex-row items-center gap-4 mb-8 mt-8">
         <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">03.</p>
         <p class="text-2xl -lg:text-lg">Contact</p>
         <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
     </div>
-    <div class="grid justify-items-center w-1/4 gap-8 wide:landscape:w-1/2 -md:w-3/4">
+    <div class="reveal grid justify-items-center w-1/4 gap-8 wide:landscape:w-1/2 -md:w-3/4">
         <p class="text-center">
             I am looking for full time software engineering opportunities.  
             If you are interested, do not hesitate to contact me!

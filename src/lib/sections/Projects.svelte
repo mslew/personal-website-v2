@@ -4,9 +4,17 @@
     import otherprojects from '../projects/otherprojects.json'
     import Project from '../components/Project.svelte';
     import OtherProject from '@components/OtherProject.svelte';
+    import ScrollReveal from "scrollreveal";
     let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
+        let options = {
+            show: 50, 
+            threshold: 100,
+            opacity: 0,
+            duration: 2000
+        }
+        ScrollReveal().reveal(".project-header", options);
     });
 
     function makeVisible(){
@@ -18,7 +26,7 @@
 <section class="h-full w-full grid justify-items-center wide:landscape:mt-96" id="projects">
     <div class="grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2">
         <div class="">
-            <div class="flex flex-row items-center gap-4 mb-8 tall:portrait:mt-16">
+            <div class="project-header flex flex-row items-center gap-4 mb-8 tall:portrait:mt-16">
                 <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">02.</p>
                 <p class="text-2xl -lg:text-lg">My Projects</p>
                 <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
@@ -39,7 +47,7 @@
         </div>
     </div>
     <div class="w-full grid justify-items-center place-items-center">
-        <div class="flex flex-row items-center gap-4 mb-8 mt-8 tall:portrait:mt-16">
+        <div class="project-header flex flex-row items-center gap-4 mb-8 mt-8 tall:portrait:mt-16">
             <div class="border dark:border-white border-black ml-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
                 <p class="text-2xl -lg:text-lg">Other Projects</p>
             <div class="border dark:border-white border-black mr-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
