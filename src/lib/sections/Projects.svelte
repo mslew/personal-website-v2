@@ -5,7 +5,7 @@
     import Project from '../components/Project.svelte';
     import OtherProject from '@components/OtherProject.svelte';
     import ScrollReveal from "scrollreveal";
-    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
+    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
         let options = {
@@ -24,7 +24,7 @@
 </script>
 
 {#if onLoadVisible}
-<section class="reveal h-full w-full grid justify-items-center wide:landscape:mt-96 mt-6" id="projects">
+<section class="reveal h-full w-full grid justify-items-center mt-6" id="projects">
     <div class="grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2">
         <div class="reveal">
             <div class="reveal flex flex-row items-center gap-4 mb-8 tall:portrait:mt-16">
@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div class="w-full grid justify-items-center place-items-center">
+    <div class="h-full w-full grid justify-items-center place-items-center">
         <div class="reveal flex flex-row items-center gap-4 mb-8 mt-8 tall:portrait:mt-16">
             <div class="border dark:border-white border-black ml-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
                 <p class="text-2xl -lg:text-lg">Other Projects</p>

@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import AboutPicture from '../components/AboutPicture.svelte';
     import ScrollReveal from "scrollreveal"
-    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
+    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
         let options = {
@@ -21,7 +21,7 @@
 </script>
 
 {#if onLoadVisible}
-<section class="about h-screen pl-44 pr-44 w-full grid grid-cols-2 grid-rows-1 justify-items-center gap-10 -lg:justify-items-center -lg:place-items-center" id="about">
+<section class="about h-full pl-44 pr-44 w-full grid grid-cols-2 grid-rows-1 justify-items-center gap-10 -lg:justify-items-center -lg:place-items-center" id="about">
     <div class="ml-10 -lg:col-span-2 -xl:ml-0">
         <div class="flex flex-row items-center gap-4">
             <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">01.</p>
@@ -63,9 +63,9 @@
         </div>
     </div>
     </div>
-    <div class="flex flex-col items-center xl:ml-10 lg:ml-0 -lg:mr-10 -md:mr-0 -lg:col-span-2 -lg:mt-24 -md:mt-10 -sm:mt-8">
+    <div class="flex flex-col items-center xl:ml-10 lg:ml-0 -lg:mr-10 -md:mr-0 -lg:col-span-2">
         <AboutPicture />
-        <p class="mt-2">Me in San Diego!</p>
+        <p class="mt-2 mb-10">Me in San Diego!</p>
     </div>
 </section>
 {/if}
