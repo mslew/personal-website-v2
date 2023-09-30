@@ -38,7 +38,7 @@
             </a>
         </div>
     </div>
-    <div class="md:hidden wide:landscape:hidden">
+    <div class="md:hidden">
         <BottomSocials />
     </div>
     <div class="z-0 mb-6">

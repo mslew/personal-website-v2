@@ -5,7 +5,7 @@
     import IntroCard from "@components/IntroCard.svelte";
     import SocialSideBar from "@components/SocialSideBar.svelte";
     import EmailSideBar from "@components/EmailSideBar.svelte";
-    let visible = false;
+    let visible = true;
 
     onMount(() => {
         setTimeout(raiseBar, 6750);
@@ -16,12 +16,12 @@ function raiseBar(){
 }
 </script>
 
-<LogoAnim />
+<!--<LogoAnim />-->
 
 <section id="intro">
     <IntroCard />
     {#if visible}
-        <div transition:fly="{{ y: 100, duration: 200 }}" class="fixed wide:landscape:bottom-36 -md:hidden bottom-4 h-1/4 w-full flex flex-row justify-between">
+        <div transition:fly="{{ y: 100, duration: 200 }}" class="fixed -md:hidden bottom-4 h-1/4 w-full flex flex-row justify-between">
             <SocialSideBar />
             <EmailSideBar />
         </div>

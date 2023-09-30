@@ -3,12 +3,12 @@
     import { fly} from 'svelte/transition';
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
-	let visible = false; //change this back dog
-    let link1 = false;
-    let link2 = false;
-    let link3 = false;
-    let link4 = false;
-    let button = false;
+	let visible = true; //change this back dog
+    let link1 = true;
+    let link2 = true;
+    let link3 = true;
+    let link4 = true;
+    let button = true;
     let i = 0; 
     onMount(() => {
         setTimeout(flyDown, 4000) //4000
@@ -45,9 +45,9 @@
 </script>
   
 {#if visible}
-<div in:fly="{{ y: -100, duration: 1000 }}" class="flex tall:portrait:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
+<div in:fly="{{ y: -100, duration: 1000 }}" class="flex flex-row -md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="mt-3" href="/"><Logo /></a>
-    <div class="flex gap-14 flex-row justify-items-center pt-4 -sm:hidden overflow-x-hidden wide:landscape:gap-8 z-50">
+    <div class="flex gap-4 flex-row justify-items-center pt-4 overflow-x-hidden wide:landscape:gap-8 z-50 flex-shrink-0">
         {#if link1}
         <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#intro"><span class="num">00</span><span class="link-text">Intro</span></a>
         {/if}
@@ -66,14 +66,16 @@
                 <div transition:fly="{{ y: -100, duration: 250 }}" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
             </a>
         </div>
-        <div class="mr-4 " transition:fly="{{ y: -100, duration: 250 }}"><ThemeSwitch /></div>
+        <div class="" transition:fly="{{ y: -100, duration: 250 }}"><ThemeSwitch /></div>
         {/if}
     </div>
 </div>
-<div transition:fly="{{ y: -100, duration: 1000 }}" class="lg:hidden wide:landscape:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 grid grid-cols-4 grid-rows-2 justify-items-center place-items-center fixed w-full shadow-lg">
+<div transition:fly="{{ y: -100, duration: 1000 }}" class="md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 grid grid-cols-4 grid-rows-2 justify-items-center place-items-center fixed w-full shadow-lg">
     {#if link1}
-    <div transition:fly="{{ y: -100, duration: 250 }}">
-        <a href="content/Resume.pdf" target="_blank"><button transition:fly="{{ y: -100, duration: 250 }}" type="button" class="border p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black">Resume</button></a>
+    <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150">
+        <a href="content/Resume.pdf" target="_blank">
+            <div transition:fly="{{ y: -100, duration: 250 }}" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
+        </a>
     </div>
     <div transition:fly="{{ y: -100, duration: 250 }}" class="mt-2 mb-2 col-span-2">
         <Logo />
