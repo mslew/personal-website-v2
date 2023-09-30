@@ -9,7 +9,7 @@
   import { onMount } from 'svelte';
   let onLoadVisible: string = ' hidden';
   onMount(() => {
-    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 4000);
+    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 4000); //this is important to run on the 4000 interval.
     setTimeout(makeVisible, 4000);
   })
 
