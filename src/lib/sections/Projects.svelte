@@ -15,7 +15,7 @@
 </script>
 
 {#if onLoadVisible}
-<section class="h-full w-[99vw] grid justify-items-center mt-6" id="projects">
+<section class="h-full w-full grid justify-items-center mt-6" id="projects">
     <div class="grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2 md:mt-24 xl:mt-44">
         <div class="">
             <div class="reveal flex flex-row items-center gap-4 mb-8">
