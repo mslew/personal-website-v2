@@ -1,8 +1,6 @@
 <script lang="ts">
     import GitHub from "./icons/GitHub.svelte";
     import External from "./icons/External.svelte";
-    import ScrollReveal from 'scrollreveal'
-    import { onMount } from "svelte";
     export let title : string;
     export let techs : string[];
     export let githubIcon : boolean;
@@ -12,19 +10,9 @@
     export let description : string[];
     export let orientation : string;
     export let headerTextAlign: string;
-    onMount(() => {
-        let options = {
-            show: 50, 
-            threshold: 100,
-            opacity: 0,
-            duration: 2000,
-            delay: 500,
-        }
-        ScrollReveal().reveal(".featured-project", options);
-    })
 </script>
 
-<div class={"flex flex-col featured-project " + orientation}>
+<div class={"flex flex-col featured-project reveal " + orientation}>
     <div class={"mb-6 " + headerTextAlign}>
         <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
         <p class="text-2xl mt-2 -sm:text-xl">{@html title}</p>
