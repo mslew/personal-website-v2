@@ -1,0 +1,26 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    @apply bg-slate-300 dark:bg-gray-900 text-black dark:text-white;
+    font-family: 'Source Code Pro';
+}
+
+html {
+    @media (max-width: 768px){
+        scroll-padding-top: 150px;
+    }
+    scroll-padding-top: 85px;
+}
+
+.underline-hover{
+    @apply block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 dark:bg-purple-900 bg-purple-600;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('./fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf');
+}

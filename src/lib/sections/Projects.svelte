@@ -1,76 +1,48 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { fade } from 'svelte/transition';
     import projects from '../projects/projects.json'
+    import otherprojects from '../projects/otherprojects.json'
     import Project from '../components/Project.svelte';
-    import ProjectSwitched from '../components/ProjectSwitched.svelte';
-    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
-    onMount(() => {
-        setTimeout(makeVisible, 7000);
-    });
-
-    function makeVisible(){
-        onLoadVisible = true;
-    }
+    import OtherProject from '@components/OtherProject.svelte';
 </script>
 
-{#if onLoadVisible}
-<section id="projects" in:fade>
-    <div class="container mt-5">
-        <div class="row top">
-            <div class="col">
-                <div class="intro">
-                    <p class="sectionNumberHeader">02.</p>
-                    <p class="sectionHeader">My Projects</p>
-                    <hr class="line" />
-                </div>
+<section class="h-full w-full grid justify-items-center mt-6" id="projects">
+    <div class="grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2 md:mt-24 xl:mt-44">
+        <div class="">
+            <div class="reveal flex flex-row items-center gap-4 mb-8">
+                <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">02.</p>
+                <p class="text-2xl -lg:text-lg">My Projects</p>
+                <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
+            </div>
+            <div class="flex flex-col gap-16 tall:portrait:">
+                {#each projects.projects as project, i}
+                    {#if i % 2 != 0}
+                        <Project title={project.title} techs={project.techs} githubIcon={project.githubIcon}
+                        externalIcon={project.externalIcon} github={project.github} link={project.link} description={project.description}
+                        orientation='items-end' headerTextAlign='text-right'/>
+                    {:else}
+                        <Project title={project.title} techs={project.techs} githubIcon={project.githubIcon}
+                        externalIcon={project.externalIcon} github={project.github} link={project.link} description={project.description}
+                        orientation='items-start' headerTextAlign='text-left'/>
+                    {/if}
+                {/each}
             </div>
         </div>
-        {#each projects.projects as project, i}
-            {#if i % 2 === 0}
-                <Project title={project.title} techs={project.techs} githubIcon={project.githubIcon}
-                externalIcon={project.externalIcon} github={project.github} link={project.link} description={project.description}/>
-            {:else}
-                <ProjectSwitched title={project.title} techs={project.techs} githubIcon={project.githubIcon}
-                externalIcon={project.externalIcon} github={project.github} link={project.link} description={project.description}/>
-            {/if}
-        {/each}
+    </div>
+    <div class="h-full w-full grid justify-items-center place-items-center">
+        <div class="reveal flex flex-row items-center gap-4 mb-8 mt-8">
+            <div class="border dark:border-white border-black ml-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
+                <p class="text-2xl -lg:text-lg">Other Projects</p>
+            <div class="border dark:border-white border-black mr-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
+        </div>
+        <div class="w-1/2 -md:w-3/4 grid grid-cols-3 gap-3">
+            {#each otherprojects.otherprojects as project}
+                <OtherProject title={project.title} techs={project.techs} githubIcon={project.githubIcon} 
+                externalIcon={project.externalIcon} github={project.github} 
+                link={project.link} description={project.description}/>
+            {/each}
+        </div>
     </div>
 </section>
-{/if}
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    .top{
-        margin-top: 15rem;
-        width: 100%;
-        color: $white;
-        margin-left: 2rem;
-        @include media-breakpoint-down(md){
-            margin-top: 10rem;
-        }
-    }
-    .intro{
-        display: flex;
-        margin-bottom: 1rem;
-        @include media-breakpoint-down(md){
-            margin-right: 5rem;
-        }
-    }
-    .sectionNumberHeader{
-        color: $orange;
-        font-size: 1.5rem;
-        padding-right: 1rem;
-    }
-    .sectionHeader{
-        color: $white;
-        font-size: 1.5rem;
-    }
-    hr{
-        color: $white;
-        border: .1rem solid $white;
-        width: 50%;
-        height: 100%;
-        margin-left: 1rem;
-    }
+<style>
 </style>

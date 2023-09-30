@@ -8,122 +8,39 @@
     export let github : string;
     export let link : string;
     export let description : string[];
+    export let orientation : string;
+    export let headerTextAlign: string;
 </script>
 
-<div class="row">
-    <div class="col title order-1">
-        <div class="title-background">
-            <p class="display-6 title-text">{@html title}</p>
-        </div>
-        <div class="technologies">
-            <p class="technology">
-                {#each techs as tech}
-                <p class = "tech">{tech}</p>
-                {/each}
-            </p>
-        </div>
+<div class={"flex flex-col featured-project reveal " + orientation}>
+    <div class={"mb-6 " + headerTextAlign}>
+        <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
+        <p class="text-2xl mt-2 -sm:text-xl">{@html title}</p>
     </div>
-    <div class="col-lg-6 description order-2">
-        <p>
+    <div class="lmb-4 rounded-lg dark:bg-gray-800 bg-slate-400 w-1/2 p-4 shadow-lg -lg:w-full">
+        <p class="-sm:text-sm">
             {#each description as line}
             {@html line}
             {/each}
         </p>
     </div>
-    <div class="links order-3">
+    <div class="flex flex-row gap-10 mt-6">
+        {#each techs as tech}
+            <p class="">{tech}</p>
+        {/each}
+    </div>
+    <div class="flex flex-row gap-8 mt-6">
         {#if githubIcon}
-        <a class="iconlink" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
+            <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
         {/if}
         {#if externalIcon}
-        <a class="iconlink" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
+            <a class="icon" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
         {/if}
     </div>
 </div>
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    @import '../../scss/mixins.scss';
-    .row{
-        margin-bottom: 4rem;
-        padding: 2rem;
-        outline: .15rem solid $orange;
-        margin-left: 2.75rem;
-        margin-right: 1.25rem;
-    }
-    .col, .col-lg-6{
-        color: $light-gray;
-    }
-    .description{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include media-breakpoint-down(sm){
-            font-size: .75rem;
-            text-align: center;
-        }
-    }
-    .technologies{
-        display: flex;
-        float: center;
-        padding-top: 2rem;
-        margin-right: 2rem;
-        justify-content: center;
-        align-items: center;
-        @include media-breakpoint-down(sm){
-            float: center;
-            margin-left: 2rem;
-        }
-    }
-    .technology{
-        display: flex;
-        color: $orange;
-        margin-left: .5rem;
-        font-size: 1.1rem;
-        margin-right: .5rem;
-        @include media-breakpoint-down(sm){
-            display: block;
-            text-align: center;
-            font-size: .8rem;
-        }
-    }
-    .tech{
-        margin-left: .25rem;
-        margin-right: .25rem;
-    }
-    .links{
-        float: left;
-        margin-top: 2rem;
-    }
-    .iconlink{
-        padding-left: 1rem;
-        float: left;
-        &:hover{
-            :global(.icon){
-                fill: $orange;
-            }
-        }
-    }
-    .title-background{
-        border-radius: 10px;
-        background-color: $medium-gray;
-        box-shadow: 3px 3px 3px black;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-    .title-text{
-        font-size: 1.75rem;
-        text-align: center;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-bottom: 1rem;
-        padding-top: 1rem;
-        color: $white;
-        @include media-breakpoint-down(lg){
-            font-size: 1.25rem;
-        }
-        @include media-breakpoint-down(sm){
-            font-size: .8rem;
-            text-align: center;
-        }
+<style lang="postcss">
+    .icon{
+        @apply dark:hover:fill-purple-900 pb-3 hover:fill-purple-600 dark:fill-white fill-black transition ease-in-out hover:-translate-y-1 duration-300
     }
 </style>

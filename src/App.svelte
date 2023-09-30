@@ -1,24 +1,33 @@
 <script lang="ts">
-  import Intro from './lib/sections/Intro.svelte';
-  import About from './lib/sections/About.svelte';
-  import Projects from './lib/sections/Projects.svelte';
-  import Contact from './lib/sections/Contact.svelte'; 
-  import Nav from './lib/components/Nav.svelte'
-  import Logo from './lib/components/icons/Logo.svelte';
+  import Intro from '@sections/Intro.svelte';
+  import About from '@sections/About.svelte';
+  import Projects from '@sections/Projects.svelte';
+  import Contact from '@sections/Contact.svelte'; 
+  import Nav from '@components/Nav.svelte'
+  import { ScrollRevealOptions } from './config';
+  import ScrollReveal from 'scrollreveal';
+  import { onMount } from 'svelte';
+  let onLoadVisible: string = ' hidden';
+  onMount(() => {
+    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 4000); //this is important to run on the 4000 interval.
+    setTimeout(makeVisible, 4000);
+  })
+
+  function makeVisible(){
+        onLoadVisible = '';
+    }
 
 </script>
 
+<svelte:head>
+  <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
+</svelte:head>
+
 <Nav />
 <Intro />
-<About />
-<Projects />
-<Contact />
 
-<style lang="scss">
-  @import './scss/variables.scss';
-  @import './scss/fonts.scss';
-  :global(body){
-    background-color: $background;
-    font-family: $font-regular;
-  }
-</style>
+<div class={'page'+ onLoadVisible}>
+  <About />
+  <Projects />
+  <Contact />
+</div>

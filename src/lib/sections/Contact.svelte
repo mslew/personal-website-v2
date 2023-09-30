@@ -1,117 +1,35 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { fade } from 'svelte/transition';
     import BottomSocials from '../components/BottomSocials.svelte';
-    let onLoadVisible = false; //MAKE SURE YOU CHANGE THIS BACK CHIEF
-    onMount(() => {
-        setTimeout(makeVisible, 7000);
-    });
-
-    function makeVisible(){
-        onLoadVisible = true;
-    }
 </script>
 
-{#if onLoadVisible}
-<section id="contact" in:fade>
-    <div class="container top-container">
-        <div class="row top justify-content-center">
-            <div class="col">
-                <div class="intro">
-                    <p class="sectionNumberHeader">03.</p>
-                    <p class="sectionHeader">Contact</p>
-                    <hr class="line" />
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-6">
-                    <p class="contact-text">
-                        I am looking for full time software engineering opportunities.  
-                        If you are interested, do not hesitate to contact me!
-                    </p>
-                    <a href="mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email"><button class="btn btn-outline-light">Contact</button></a>
-                </div>
-            </div>
+<section class="h-full w-full grid justify-items-center" id="contact">
+    <div class="reveal flex flex-row items-center gap-4 mb-8 mt-8">
+        <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">03.</p>
+        <p class="text-2xl -lg:text-lg">Contact</p>
+        <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
+    </div>
+    <div class="reveal grid justify-items-center w-1/4 gap-8 -2xl:w-1/3 -lg:w-1/2">
+        <p class="text-center">
+            I am looking for full time software engineering opportunities.  
+            If you are interested, do not hesitate to contact me!
+        </p>
+        <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150 mb-20 z-0">
+            <a class="mb-20 z-0 wide:landscape:mb-12" href="mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email">
+                <div class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Contact</div>
+            </a>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <BottomSocials />
-                <div class="wrapper">
-                    <a href="https://github.com/mslew/personal-website-v2" target="_blank" rel="noreferrer" aria-label="Repo" title="Repo"><p class="credits">Designed and Built by Maximus Lewis</p></a>
-                </div>
-            </div>
-        </div>
+    <div class="md:hidden">
+        <BottomSocials />
+    </div>
+    <div class="z-0 mb-6">
+        <a class=" dark:hover:text-purple-900 hover:text-purple-600 group" href="https://github.com/mslew/personal-website-v2" 
+        target="_blank" rel="noreferrer" aria-label="Repo" title="Repo">
+            Designed and Built by Maximus Lewis
+            <span class="underline-hover"></span> 
+        </a>
     </div>
 </section>
-{/if}
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    @import '../../scss/mixins.scss';
-    .top-container{
-        margin-bottom: 15rem;
-    }
-    .top{
-        margin-top: 15rem;
-        width: 100%;
-        color: $white;
-    }
-    .intro{
-        display: flex;
-        justify-content: center;
-        @include media-breakpoint-down(sm){
-            font-size: .8rem;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        } 
-    }
-    .contact-text{
-        text-align: center;
-        color: $light-gray;
-    }
-    .sectionNumberHeader{
-        color: $orange;
-        font-size: 1.5rem;
-        padding-right: 1rem;
-    }
-    .sectionHeader{
-        color: $white;
-        font-size: 1.5rem;
-    }
-    hr{
-        color: $white;
-        border: .1rem solid $white;
-        width: 50%;
-        height: 100%;
-        margin-left: 1rem;
-    }
-    .credits{
-        text-align: center;
-        color: $light-gray;
-        margin-bottom: 1rem;
-        @include underline-from-center;
-    }
-    .btn{
-        margin-top: 3rem;
-        height: auto;
-        width: 10rem;
-        margin: 0 auto;
-        display:block;
-        text-decoration: none;
-        &:hover{
-            background-color: $orange;
-        }
-    }
-    .wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: auto;
-    }
-    a{
-        text-decoration: none;
-    }
+<style>
 </style>

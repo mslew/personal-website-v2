@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
-    let nameVisible = false;
-    let subtitleVisible = false;
-    let contentVisible = false;
+    let nameVisible = false; //change this back
+    let subtitleVisible = false; //change this back
+    let contentVisible = false; //change this back
 
     onMount(() => {
         setTimeout(dropName, 6000)
@@ -25,59 +25,22 @@
 
 </script>
 
-<div class="container mt-5 d-flex">
-    <div class="card-body">
+<div class="h-screen w-full grid grid-cols-4 grid-rows-2 justify-items-center place-items-center">
+    <div class="row-span-2 col-span-3 -2xl:col-span-4 -xl:w-2/3 -lg:w-3/4 -md:w-full sm:mt-32 md:mt-0">
         {#if nameVisible}
-        <p transition:fly="{{ y: -100, duration: 100 }}" class="intro">Hi, my name is</p>
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="text-2xl pl-6 pt-4 dark:text-purple-900 text-purple-600 -lg:text-xl sm:pb-0">Hi, my name is</p>
         {/if}
         {#if nameVisible}
-        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-1 name">Maximus Lewis.</h1>
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="text-7xl pl-6 pt-4 -lg:text-4xl sm:pb-0">Maximus Lewis.</h1>
         {/if}
         {#if subtitleVisible}
-        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="display-3 subtitle">Software Engineer</h1>
+        <h1 transition:fly="{{ y: -100, duration: 100 }}" class="text-6xl pl-6 pt-4 -lg:text-4xl sm:pb-0">Software Engineer</h1>
         {/if}
         {#if contentVisible}
-        <p transition:fly="{{ y: -100, duration: 100 }}" class="content mt-4">I am a recent Lewis University Computer Science graduate.</p>
+        <p transition:fly="{{ y: -100, duration: 100 }}" class="text-2xl pl-6 pt-4 dark:text-purple-900 text-purple-600 -lg:text-xl">I am a recent Lewis University Computer Science graduate.</p>
         {/if}
     </div>
 </div>
 
-<style lang="scss">
-    @import '../../scss/variables.scss';
-    @import '../../scss/fonts.scss';
-    .card-body{
-        margin-top: 16rem;
-        margin-left: 5rem;
-        @include media-breakpoint-down(md){
-            margin-top: 8rem;
-            margin-left: 6rem;
-            margin-right: 1rem;
-        }
-    }
-    .intro{
-        color: $orange;
-        font-size: 1.5rem;
-        @include media-breakpoint-down(md){
-            font-size: 1rem;
-        }
-    }
-    .name{
-        color: $light-gray;
-        @include media-breakpoint-down(md){
-            font-size: 2rem;
-        }
-    }
-    .subtitle{
-        color: $light-gray;
-        @include media-breakpoint-down(md){
-            font-size: 2rem;
-        }
-    }
-    .content{
-        font-size: 1.25rem;
-        color: $orange;
-        @include media-breakpoint-down(md){
-            font-size: 1rem;
-        }
-    }
+<style>
 </style>
