@@ -27,7 +27,7 @@
         <p class="text-2xl -lg:text-lg">Contact</p>
         <div class="border dark:border-white border-black ml-2 pr-72 -xl:pr-40 -lg:pr-36 -sm:pr-32"></div>
     </div>
-    <div class="reveal grid justify-items-center w-1/4 gap-8 wide:landscape:w-1/2 -md:w-3/4">
+    <div class="reveal grid justify-items-center w-1/4 gap-8 -2xl:w-1/3 -lg:w-1/2">
         <p class="text-center">
             I am looking for full time software engineering opportunities.  
             If you are interested, do not hesitate to contact me!
