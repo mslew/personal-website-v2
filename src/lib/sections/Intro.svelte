@@ -21,7 +21,7 @@ function raiseBar(){
 <section id="intro">
     <IntroCard />
     {#if visible}
-        <div transition:fly="{{ y: 100, duration: 200 }}" class="fixed -md:hidden bottom-4 h-1/4 w-full flex flex-row justify-between">
+        <div transition:fly="{{ y: 100, duration: 200 }}" class="fixed -md:hidden -lg:wide:bottom-36 bottom-4 h-1/4 w-full flex flex-row justify-between">
             <SocialSideBar />
             <EmailSideBar />
         </div>
