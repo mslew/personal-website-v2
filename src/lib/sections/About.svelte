@@ -1,18 +1,9 @@
 <script>
     import { onMount } from 'svelte';
     import AboutPicture from '../components/AboutPicture.svelte';
-    import ScrollReveal from "scrollreveal"
     let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
-        let options = {
-            show: 50, 
-            threshold: 100,
-            opacity: 0,
-            duration: 2000,
-            delay: 500,
-        }
-        ScrollReveal().reveal(".reveal", options);
     });
 
     function makeVisible(){
@@ -22,7 +13,7 @@
 
 {#if onLoadVisible}
 <section class="about h-full pl-44 pr-44 w-full grid grid-cols-2 grid-rows-1 justify-items-center gap-10 -lg:justify-items-center -lg:place-items-center" id="about">
-    <div class="ml-10 -lg:col-span-2 -xl:ml-0">
+    <div class="reveal ml-10 -lg:col-span-2 -xl:ml-0">
         <div class="flex flex-row items-center gap-4">
             <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">01.</p>
             <p class="text-2xl -lg:text-lg">About Me</p>
@@ -63,7 +54,7 @@
         </div>
     </div>
     </div>
-    <div class="flex flex-col items-center xl:ml-10 lg:ml-0 -lg:mr-10 -md:mr-0 -lg:col-span-2">
+    <div class="reveal flex flex-col items-center xl:ml-10 lg:ml-0 -lg:mr-10 -md:mr-0 -lg:col-span-2">
         <AboutPicture />
         <p class="mt-2 mb-10">Me in San Diego!</p>
     </div>

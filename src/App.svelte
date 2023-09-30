@@ -4,6 +4,10 @@
   import Projects from '@sections/Projects.svelte';
   import Contact from '@sections/Contact.svelte'; 
   import Nav from '@components/Nav.svelte'
+  import { ScrollRevealOptions } from './config';
+  import ScrollReveal from 'scrollreveal';
+  ScrollReveal().reveal(".reveal", ScrollRevealOptions);
+
 </script>
 
 <svelte:head>
