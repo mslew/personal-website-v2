@@ -5,14 +5,6 @@
     let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);
-        let options = {
-            show: 50, 
-            threshold: 100,
-            opacity: 0,
-            duration: 2000,
-            delay: 500,
-        }
-        ScrollReveal().reveal(".reveal", options);
     });
 
     function makeVisible(){
@@ -21,7 +13,7 @@
 </script>
 
 {#if onLoadVisible}
-<section class="reveal h-full w-full grid justify-items-center" id="contact">
+<section class="h-full w-full grid justify-items-center" id="contact">
     <div class="reveal flex flex-row items-center gap-4 mb-8 mt-8">
         <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">03.</p>
         <p class="text-2xl -lg:text-lg">Contact</p>

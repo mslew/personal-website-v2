@@ -6,7 +6,10 @@
   import Nav from '@components/Nav.svelte'
   import { ScrollRevealOptions } from './config';
   import ScrollReveal from 'scrollreveal';
-  ScrollReveal().reveal(".reveal", ScrollRevealOptions);
+  import { onMount } from 'svelte';
+  onMount(() => {
+    ScrollReveal().reveal(".reveal", ScrollRevealOptions);
+  })
 
 </script>
 
