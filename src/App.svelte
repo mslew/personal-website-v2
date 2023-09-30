@@ -13,10 +13,6 @@
 
 </script>
 
-<svelte:head>
-  <link rel="icon" type="image/svg" sizes="any" href="public/logo.ico" />
-</svelte:head>
-
 <Nav />
 <Intro />
 <About />

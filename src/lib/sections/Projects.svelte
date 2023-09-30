@@ -15,7 +15,7 @@
 </script>
 
 {#if onLoadVisible}
-<section class="h-full w-screen grid justify-items-center mt-6" id="projects">
+<section class="h-full w-[99vw] grid justify-items-center mt-6" id="projects">
     <div class="grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2 md:mt-24 xl:mt-44">
         <div class="">
             <div class="reveal flex flex-row items-center gap-4 mb-8">
@@ -44,7 +44,7 @@
                 <p class="text-2xl -lg:text-lg">Other Projects</p>
             <div class="border dark:border-white border-black mr-2 pr-52 -2xl:pr-36 -xl:pr-24 -lg:pr-20 -md:pr-16"></div>
         </div>
-        <div class="w-1/2 tall:portrait:w-3/4 grid grid-cols-3 gap-3">
+        <div class="w-1/2 -md:w-3/4 grid grid-cols-3 gap-3">
             {#each otherprojects.otherprojects as project}
                 <OtherProject title={project.title} techs={project.techs} githubIcon={project.githubIcon} 
                 externalIcon={project.externalIcon} github={project.github} 
