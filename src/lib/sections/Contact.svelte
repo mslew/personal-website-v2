@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import BottomSocials from '../components/BottomSocials.svelte';
-    import ScrollReveal from 'scrollreveal'
     let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
     onMount(() => {
         setTimeout(makeVisible, 7000);

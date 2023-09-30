@@ -16,8 +16,8 @@
 
 {#if onLoadVisible}
 <section class="h-full w-screen grid justify-items-center mt-6" id="projects">
-    <div class="reveal grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2 md:mt-24 xl:mt-44">
-        <div class="reveal">
+    <div class="grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2 md:mt-24 xl:mt-44">
+        <div class="">
             <div class="reveal flex flex-row items-center gap-4 mb-8">
                 <p class="text-3xl dark:text-purple-900 p-1 object-bottom text-purple-600 -lg:text-xl -md:text-xl">02.</p>
                 <p class="text-2xl -lg:text-lg">My Projects</p>
