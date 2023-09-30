@@ -19,6 +19,10 @@
 
 </script>
 
+<svelte:head>
+  
+</svelte:head>
+
 <Nav />
 <Intro />
 

@@ -1,5 +1,4 @@
 <script>
-    import { onMount } from 'svelte';
     import AboutPicture from '../components/AboutPicture.svelte';
 </script>
 
