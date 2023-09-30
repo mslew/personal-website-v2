@@ -4,17 +4,8 @@
     import otherprojects from '../projects/otherprojects.json'
     import Project from '../components/Project.svelte';
     import OtherProject from '@components/OtherProject.svelte';
-    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
-    onMount(() => {
-        setTimeout(makeVisible, 7000);
-    });
-
-    function makeVisible(){
-        onLoadVisible = true;
-    }
 </script>
 
-{#if onLoadVisible}
 <section class="h-full w-full grid justify-items-center mt-6" id="projects">
     <div class="grid w-2/3 grid-cols-1 justify-items-center place-items-center gap-2 md:mt-24 xl:mt-44">
         <div class="">
@@ -53,7 +44,6 @@
         </div>
     </div>
 </section>
-{/if}
 
 <style>
 </style>

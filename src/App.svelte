@@ -7,14 +7,23 @@
   import { ScrollRevealOptions } from './config';
   import ScrollReveal from 'scrollreveal';
   import { onMount } from 'svelte';
+  let onLoadVisible: string = ' hidden';
   onMount(() => {
-    ScrollReveal().reveal(".reveal", ScrollRevealOptions);
+    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 4000);
+    setTimeout(makeVisible, 4000);
   })
+
+  function makeVisible(){
+        onLoadVisible = '';
+    }
 
 </script>
 
 <Nav />
 <Intro />
-<About />
-<Projects />
-<Contact />
+
+<div class={'page'+ onLoadVisible}>
+  <About />
+  <Projects />
+  <Contact />
+</div>

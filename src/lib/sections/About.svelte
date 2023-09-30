@@ -1,17 +1,8 @@
 <script>
     import { onMount } from 'svelte';
     import AboutPicture from '../components/AboutPicture.svelte';
-    let onLoadVisible = true; //MAKE SURE YOU CHANGE THIS BACK CHIEF
-    onMount(() => {
-        setTimeout(makeVisible, 7000);
-    });
-
-    function makeVisible(){
-        onLoadVisible = true;
-    }
 </script>
 
-{#if onLoadVisible}
 <section class="about h-full pl-44 pr-44 w-full grid grid-cols-2 grid-rows-1 justify-items-center gap-10 -lg:justify-items-center -lg:place-items-center" id="about">
     <div class="reveal ml-10 -lg:col-span-2 -xl:ml-0">
         <div class="flex flex-row items-center gap-4">
@@ -59,7 +50,6 @@
         <p class="mt-2 mb-10">Me in San Diego!</p>
     </div>
 </section>
-{/if}
 
 <style lang="postcss">
     li{

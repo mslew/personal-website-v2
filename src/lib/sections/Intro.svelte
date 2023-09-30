@@ -5,7 +5,7 @@
     import IntroCard from "@components/IntroCard.svelte";
     import SocialSideBar from "@components/SocialSideBar.svelte";
     import EmailSideBar from "@components/EmailSideBar.svelte";
-    let visible = true;
+    let visible = false;
 
     onMount(() => {
         setTimeout(raiseBar, 6750);
@@ -16,7 +16,7 @@ function raiseBar(){
 }
 </script>
 
-<!--<LogoAnim />-->
+<LogoAnim />
 
 <section id="intro">
     <IntroCard />

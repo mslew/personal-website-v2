@@ -3,12 +3,12 @@
     import { fly} from 'svelte/transition';
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
-	let visible = true; //change this back dog
-    let link1 = true;
-    let link2 = true;
-    let link3 = true;
-    let link4 = true;
-    let button = true;
+	let visible = false; //change this back dog
+    let link1 = false;
+    let link2 = false;
+    let link3 = false;
+    let link4 = false;
+    let button = false;
     let i = 0; 
     onMount(() => {
         setTimeout(flyDown, 4000) //4000

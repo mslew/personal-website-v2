@@ -16,7 +16,6 @@
     function fadeOut (){
         visible = false
     }
-    onDestroy(() => clearInterval(4000));
 </script>
 
 {#if visible}
