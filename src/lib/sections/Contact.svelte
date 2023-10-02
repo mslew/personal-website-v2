@@ -22,10 +22,17 @@
     <div class="md:hidden">
         <BottomSocials />
     </div>
-    <div class="z-0 mb-6">
+    <div class="z-0 mb-6 text-center">
         <a class=" dark:hover:text-purple-900 hover:text-purple-600 group" href="https://github.com/mslew/personal-website-v2" 
         target="_blank" rel="noreferrer" aria-label="Repo" title="Repo">
-            Designed and Built by Maximus Lewis
+            Built by Maximus Lewis
+            <span class="underline-hover"></span> 
+        </a>
+    </div>
+    <div class="z-0 mb-6 text-center -sm:text-sm">
+        <a class=" dark:hover:text-purple-900 hover:text-purple-600 group" href="https://github.com/bchiang7/v4" 
+        target="_blank" rel="noreferrer" aria-label="Repo" title="Repo">
+            Design Inspiration from Brittany Chiang
             <span class="underline-hover"></span> 
         </a>
     </div>
