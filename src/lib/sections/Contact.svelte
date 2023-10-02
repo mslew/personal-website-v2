@@ -22,7 +22,7 @@
     <div class="md:hidden">
         <BottomSocials />
     </div>
-    <div class="z-0 mb-6 text-center">
+    <div class="z-0 mb-6">
         <a class=" dark:hover:text-purple-900 hover:text-purple-600 group" href="https://github.com/mslew/personal-website-v2" 
         target="_blank" rel="noreferrer" aria-label="Repo" title="Repo">
             Built by Maximus Lewis
