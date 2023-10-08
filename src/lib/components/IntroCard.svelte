@@ -6,9 +6,9 @@
     let contentVisible = false; //change this back
 
     onMount(() => {
-        setTimeout(dropName, 6000)
-        setTimeout(dropSubtitle, 6250)
-        setTimeout(dropContent, 6500)
+        setTimeout(dropName, 4000)
+        setTimeout(dropSubtitle, 4250)
+        setTimeout(dropContent, 4500)
     });
 
     function dropName (){

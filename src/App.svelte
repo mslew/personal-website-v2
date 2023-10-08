@@ -26,8 +26,9 @@
 <Nav />
 <Intro />
 
-<div class={'page'+ onLoadVisible}>
+<!--<div class={'page'+ onLoadVisible}>
   <About />
   <Projects />
   <Contact />
 </div>
+-->

@@ -6,7 +6,7 @@
 
     onMount(() => {
         setTimeout(drawIn, 500)
-        setTimeout(fadeOut, 3500)
+        setTimeout(fadeOut, 3000)
     });
 
     function drawIn (){

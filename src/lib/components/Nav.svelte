@@ -11,8 +11,8 @@
     let button = false;
     let i = 0; 
     onMount(() => {
-        setTimeout(flyDown, 4000) //4000
-        setTimeout(dropLinks, 4500) //4500
+        setTimeout(flyDown, 3000) 
+        setTimeout(dropLinks, 3250) 
     });
 
     function flyDown (){
@@ -20,54 +20,54 @@
     }
 
     function dropLinks() {         
-    setTimeout(function() {                      
-        if (i < 5) { 
-            if(!link1 && i === 0){
-                link1 = true
-            } 
-            else if(!link2 && i === 1){
-                link2 = true
-            }  
-            else if(!link3 && i === 2){
-                link3 = true
-            } 
-            else if(!link4 && i === 3){
-                link4 = true
-            } 
-            else if(!button && i === 4){
-                button = true
-            } 
-            i++;
-        dropLinks();              
-        }                      
-    }, 200)
+        setTimeout(function() {                      
+            if (i < 5) { 
+                if(!link1 && i === 0){
+                    link1 = true
+                } 
+                else if(!link2 && i === 1){
+                    link2 = true
+                }  
+                else if(!link3 && i === 2){
+                    link3 = true
+                } 
+                else if(!link4 && i === 3){
+                    link4 = true
+                } 
+                else if(!button && i === 4){
+                    button = true
+                } 
+                i++;
+            dropLinks();              
+            }                      
+        }, 100)
     }
 </script>
   
 {#if visible}
-<div in:fly="{{ y: -100, duration: 1000 }}" class="flex flex-row -md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
+<div in:fly="{{ y: -100, duration: 500 }}" class="flex flex-row -md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="mt-3" href="/"><Logo /></a>
     <div class="flex gap-4 flex-row justify-items-center pt-4 overflow-x-hidden wide:landscape:gap-8 z-50 flex-shrink-0">
         {#if link1}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#about"><span class="num">00</span><span class="link-text">About</span></a>
+        <a transition:fly="{{ y: -90, duration: 100 }}" class="link" href="#about"><span class="num">00</span><span class="link-text">About</span></a>
         {/if}
         {#if link2}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#projects"><span class="num">01</span><span class="link-text">Projects</span></a>
+        <a transition:fly="{{ y: -80, duration: 100 }}" class="link" href="#projects"><span class="num">01</span><span class="link-text">Projects</span></a>
         {/if}
         {#if link3}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="#contact"><span class="num">02</span><span class="link-text">Contact</span></a>
+        <a transition:fly="{{ y: -70, duration: 100 }}" class="link" href="#contact"><span class="num">02</span><span class="link-text">Contact</span></a>
         {/if}
         {#if link4}
-        <a transition:fly="{{ y: -100, duration: 250 }}" class="link" href="https://blog.maximuslewis.com" rel="noreferrer" aria-label="Blog" title="Blog" 
+        <a transition:fly="{{ y: -60, duration: 100 }}" class="link" href="https://blog.maximuslewis.com" rel="noreferrer" aria-label="Blog" title="Blog" 
         target="_blank"><span class="num">03</span><span class="link-text">Blog</span></a>
         {/if}
         {#if button}
         <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150">
             <a href="content/Resume.pdf" target="_blank">
-                <div transition:fly="{{ y: -100, duration: 250 }}" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
+                <div transition:fly="{{ y: -50, duration: 100 }}" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
             </a>
         </div>
-        <div class="" transition:fly="{{ y: -100, duration: 250 }}"><ThemeSwitch /></div>
+        <div class="" transition:fly="{{ y: -40, duration: 100 }}"><ThemeSwitch /></div>
         {/if}
     </div>
 </div>

@@ -1,8 +1,9 @@
 <script lang="ts">
+    import { Email } from "src/config";
 </script>
 
 <div class="flex flex-col items-center mr-12 wide:landscape:mr-4">
-    <a class="email mr-2" href = "mailto:mlew3223@gmail.com" target = "_blank" aria-label="Email" title="Email">mlew3223@gmail.com</a>
+    <a class="email mr-2" href={"mailto:" + Email.name} target = "_blank" aria-label="Email" title="Email">{Email.name}</a>
     <div class="border dark:border-white pb-10 mt-2 mr-2 border-black"></div>
 </div>
 

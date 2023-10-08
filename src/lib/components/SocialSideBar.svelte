@@ -1,15 +1,16 @@
 <script lang="ts">
+    import { XTwitterURL, GitHubURL, LinkedInURL, InstagramURL } from 'src/config';
     import GitHub from './icons/GitHub.svelte';
     import LinkedIn from './icons/LinkedIn.svelte';
-    import Handshake from './icons/Handshake.svelte';
+    import X from './icons/X.svelte';
     import Instagram from './icons/Instagram.svelte';
 </script>
 
-<div class="flex flex-col items-center ml-12 wide:landscape:ml-4">
-    <a class="item" href="https://github.com/mslew" target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub class="wide:landscape:h-6" height={30}/></a>
-    <a class="item" href = "https://www.linkedin.com/in/maximuslewis/" target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn class="wide:landscape:h-6" height={30}/></a>
-    <a class="item" href = "https://lewisu.joinhandshake.com/users/20583963" target = "_blank" rel="noreferrer" aria-label="Handshake" title="Handshake"><Handshake class="wide:landscape:h-6" height={30}/></a>
-    <a class="item" href = "https://www.instagram.com/maxslewis/" target = "_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Instagram class="wide:landscape:h-6" height={30}/></a>
+<div class="flex flex-col items-center ml-12">
+    <a class="item" href={GitHubURL.url} target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub class="" height={30}/></a>
+    <a class="item" href={LinkedInURL.url} target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn class="" height={30}/></a>
+    <a class="item" href={XTwitterURL.url} target = "_blank" rel="noreferrer" aria-label="Handshake" title="Handshake"><X class="" height={30}/></a>
+    <a class="item" href={InstagramURL.url} target = "_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Instagram class="" height={30}/></a>
     <div class="border dark:border-white pb-14 mt-2 border-black wide:landscape:pb-20"></div>
 </div>
 
