@@ -9,14 +9,11 @@
   import { onMount } from 'svelte';
   let onLoadVisible: string = ' hidden';
   onMount(() => {
-    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 4000); //this is important to run on the 4000 interval.
-    setTimeout(makeVisible, 4000);
+    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
+    setTimeout(() => {
+      onLoadVisible = ''
+    }, 3750);
   })
-
-  function makeVisible(){
-        onLoadVisible = '';
-    }
-
 </script>
 
 <svelte:head>
@@ -26,9 +23,8 @@
 <Nav />
 <Intro />
 
-<!--<div class={'page'+ onLoadVisible}>
+<div class={'page'+ onLoadVisible}>
   <About />
   <Projects />
   <Contact />
 </div>
--->
