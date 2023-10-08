@@ -17,7 +17,6 @@
 
 <LogoAnim />
 
-
 <section id="intro">
     <IntroCard />
     {#if visible}
