@@ -16,7 +16,7 @@ function raiseBar(){
 }
 </script>
 
-<LogoAnim />
+<!--<LogoAnim />-->
 
 <!--
 <section id="intro">
