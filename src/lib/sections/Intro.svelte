@@ -18,6 +18,7 @@ function raiseBar(){
 
 <LogoAnim />
 
+<!--
 <section id="intro">
     <IntroCard />
     {#if visible}
@@ -27,6 +28,4 @@ function raiseBar(){
         </div>
     {/if}
 </section>
-
-<style>
-</style>
+-->

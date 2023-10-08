@@ -23,7 +23,7 @@
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
-<Nav />
+<!--<Nav />-->
 <Intro />
 
 <!--<div class={'page'+ onLoadVisible}>
