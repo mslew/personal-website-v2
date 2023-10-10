@@ -6,10 +6,6 @@ export default {
   // for more information about preprocessors
   preprocess: [
     vitePreprocess({}),
-    preprocess({
-      scss: {
-        prependData: '@use "src/scss/variables.scss" as *;',
-      },
-    }),
+    preprocess({}),
   ],
 };
