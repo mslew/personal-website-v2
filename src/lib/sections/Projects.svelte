@@ -1,8 +1,10 @@
 <script lang="ts">
-    import projects from '../projects/projects.json'
-    import otherprojects from '../projects/otherprojects.json'
+    import { projectsMD } from '../data/index';
+    import projects from '../data/projects.json'
+    import otherprojects from '../data/otherprojects.json'
     import Project from '../components/Project.svelte';
     import OtherProject from '@components/OtherProject.svelte';
+    projectsMD()
 </script>
 
 <section class="h-full w-full grid justify-items-center mt-6" id="projects">

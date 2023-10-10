@@ -7,12 +7,12 @@
   import { ScrollRevealOptions } from './config';
   import ScrollReveal from 'scrollreveal';
   import { onMount } from 'svelte';
-  let onLoadVisible: string = ' hidden';
+  let onLoadVisible: string = ' '; //change this back hehe
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
       onLoadVisible = ''
-    }, 3750);
+    }, 0); //3750
   })
 </script>
 
@@ -20,8 +20,8 @@
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
-<Nav />
-<Intro />
+<!--<Nav />-->
+<!--<Intro />-->
 
 <div class={'page'+ onLoadVisible}>
   <About />

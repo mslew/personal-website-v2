@@ -7,4 +7,7 @@ export default defineConfig({
   plugins: [svelte(), tsConfigPaths()],
   css: {
   },
+  assetsInclude: [
+    '**/*.md'
+  ]
 });
