@@ -8,10 +8,10 @@
 
 <div class="flex flex-row items-center gap-4 mb-4">
     <div class="border dark:border-white border-black ml-2 -md:pr-12"></div>
-    <a class="item" href={GitHubURL.url} target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub class="icon" height={30}/></a>
-    <a class="item" href={LinkedInURL.url} target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn class="icon" height={30}/></a>
-    <a class="item" href={XTwitterURL.url} target = "_blank" rel="noreferrer" aria-label="Handshake" title="Handshake"><X class="icon" height={30}/></a>
-    <a class="item" href={InstagramURL.url} target = "_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Instagram class="icon" height={30}/></a>
+    <a class="item" href={GitHubURL.url} target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub height={30}/></a>
+    <a class="item" href={LinkedInURL.url} target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn height={30}/></a>
+    <a class="item" href={XTwitterURL.url} target = "_blank" rel="noreferrer" aria-label="X/Twitter" title="X/Twitter"><X height={30}/></a>
+    <a class="item" href={InstagramURL.url} target = "_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Instagram height={30}/></a>
     <div class="border dark:border-white border-black mr-2 -md:pr-12 "></div>
 </div>
 
