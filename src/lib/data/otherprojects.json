@@ -19,7 +19,7 @@
         " It tutors students on mathematics with a dynamic leveling and points system."]
     },
     {"title":"Personal Blog", 
-    "techs":["Astro", "Tailwind CSS"], 
+    "techs":["Astro", "Tailwind CSS", "TypeScript"], 
     "githubIcon":true,
     "externalIcon":true,
     "github": "https://github.com/mslew/blog",
@@ -28,7 +28,7 @@
         " I write about anything that piques my interest!"]
     },
     {"title":"Live Blog", 
-    "techs":["Bootstrap", "CSS", "Handlebars", "Express", "Firebase"], 
+    "techs":["Bootstrap", "JavaScript", "Handlebars", "Express", "Firebase"], 
     "githubIcon":true,
     "externalIcon":false,
     "github": "https://github.com/software-engineering-team-fun/blog-project",
