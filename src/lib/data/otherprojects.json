@@ -47,7 +47,7 @@
         " This application allows users to sign in and rate their favorite movies."]
     },
     {"title":"Music Database", 
-    "techs":["PHP", "SQL", "Bootstrap 5"], 
+    "techs":["PHP", "SQL", "Bootstrap"], 
     "githubIcon":true,
     "externalIcon":false,
     "github": "https://github.com/mslew/db-final-project",
