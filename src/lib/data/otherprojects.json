@@ -47,13 +47,13 @@
         " This application allows users to sign in and rate their favorite movies."]
     },
     {"title":"Music Database", 
-    "techs":["PHP", "SQL"], 
+    "techs":["PHP", "SQL", "Bootstrap 5"], 
     "githubIcon":true,
     "externalIcon":false,
     "github": "https://github.com/mslew/db-final-project",
     "link": "",
     "description": ["Final project in the Database Systems class.",
-        " This project was my first introduction to PHP. I wrote an SQL database", 
-        " and a PHP client that allows users to do basic CRUD functions with their favorite music."]
+        " This project was my first introduction to PHP. I wrote an SQL database,", 
+        " a PHP backend, and a Bootstrap 5 frontend. The application enables users to do CRUD functions with their favorite music."]
     }
 ]}
