@@ -13,7 +13,7 @@
 </script>
 
 <div class={"flex flex-col featured-project reveal " + orientation}>
-    <div class={"mb-6 " + headerTextAlign}>
+    <div class={"mb-6 lg:w-1/2 " + headerTextAlign}>
         <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
         <p class="text-2xl mt-2 -sm:text-xl">{@html title}</p>
     </div>
