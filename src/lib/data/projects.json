@@ -5,8 +5,10 @@
     "externalIcon":true,
     "github": "https://github.com/QuizMasterInc/QuizMaster",
     "link": "https://quizmaster-c66a2.web.app/",
-    "description": ["Software systems capstone project for the computer science degree.", 
-        " This will quiz users on a variety of topics. It will remember your progress and grade your quizzes!"]
+    "description": ["Software Systems Capstone Project at Lewis University.", 
+        " Designed, as part of an Agile Scrum team, a comprehensive quizzing application to keep users' minds sharp on various topics.", 
+        " Redesigned and modernized the front-end application from HTML/CSS/JavaScript to React and Tailwind CSS, optimizing the user experience.", 
+        " Onboarded and mentored Juniors to develop new features and take over maintenance, ensuring project continuity."]
     },
     {"title":"In Theaters", 
     "techs":["Java", "Android Studio"], 
@@ -28,9 +30,11 @@
         " The research has been conducted with a partner and two faculty advisors.",
         " I have presented the research at the Mathematical Association of America's",
         " <a class='text-purple-600' href='https://www.maa.org/sites/default/files/pdf/students/undergrad/PosterSess22%20%282%29.pdf' target='_blank'>MathFest</a>", 
-        " in Philadelphia, PA and the <a class='text-purple-600' href='https://ir.library.illinoisstate.edu/cgi/viewcontent.cgi?article=1625&context=beer' target='_blank'>Symposium on Biomathematics</a>", 
+        " in Philadelphia, PA and the", 
+        " <a class='text-purple-600' href='https://ir.library.illinoisstate.edu/cgi/viewcontent.cgi?article=1625&context=beer' target='_blank'>Symposium on Biomathematics</a>", 
         " and Ecology Education and Research at Illinois State University.",
-        " I have won <a class='text-purple-600' href='https://qubeshub.org/community/groups/biosigmaa/andersen_prize' target='_blank'>The Janet L. Andersen Award</a>",
+        " I have won", 
+        " <a class='text-purple-600' href='https://qubeshub.org/community/groups/biosigmaa/andersen_prize' target='_blank'>The Janet L. Andersen Award</a>",
         " for Undergraduate Research in Mathematical or Computational Biology, and the Undergraduate Student Poster Session",
         " <a class='text-purple-600' href='https://www.maa.org/sites/default/files/pdf/students/undergrad/2022%20Outstanding%20Posters%20-%20FINAL.pdf' target='_blank'>Outstanding Poster Award</a>", 
         " at MathFest. Manuscript coming soon!"]

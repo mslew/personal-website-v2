@@ -19,7 +19,7 @@
             <p> 
                 Studying Computer Science at Lewis University 
                 has been a mentally challenging, but equally intellectually stimulating time of my life. 
-                I have enjoyed my studies so far and I am extremely excited to be a recent graduate and eager to start my career!
+                I have enjoyed my studies and I am extremely excited to be a recent graduate and eager to start my career!
             </p>
             <p>
                 Here are a few technologies that I know and some I have been working with recently: 
