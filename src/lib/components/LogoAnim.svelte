@@ -6,6 +6,7 @@
     let visible = true;
 
     onMount(() => {
+        checkLocal()
         setTimeout(() => {
             toDraw = true
         }, 500)
@@ -16,6 +17,15 @@
             visible = false
         }, 3000)
     });
+    function checkLocal(){
+        if (
+            localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+            document.documentElement.classList.add('dark')
+        }else{
+            document.documentElement.classList.remove('dark')
+        }
+    }
 </script>
 
 {#if visible}
