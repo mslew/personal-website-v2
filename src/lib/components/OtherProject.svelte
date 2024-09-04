@@ -12,7 +12,7 @@
 </script>
 
 <div class="transform ease-in-out hover:-translate-y-2 duration-300 z-10 -2xl:col-span-3">
-    <div class="reveal h-full w-full p-6 dark:bg-gray-800 bg-slate-400 rounded-lg">
+    <div class="reveal h-full w-full p-6 dark:bg-gray-800 bg-slate-400 rounded-sm">
         <div class="flex flex-row justify-between">
             <File class="dark:fill-white fill-black mb-2" height={50}/>
             <div class="flex flex-row gap-4">
@@ -32,11 +32,11 @@
             {@html line}
             {/each}
         </div>
-        <div class="flex flex-row gap-6 flex-wrap mt-4 z-0">
+        <ul class="z-0"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. -->
             {#each techs as tech}
-                <p class="">{tech}</p>
+                <li class="dark:text-slate-400 text-black inline-block pr-2 text-sm">{tech}</li>
             {/each}
-        </div>
+        </ul>
     </div>
 </div>
 

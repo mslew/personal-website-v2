@@ -17,7 +17,7 @@
         <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
         <p class="text-2xl mt-2 -sm:text-xl">{@html title}</p>
     </div>
-    <div class="lmb-4 rounded-lg dark:bg-gray-800 bg-slate-400 w-1/2 p-4 shadow-lg -lg:w-full">
+    <div class="lmb-4 rounded-sm dark:bg-gray-800 bg-slate-400 w-1/2 p-4 shadow-lg -lg:w-full">
         <p class="-sm:text-sm">
             {#each description as line}
             {@html line}
@@ -26,7 +26,7 @@
     </div>
     <div class="flex flex-row gap-10 mt-6">
         {#each techs as tech}
-            <p class="">{tech}</p>
+            <p class="dark:text-slate-400 text-black">{tech}</p>
         {/each}
     </div>
     <div class="flex flex-row gap-8 mt-6">

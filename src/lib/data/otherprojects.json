@@ -39,7 +39,7 @@
     },
     {
       "title": "Live Blog",
-      "techs": ["Bootstrap", "JavaScript", "Handlebars", "Express", "Firebase"],
+      "techs": ["Bootstrap", "Handlebars", "Firebase"],
       "githubIcon": true,
       "externalIcon": false,
       "github": "https://github.com/software-engineering-team-fun/blog-project",
