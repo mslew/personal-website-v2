@@ -6,7 +6,7 @@
       "githubIcon": true,
       "externalIcon": true,
       "github": "https://github.com/mslew/personal-website-v2",
-      "link": "https://maximuslewis.com/",
+      "link": "https://maxlewis.dev/",
       "description": [
         "You are looking at it! This is the second version of my personal website.",
         " The site was originally written using Bootstrap, but I rewrote the styles using Tailwind CSS.",
