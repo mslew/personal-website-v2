@@ -32,9 +32,9 @@
             {@html line}
             {/each}
         </div>
-        <ul class="flex flex-row w-full pr-6 z-0 absolute bottom-6"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. Height problem!! -->
+        <ul class="flex flex-row w-full pr-6 z-0 absolute bottom-6">
             {#each techs as tech}
-                <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm">{tech}</li>
+                <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm -xs:text-xs">{tech}</li>
             {/each}
         </ul>
     </div>
