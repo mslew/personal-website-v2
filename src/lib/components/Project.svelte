@@ -26,7 +26,7 @@
     </div>
     <div class="flex flex-row gap-10 mt-6">
         {#each techs as tech}
-            <p class="dark:text-slate-400 text-black">{tech}</p>
+            <p class="dark:text-slate-400 text-slate-700">{tech}</p>
         {/each}
     </div>
     <div class="flex flex-row gap-8 mt-6">

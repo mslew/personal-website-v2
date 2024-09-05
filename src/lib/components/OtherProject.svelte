@@ -14,7 +14,7 @@
 <div class="transform ease-in-out hover:-translate-y-2 duration-300 z-10 -2xl:col-span-3">
     <div class="reveal h-full w-full p-6 dark:bg-gray-800 bg-slate-400 rounded-sm">
         <div class="flex flex-row justify-between">
-            <File class="dark:fill-white fill-black mb-2" height={50}/>
+            <File class="dark:fill-white fill-black mb-2" height={30}/>
             <div class="flex flex-row gap-4">
                 {#if githubIcon}
                     <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
@@ -27,18 +27,16 @@
         <div class="title text-xl">
             {@html title}
         </div>
-        <div class="flex flex-col justify-between border h-full">
-            <div class="mt-2 text-sm">
-                {#each description as line}
-                {@html line}
-                {/each}
-            </div>
-            <ul class="z-0"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. Height problem!! -->
-                {#each techs as tech}
-                    <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm">{tech}</li>
-                {/each}
-            </ul>
+        <div class="mt-2 pb-8 text-sm">
+            {#each description as line}
+            {@html line}
+            {/each}
         </div>
+        <ul class="flex flex-row w-full pr-6 z-0 absolute bottom-6"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. Height problem!! -->
+            {#each techs as tech}
+                <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm">{tech}</li>
+            {/each}
+        </ul>
     </div>
 </div>
 
