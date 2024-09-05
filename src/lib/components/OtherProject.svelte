@@ -32,7 +32,7 @@
             {@html line}
             {/each}
         </div>
-        <ul class="z-0 border"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. -->
+        <ul class="z-0 border absolute bottom-3"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. -->
             {#each techs as tech}
                 <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm">{tech}</li>
             {/each}
