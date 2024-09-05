@@ -9,8 +9,7 @@
       "link": "https://maxlewis.dev/",
       "description": [
         "You are looking at it! This is the second version of my personal website.",
-        " The site was originally written using Bootstrap, but I rewrote the styles using Tailwind CSS.",
-        " This is used for my portfolio and to showcase my skills!"
+        " Hope you like it!"
       ]
     },
     {
@@ -21,7 +20,7 @@
       "github": "https://github.com/mslew/math-tutor",
       "link": "https://yellow-ocean-02e8fd010.1.azurestaticapps.net/",
       "description": [
-        "Math Tutor was my final project for the Applied Programming Languages class. The application was developed by myself and a partner.",
+        "The application was developed by myself and a partner.",
         " It tutors students in mathematics with a dynamic leveling and points system."
       ]
     },
@@ -33,7 +32,7 @@
       "github": "https://github.com/mslew/blog",
       "link": "https://blog.maximuslewis.com/",
       "description": [
-        "This project is my blog. I wrote it using Astro and Tailwind CSS.",
+        "This project is my blog.",
         " I write about anything that piques my interest, typically movies and music!"
       ]
     },
@@ -45,7 +44,7 @@
       "github": "https://github.com/software-engineering-team-fun/blog-project",
       "link": "",
       "description": [
-        "Final project in the Software Engineering class that was developed as part of a Scrum Team using Agile Scrum development methodology.",
+        "Developed as part of a Scrum Team using Agile Scrum development methodology.",
         " This allows users to sign in and write blogs on their favorite topics."
       ]
     },
@@ -57,8 +56,6 @@
       "github": "https://github.com/mslew/movie-deck",
       "link": "https://movie-deck-1847e.web.app/#/",
       "description": [
-        " This was the final project in the Web and Distributed Programming class.",
-        " It was my first usage of a modern front-end framework.",
         " This application allows users to sign in and rate their favorite movies."
       ]
     },
@@ -70,9 +67,7 @@
       "github": "https://github.com/mslew/db-final-project",
       "link": "",
       "description": [
-        "This was my final project in the Database Systems class.",
-        " This project was my first introduction to PHP. I wrote an SQL database,",
-        " a PHP backend, and a Bootstrap 5 frontend. The application enables users to do CRUD functions with their favorite music."
+        "This application enables users to do CRUD functions with their favorite music."
       ]
     }
   ]
