@@ -27,16 +27,18 @@
         <div class="title text-xl">
             {@html title}
         </div>
-        <div class="mt-2 text-sm">
-            {#each description as line}
-            {@html line}
-            {/each}
+        <div class="flex flex-col justify-between border h-full">
+            <div class="mt-2 text-sm">
+                {#each description as line}
+                {@html line}
+                {/each}
+            </div>
+            <ul class="z-0"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. -->
+                {#each techs as tech}
+                    <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm">{tech}</li>
+                {/each}
+            </ul>
         </div>
-        <ul class="z-0 border absolute bottom-3"> <!--TODO: Float list of technologies to the bottom of the box. And Make sure the list doesnt grow to >2 lines. -->
-            {#each techs as tech}
-                <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm">{tech}</li>
-            {/each}
-        </ul>
     </div>
 </div>
 
