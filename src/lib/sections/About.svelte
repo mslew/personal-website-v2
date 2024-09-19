@@ -46,7 +46,6 @@
     </div>
     <div class="reveal flex flex-col items-center xl:ml-10 lg:ml-0 -lg:mr-10 -md:mr-0 -lg:col-span-2">
         <AboutPicture />
-        <p class="mt-2 mb-10">Me in San Diego!</p>
     </div>
 </section>
 
