@@ -10,6 +10,7 @@
   let onLoadVisible: string = ' hidden';
   let y: number;
   let yPrev: number;
+  let scrollUp: boolean = true;
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
@@ -17,8 +18,17 @@
     }, 3750);
   })
 
-  function calculateY(){
-    yPrev = y
+  function scroll(){
+    let threshold: number = 25
+    if (yPrev > y){ 
+      yPrev = y > 0 ? y : 0
+      scrollUp = true
+      return;
+    }
+    else{
+      yPrev = y > 0 ? y : 0 
+      scrollUp = false
+    }
   }
 </script>
 
@@ -26,9 +36,10 @@
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
-<svelte:window bind:scrollY={y} on:scroll={calculateY}/>
-
-<Nav />
+<svelte:window bind:scrollY={y} on:scroll={scroll}/>
+{#if scrollUp}
+  <Nav scroll={scrollUp} />
+{/if}
 <Intro />
 
 <div class={'page'+ onLoadVisible}>

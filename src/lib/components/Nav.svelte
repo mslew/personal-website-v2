@@ -5,6 +5,7 @@
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
 	let visible = false;
+    export let scroll: boolean;
     onMount(() => {
         setTimeout(() => {
             visible = true
@@ -12,7 +13,7 @@
     });
 </script>
   
-{#if visible}
+{#if visible && scroll}
 <div in:fly="{{ y: -20, duration: 500 }}" class="flex flex-row -md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="mt-3" href="/"><Logo /></a>
     <div class="flex gap-4 flex-row justify-items-center pt-4 overflow-x-hidden wide:landscape:gap-8 z-50 flex-shrink-0">
