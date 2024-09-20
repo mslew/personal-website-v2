@@ -10,7 +10,7 @@
   let onLoadVisible: string = ' hidden';
   let y: number;
   let yPrev: number;
-  let scrollUp: boolean = true;
+  let scroll: string = '';
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
@@ -18,15 +18,15 @@
     }, 3750);
   })
 
-  function scroll(){
-    if (yPrev > y){ 
+  function scrollDirection(){
+    if (y > yPrev){ 
       yPrev = y > 0 ? y : 0
-      scrollUp = true
+      scroll = ' transform ease-in-out duration-500 -translate-y-full'
       return;
     }
     else{
       yPrev = y > 0 ? y : 0 
-      scrollUp = false
+      scroll = ' transform ease-in-out duration-500 translate-y-0'
       return;
     }
   }
@@ -36,10 +36,8 @@
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
-<svelte:window bind:scrollY={y} on:scroll={scroll}/>
-{#if scrollUp}
-  <Nav />
-{/if}
+<svelte:window bind:scrollY={y} on:scroll={scrollDirection}/>
+<Nav scroll={scroll} />
 <Intro />
 
 <div class={'page'+ onLoadVisible}>
