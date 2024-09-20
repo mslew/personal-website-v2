@@ -19,7 +19,6 @@
   })
 
   function scroll(){
-    let threshold: number = 25
     if (yPrev > y){ 
       yPrev = y > 0 ? y : 0
       scrollUp = true
@@ -28,6 +27,7 @@
     else{
       yPrev = y > 0 ? y : 0 
       scrollUp = false
+      return;
     }
   }
 </script>
@@ -38,7 +38,7 @@
 
 <svelte:window bind:scrollY={y} on:scroll={scroll}/>
 {#if scrollUp}
-  <Nav scroll={scrollUp} />
+  <Nav />
 {/if}
 <Intro />
 
