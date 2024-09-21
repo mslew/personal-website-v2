@@ -21,7 +21,7 @@
     function handleClickOutside(){
         toggleSide = !toggleSide
         dispatch("disableScroll", {
-            value: !disableScroll
+            value: toggleSide
         });
     }
 
