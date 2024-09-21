@@ -83,9 +83,9 @@
     <div transition:fly="{{ x: 200, duration: 500 }}" 
         class="z-40 dark:bg-gray-800 bg-slate-300 flex flex-col place-items-center justify-center fixed h-screen w-3/4 shadow-lg right-0">
         <div class="flex flex-col place-items-center justify-center gap-6 w-3/4 h-3/4">
-            <a class="flex flex-col place-items-center" href="#about"><span class="mobile-num">00</span><span class="link-text">About</span></a>
-            <a class="flex flex-col place-items-center" href="#projects"><span class="mobile-num">01</span><span class="">Projects</span></a>
-            <a class="flex flex-col place-items-center" href="#contact"><span class="mobile-num">02</span><span class="">Contact</span></a>
+            <a class="flex flex-col place-items-center" href="#about" on:click={toggleSideMenu}><span class="mobile-num">00</span><span class="link-text">About</span></a>
+            <a class="flex flex-col place-items-center" href="#projects" on:click={toggleSideMenu}><span class="mobile-num">01</span><span class="">Projects</span></a>
+            <a class="flex flex-col place-items-center" href="#contact" on:click={toggleSideMenu}><span class="mobile-num">02</span><span class="">Contact</span></a>
             <a class="flex flex-col place-items-center" href="https://blog.maxlewis.dev" rel="noreferrer" aria-label="Blog" title="Blog" 
             target="_blank"><span class="mobile-num">03</span><span class="">Blog</span></a>
             <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150">
