@@ -69,7 +69,7 @@
     <a class="mt-3 mb-3" href="#intro"><Logo /></a>
 </div>
 <button class:scroll-collapse={scroll} class:scroll-regular={!scroll} 
-        class="z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" 
+        class="md:hidden z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" 
         on:click={toggleSideMenu}>
     <div class={"flex flex-col items-start gap-2" + hamburgerTransform}>
         <div class="border-2 w-10 border-purple-600 dark:border-purple-900"></div>
