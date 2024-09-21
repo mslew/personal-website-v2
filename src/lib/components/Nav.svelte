@@ -8,6 +8,7 @@
     let toggleSide: boolean = false;
     let hamburgerTransform: string = '';
     export let scroll: boolean;
+    let disableScroll: boolean = false;
     onMount(() => {
         setTimeout(() => {
             visible = true
@@ -19,11 +20,21 @@
     }
 
     function toggleSideMenu(){
+        disableScrollCheck()
         toggleSide = !toggleSide
         if (!toggleSide){
             hamburgerTransform = ' '
         }else{
             hamburgerTransform = ' ' 
+        }
+    }
+
+    function disableScrollCheck(){
+        disableScroll = !disableScroll
+        if(disableScroll){
+        document.documentElement.classList.add('overflow-y-hidden')
+        }else{
+        document.documentElement.classList.remove('overflow-y-hidden')
         }
     }
 </script>
@@ -45,10 +56,12 @@
         <div class="" transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 750 }}"><ThemeSwitch /></div>
     </div>
 </div>
-<div transition:fly="{{ y: -20, duration: 500 }}" class={"md:hidden z-30 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-row justify-between place-items-center fixed w-full shadow-lg" + scroll}>
+<div class:scroll-collapse={scroll} class:scroll-regular={!scroll} transition:fly="{{ y: -20, duration: 500 }}" class="md:hidden z-30 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-row justify-between place-items-center fixed w-full shadow-lg">
     <a class="mt-3 mb-3" href="#intro"><Logo /></a>
 </div>
-<button class={"z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" + scroll} on:click={toggleSideMenu}>
+<button class:scroll-collapse={scroll} class:scroll-regular={!scroll} 
+        class="z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" 
+        on:click={toggleSideMenu}>
     <div class={"flex flex-col items-start gap-2" + hamburgerTransform}>
         <div class="border-2 w-10 border-purple-600 dark:border-purple-900"></div>
         <div class="border-2 w-8 border-purple-600 dark:border-purple-900"></div>

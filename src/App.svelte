@@ -12,7 +12,6 @@
   let y: number;
   let yPrev: number;
   let scroll: boolean;
-  let disableScroll: boolean = true; 
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
@@ -43,15 +42,9 @@
 
 <LogoAnim />
 
-<main class:scroll-lock={disableScroll} class={'page'+ onLoadVisible}>
+<main class={'page'+ onLoadVisible}>
   <Intro />
   <About />
   <Projects />
   <Contact />
 </main>
-
-<style lang="postcss">
-  .scroll-lock{
-    @apply overflow-y-hidden
-  }
-</style>
