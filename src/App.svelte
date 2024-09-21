@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LogoAnim from "@components/LogoAnim.svelte";
   import Intro from '@sections/Intro.svelte';
   import About from '@sections/About.svelte';
   import Projects from '@sections/Projects.svelte';
@@ -11,6 +12,7 @@
   let y: number;
   let yPrev: number;
   let scroll: string = '';
+  let sideOutScroll: boolean = false;
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
@@ -22,11 +24,13 @@
     if (y > yPrev){ 
       yPrev = y > 0 ? y : 0
       scroll = ' transform ease-in-out duration-500 -translate-y-full'
+      sideOutScroll = false
       return;
     }
     else{
       yPrev = y > 0 ? y : 0 
       scroll = ' transform ease-in-out duration-500 translate-y-0'
+      sideOutScroll = true
       return;
     }
   }
@@ -36,11 +40,15 @@
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
+<svelte:body class="overflow-hidden" />
+
 <svelte:window bind:scrollY={y} on:scroll={scrollDirection}/>
-<Nav scroll={scroll} />
-<Intro />
+<Nav scroll={scroll} sideOutScroll={sideOutScroll}/>
+
+<LogoAnim />
 
 <div class={'page'+ onLoadVisible}>
+  <Intro />
   <About />
   <Projects />
   <Contact />

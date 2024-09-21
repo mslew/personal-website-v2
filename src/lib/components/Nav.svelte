@@ -2,19 +2,24 @@
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import { quintInOut } from 'svelte/easing'
-    import {clickOutside} from '../../utils/clickOutside'
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
 	let visible = false;
+    let toggleSide: boolean = false;
     export let scroll: string;
+    export let sideOutScroll: boolean;
     onMount(() => {
         setTimeout(() => {
             visible = true
         }, 0) //3000
     });
 
-    function handleClickOutside(event){
+    function handleClickOutside(){
         alert('Click outside')
+    }
+
+    if(sideOutScroll){
+        toggleSide = false
     }
 </script>
 
@@ -35,22 +40,24 @@
         <div class="" transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 750 }}"><ThemeSwitch /></div>
     </div>
 </div>
-<div transition:fly="{{ y: -20, duration: 500 }}" class={"md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-row justify-between place-items-center fixed w-full shadow-lg" + scroll}>
+<div transition:fly="{{ y: -20, duration: 500 }}" class={"md:hidden z-30 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-row justify-between place-items-center fixed w-full shadow-lg" + scroll}>
     <a class="mt-3 mb-3" href="#intro"><Logo /></a>
-    <button class="z-50 mr-10 h-12 w-12 flex flex-col justify-center items-center">
-        <div class="flex flex-col items-start gap-2">
-            <div class="border-2 w-10 border-purple-600 dark:border-purple-900"></div>
-            <div class="border-2 w-8 border-purple-600 dark:border-purple-900"></div>
-            <div class="border-2 w-6 border-purple-600 dark:border-purple-900"></div>
-        </div>
-    </button>
 </div>
-<div class="flex flex-row">
-    <div class="fixed h-full w-1/4 filter blur-sm z-40"></div>
-    <div use:clickOutside on:click_outside={handleClickOutside} transition:fly="{{ y: -20, duration: 500 }}" class="md:hidden z-40 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-col justify-between place-items-center fixed h-full w-3/4 shadow-lg right-0">
-        <div class="p-4 bg-red-400"></div>
+<button class={"z-50 mr-10 h-12 w-12 flex flex-col justify-center items-center fixed right-2 top-3" + scroll} on:click={() => {toggleSide = !toggleSide}}>
+    <div class="flex flex-col items-start gap-2">
+        <div class="border-2 w-10 border-purple-600 dark:border-purple-900"></div>
+        <div class="border-2 w-8 border-purple-600 dark:border-purple-900"></div>
+        <div class="border-2 w-6 border-purple-600 dark:border-purple-900"></div>
+    </div>
+</button>
+{#if toggleSide && sideOutScroll}
+<div class="md:hidden flex flex-row">
+    <button class="fixed h-full w-1/4 filter z-40" on:click={handleClickOutside}></button>
+    <div transition:fly="{{ x: 200, duration: 500 }}" class="z-40 dark:bg-gray-800 bg-slate-300 border-purple-600 flex flex-col justify-between place-items-center fixed h-full w-3/4 shadow-lg right-0">
+        <div class=""></div>
     </div>
 </div>
+{/if}
 {/if}
 
 <style lang="postcss">
