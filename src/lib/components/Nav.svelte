@@ -19,7 +19,10 @@
     const dispatch = createEventDispatcher();
 
     function handleClickOutside(){
-        alert('Click outside')
+        toggleSide = !toggleSide
+        dispatch("disableScroll", {
+            value: !disableScroll
+        });
     }
 
     function toggleSideMenu(){
