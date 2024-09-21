@@ -6,7 +6,7 @@
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
 	let visible = false;
-    let toggleSide: boolean = false;
+    let toggleSide: boolean = false; //change this back to false
     let hamburgerTransform: string = '';
     export let scroll: boolean;
     export let disableScroll: boolean;
@@ -80,8 +80,21 @@
 {#if toggleSide}
 <div class="md:hidden flex flex-row">
     <button class="fixed h-full w-1/4 filter z-40" on:click={handleClickOutside}></button>
-    <div transition:fly="{{ x: 200, duration: 500 }}" class="z-40 dark:bg-gray-800 bg-slate-300 border-purple-600 flex flex-col justify-between place-items-center fixed h-screen w-3/4 shadow-lg right-0">
-        <div class=""></div>
+    <div transition:fly="{{ x: 200, duration: 500 }}" 
+        class="z-40 dark:bg-gray-800 bg-slate-300 flex flex-col place-items-center justify-center fixed h-screen w-3/4 shadow-lg right-0">
+        <div class="flex flex-col place-items-center justify-center gap-6 w-3/4 h-3/4">
+            <a class="flex flex-col place-items-center" href="#about"><span class="mobile-num">00</span><span class="link-text">About</span></a>
+            <a class="flex flex-col place-items-center" href="#projects"><span class="mobile-num">01</span><span class="">Projects</span></a>
+            <a class="flex flex-col place-items-center" href="#contact"><span class="mobile-num">02</span><span class="">Contact</span></a>
+            <a class="flex flex-col place-items-center" href="https://blog.maxlewis.dev" rel="noreferrer" aria-label="Blog" title="Blog" 
+            target="_blank"><span class="mobile-num">03</span><span class="">Blog</span></a>
+            <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150">
+                <a href="content/Resume.pdf" target="_blank">
+                    <div class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
+                </a>
+            </div>
+            <div class=""><ThemeSwitch /></div>
+        </div>
     </div>
 </div>
 {/if}
@@ -89,16 +102,13 @@
 
 <style lang="postcss">
     .link{
-        @apply flex flex-auto flex-shrink overflow-x-hidden bg-transparent dark:hover:text-purple-900 hover:text-purple-600 w-min  
+        @apply flex flex-auto flex-shrink overflow-x-hidden bg-transparent dark:hover:text-purple-900 hover:text-purple-600 w-min 
     }
     .num{
         @apply text-2xl dark:text-purple-900 p-1 object-bottom text-purple-600 
     }
-    .sm-num{
-        @apply text-sm dark:text-purple-900 text-purple-600
-    }
-    .sm-link-text{
-        @apply text-xs 
+    .mobile-num{
+        @apply text-4xl dark:text-purple-900 text-purple-600
     }
     .link-text{
         @apply bg-transparent mt-2
