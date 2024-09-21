@@ -12,6 +12,7 @@
   let y: number;
   let yPrev: number;
   let scroll: boolean;
+  let disableScroll: boolean = false;
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
@@ -31,6 +32,10 @@
       return;
     }
   }
+
+  function handleBlur(event){
+    disableScroll = event.detail.value
+  }
 </script>
 
 <svelte:head>
@@ -38,13 +43,23 @@
 </svelte:head>
 
 <svelte:window bind:scrollY={y} on:scroll={scrollDirection}/>
-<Nav scroll={scroll} />
+<Nav on:disableScroll={handleBlur} scroll={scroll} disableScroll={disableScroll} />
 
 <LogoAnim />
 
-<main class={'page'+ onLoadVisible}>
+<main class:blur={disableScroll} class:no-blur={!disableScroll} class={'page'+ onLoadVisible}>
   <Intro />
   <About />
   <Projects />
   <Contact />
 </main>
+
+<style lang="postcss">
+  .blur{
+    @apply blur-sm
+  }
+
+  .no-blur{
+    @apply blur-0
+  }
+</style>

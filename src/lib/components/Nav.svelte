@@ -2,18 +2,21 @@
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import { quintInOut } from 'svelte/easing'
+    import { createEventDispatcher } from 'svelte';
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
 	let visible = false;
     let toggleSide: boolean = false;
     let hamburgerTransform: string = '';
     export let scroll: boolean;
-    let disableScroll: boolean = false;
+    export let disableScroll: boolean;
     onMount(() => {
         setTimeout(() => {
             visible = true
         }, 0) //3000
     });
+
+    const dispatch = createEventDispatcher();
 
     function handleClickOutside(){
         alert('Click outside')
@@ -36,6 +39,9 @@
         }else{
         document.documentElement.classList.remove('overflow-y-hidden')
         }
+        dispatch("disableScroll", {
+            value: disableScroll
+        });
     }
 </script>
 
