@@ -40,7 +40,7 @@
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
-<svelte:body class="overflow-hidden" />
+<svelte:body class="" />
 
 <svelte:window bind:scrollY={y} on:scroll={scrollDirection}/>
 <Nav scroll={scroll} sideOutScroll={sideOutScroll}/>

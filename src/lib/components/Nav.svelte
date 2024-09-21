@@ -6,6 +6,7 @@
     import ThemeSwitch from './ThemeSwitch.svelte';
 	let visible = false;
     let toggleSide: boolean = false;
+    let hamburgerTransform: string = '';
     export let scroll: string;
     export let sideOutScroll: boolean;
     onMount(() => {
@@ -16,6 +17,15 @@
 
     function handleClickOutside(){
         alert('Click outside')
+    }
+
+    function toggleSideMenu(){
+        toggleSide = !toggleSide
+        if (!toggleSide){
+            hamburgerTransform = ' rotate-90'
+        }else{
+            hamburgerTransform = ' -rotate-90' 
+        }
     }
 
     if(sideOutScroll){
@@ -43,8 +53,8 @@
 <div transition:fly="{{ y: -20, duration: 500 }}" class={"md:hidden z-30 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-row justify-between place-items-center fixed w-full shadow-lg" + scroll}>
     <a class="mt-3 mb-3" href="#intro"><Logo /></a>
 </div>
-<button class={"z-50 mr-10 h-12 w-12 flex flex-col justify-center items-center fixed right-2 top-3" + scroll} on:click={() => {toggleSide = !toggleSide}}>
-    <div class="flex flex-col items-start gap-2">
+<button class={"z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" + scroll} on:click={toggleSideMenu}>
+    <div class={"flex flex-col items-start gap-2" + hamburgerTransform}>
         <div class="border-2 w-10 border-purple-600 dark:border-purple-900"></div>
         <div class="border-2 w-8 border-purple-600 dark:border-purple-900"></div>
         <div class="border-2 w-6 border-purple-600 dark:border-purple-900"></div>
