@@ -7,8 +7,7 @@
 	let visible = false;
     let toggleSide: boolean = false;
     let hamburgerTransform: string = '';
-    export let scroll: string;
-    export let sideOutScroll: boolean;
+    export let scroll: boolean;
     onMount(() => {
         setTimeout(() => {
             visible = true
@@ -22,19 +21,15 @@
     function toggleSideMenu(){
         toggleSide = !toggleSide
         if (!toggleSide){
-            hamburgerTransform = ' rotate-90'
+            hamburgerTransform = ' '
         }else{
-            hamburgerTransform = ' -rotate-90' 
+            hamburgerTransform = ' ' 
         }
-    }
-
-    if(sideOutScroll){
-        toggleSide = false
     }
 </script>
 
 {#if visible}
-<div in:fly="{{ y: -20, duration: 500 }}" class={"flex flex-row -md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg overflow-x-hidden fixed w-full" + scroll} out:fly="{{ y: -100, duration: 1000 }}">
+<div class:scroll-collapse={scroll} class:scroll-regular={!scroll} in:fly="{{ y: -20, duration: 500 }}" class="flex flex-row -md:hidden z-50 dark:bg-gray-900 bg-slate-300 border-b border-purple-600 pb-3 shadow-lg overflow-x-hidden fixed w-full" out:fly="{{ y: -100, duration: 1000 }}">
     <a class="mt-3" href="#intro"><Logo /></a>
     <div class="flex gap-4 flex-row justify-items-center pt-4 overflow-x-hidden wide:landscape:gap-8 z-50 flex-shrink-0">
         <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 250 }}" class="link" href="#about"><span class="num">00</span><span class="link-text">About</span></a>
@@ -60,10 +55,10 @@
         <div class="border-2 w-6 border-purple-600 dark:border-purple-900"></div>
     </div>
 </button>
-{#if toggleSide && sideOutScroll}
+{#if toggleSide}
 <div class="md:hidden flex flex-row">
     <button class="fixed h-full w-1/4 filter z-40" on:click={handleClickOutside}></button>
-    <div transition:fly="{{ x: 200, duration: 500 }}" class="z-40 dark:bg-gray-800 bg-slate-300 border-purple-600 flex flex-col justify-between place-items-center fixed h-full w-3/4 shadow-lg right-0">
+    <div transition:fly="{{ x: 200, duration: 500 }}" class="z-40 dark:bg-gray-800 bg-slate-300 border-purple-600 flex flex-col justify-between place-items-center fixed h-screen w-3/4 shadow-lg right-0">
         <div class=""></div>
     </div>
 </div>
@@ -85,5 +80,12 @@
     }
     .link-text{
         @apply bg-transparent mt-2
+    }
+    .scroll-collapse{
+        @apply transform ease-in-out duration-500 -translate-y-full
+    }
+
+    .scroll-regular{
+        @apply transform ease-in-out duration-500 translate-y-0
     }
 </style>

@@ -11,8 +11,8 @@
   let onLoadVisible: string = ' hidden';
   let y: number;
   let yPrev: number;
-  let scroll: string = '';
-  let sideOutScroll: boolean = false;
+  let scroll: boolean;
+  let disableScroll: boolean = true; 
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
@@ -23,14 +23,12 @@
   function scrollDirection(){
     if (y > yPrev){ 
       yPrev = y > 0 ? y : 0
-      scroll = ' transform ease-in-out duration-500 -translate-y-full'
-      sideOutScroll = false
+      scroll = true
       return;
     }
     else{
       yPrev = y > 0 ? y : 0 
-      scroll = ' transform ease-in-out duration-500 translate-y-0'
-      sideOutScroll = true
+      scroll = false
       return;
     }
   }
@@ -40,16 +38,20 @@
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
-<svelte:body class="" />
-
 <svelte:window bind:scrollY={y} on:scroll={scrollDirection}/>
-<Nav scroll={scroll} sideOutScroll={sideOutScroll}/>
+<Nav scroll={scroll} />
 
 <LogoAnim />
 
-<div class={'page'+ onLoadVisible}>
+<main class:scroll-lock={disableScroll} class={'page'+ onLoadVisible}>
   <Intro />
   <About />
   <Projects />
   <Contact />
-</div>
+</main>
+
+<style lang="postcss">
+  .scroll-lock{
+    @apply overflow-y-hidden
+  }
+</style>
