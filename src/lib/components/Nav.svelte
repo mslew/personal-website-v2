@@ -7,7 +7,6 @@
     import ThemeSwitch from './ThemeSwitch.svelte';
 	let visible = false;
     let toggleSide: boolean = false; //change this back to false
-    let hamburgerTransform: string = '';
     export let scroll: boolean;
     export let disableScroll: boolean;
     onMount(() => {
@@ -29,11 +28,6 @@
     function toggleSideMenu(){
         disableScrollCheck()
         toggleSide = !toggleSide
-        if (!toggleSide){
-            hamburgerTransform = ' '
-        }else{
-            hamburgerTransform = ' ' 
-        }
     }
 
     function disableScrollCheck(){
@@ -72,10 +66,21 @@
 <button class:scroll-collapse={scroll} class:scroll-regular={!scroll} 
         class="md:hidden z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" 
         on:click={toggleSideMenu}>
-    <div class={"flex flex-col items-start gap-2" + hamburgerTransform}>
-        <div class="border-2 w-10 border-purple-600 dark:border-purple-900"></div>
-        <div class="border-2 w-8 border-purple-600 dark:border-purple-900"></div>
-        <div class="border-2 w-6 border-purple-600 dark:border-purple-900"></div>
+    <div class="flex flex-col items-start gap-2 border-2 p-2 border-purple-600 dark:border-purple-900 rounded-lg">
+        <div
+            class:first-line-open={toggleSide} 
+            class="border-2 w-10 border-purple-600 dark:border-purple-900 rounded-full transition ease-in transform duration-300"></div>
+        <div class:second-line-not-open={!toggleSide} 
+            class:second-line-open={toggleSide} 
+            class="border-2 w-8 border-purple-600 dark:border-purple-900 rounded-full transition ease-in transform duration-300"></div>
+        <div class="relative mb-1">
+            <div class:third-line-not-open={!toggleSide} 
+            class:third-line-open={toggleSide} 
+            class="absolute w-6 border-2 border-purple-600 dark:border-purple-900 rounded-full transition ease-in transform duration-300"></div>
+            <div class:fourth-line-not-open={!toggleSide}
+            class:fourth-line-open={toggleSide}
+            class="absolute w-10 border-2 border-purple-600 dark:border-purple-900 rounded-full transition ease-in transform duration-300"></div>
+        </div>
     </div>
 </button>
 {#if toggleSide}
@@ -120,5 +125,33 @@
 
     .scroll-regular{
         @apply transform ease-in-out duration-500 translate-y-0
+    }
+
+    .first-line-open{
+        @apply rotate-45 translate-y-3 
+    }
+
+    .second-line-not-open{
+        @apply opacity-100
+    }
+
+    .second-line-open{
+        @apply opacity-0
+    }
+
+    .third-line-not-open{
+        @apply w-6
+    }
+
+    .third-line-open{
+        @apply opacity-0
+    }
+
+    .fourth-line-not-open{
+        @apply opacity-0 
+    }
+    
+    .fourth-line-open{
+        @apply opacity-100 -rotate-45 -translate-y-3
     }
 </style>
