@@ -27,14 +27,14 @@
         <div class="title text-xl">
             {@html title}
         </div>
-        <div class="mt-2 pb-8 text-sm">
+        <div class="mt-2 pb-6 text-sm">
             {#each description as line}
             {@html line}
             {/each}
         </div>
-        <ul class="flex flex-row w-full pr-6 z-0 absolute bottom-6">
+        <ul class="flex flex-row w-full flex-wrap gap-2 justify-center">
             {#each techs as tech}
-                <li class="dark:text-slate-400 text-slate-700 inline-block pr-2 text-sm -xs:text-xs">{tech}</li>
+                <li class="dark:text-slate-400 text-slate-700 text-sm -xs:text-xs">{tech}</li>
             {/each}
         </ul>
     </div>
