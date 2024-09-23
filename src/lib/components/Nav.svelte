@@ -18,7 +18,7 @@
 
     const dispatch = createEventDispatcher();
 
-    function handleClickOutside(){
+    function handleClickOutside(){ //Check this later. for whatever reason scrolling is still disabled :) 
         toggleSide = !toggleSide
         dispatch("disableScroll", {
             value: toggleSide
