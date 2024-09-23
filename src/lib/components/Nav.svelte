@@ -18,7 +18,8 @@
 
     const dispatch = createEventDispatcher();
 
-    function handleClickOutside(){ //Check this later. for whatever reason scrolling is still disabled :) 
+    function handleClickOutside(){ 
+        document.documentElement.classList.remove('overflow-y-hidden')
         toggleSide = !toggleSide
         dispatch("disableScroll", {
             value: toggleSide
@@ -38,9 +39,9 @@
     function disableScrollCheck(){
         disableScroll = !disableScroll
         if(disableScroll){
-        document.documentElement.classList.add('overflow-y-hidden')
+            document.documentElement.classList.add('overflow-y-hidden')
         }else{
-        document.documentElement.classList.remove('overflow-y-hidden')
+            document.documentElement.classList.remove('overflow-y-hidden')
         }
         dispatch("disableScroll", {
             value: disableScroll
