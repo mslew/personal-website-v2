@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import { quintInOut } from 'svelte/easing'
+    import { fade } from 'svelte/transition';
     import { createEventDispatcher } from 'svelte';
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
@@ -12,7 +13,7 @@
     onMount(() => {
         setTimeout(() => {
             visible = true
-        }, 0) //3000
+        }, 3000) //3000
     });
 
     const dispatch = createEventDispatcher();
@@ -60,10 +61,11 @@
         <div class="" transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 750 }}"><ThemeSwitch /></div>
     </div>
 </div>
-<div class:scroll-collapse={scroll} class:scroll-regular={!scroll} transition:fly="{{ y: -20, duration: 500 }}" class="md:hidden z-30 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-row justify-between place-items-center fixed w-full shadow-lg">
+
+<div in:fade="{{duration: 1500}}" class:scroll-collapse={scroll} class:scroll-regular={!scroll} class="md:hidden z-30 dark:bg-gray-900 bg-slate-300 border-purple-600 flex flex-row justify-between place-items-center fixed w-full shadow-lg">
     <a class="mt-3 mb-3" href="#intro"><Logo /></a>
 </div>
-<button class:scroll-collapse={scroll} class:scroll-regular={!scroll} 
+<button in:fade="{{duration: 1500}}" class:scroll-collapse={scroll} class:scroll-regular={!scroll} 
         class="md:hidden z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" 
         on:click={toggleSideMenu}>
     <div class="flex flex-col items-start gap-2 border-2 p-2 border-purple-600 dark:border-purple-900 rounded-lg">
