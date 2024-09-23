@@ -11,7 +11,7 @@
     export let description : string[];
 </script>
 
-<div class="transform ease-in-out hover:-translate-y-2 duration-300 z-10 -2xl:col-span-3">
+<div class="transform ease-in-out hover:-translate-y-2 duration-300 z-10">
     <div class="reveal h-full w-full p-6 dark:bg-gray-800 bg-slate-400 rounded-sm">
         <div class="flex flex-row justify-between">
             <File class="dark:fill-white fill-black mb-2" height={30}/>

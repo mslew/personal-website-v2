@@ -8,12 +8,15 @@
     export let github : string;
     export let link : string;
     export let description : string[];
-    export let orientation : string;
-    export let headerTextAlign: string;
+    export let orientation : boolean;
 </script>
 
-<div class={"flex flex-col featured-project reveal " + orientation}>
-    <div class={"mb-6 lg:w-1/2 " + headerTextAlign}>
+<div class:orientation-end={orientation} 
+    class:orientation-start={!orientation} 
+    class="flex flex-col featured-project reveal">
+    <div class:text-align-right={orientation} 
+        class:text-align-left={!orientation}
+        class="mb-6 lg:w-1/2 ">
         <p class="text-lg dark:text-purple-900 text-purple-600">Featured Project</p>
         <p class="text-2xl mt-2 -sm:text-xl">{@html title}</p>
     </div>
@@ -42,5 +45,21 @@
 <style lang="postcss">
     .icon{
         @apply dark:hover:fill-purple-900 pb-3 hover:fill-purple-600 dark:fill-white fill-black transition ease-in-out hover:-translate-y-1 duration-300
+    }
+
+    .orientation-end{
+        @apply items-end
+    }
+
+    .orientation-start{
+        @apply items-start
+    }
+
+    .text-align-right{
+        @apply text-right
+    }
+
+    .text-align-left{
+        @apply text-left
     }
 </style>
