@@ -66,7 +66,7 @@
     <a class="mt-3 mb-3" href="#intro"><Logo /></a>
 </div>
 <button in:fade="{{duration: 750}}" class:scroll-collapse={scroll} class:scroll-regular={!scroll} 
-        class="md:hidden z-50 mr-10 h-14 w-12 flex flex-col justify-center items-center fixed right-2 top-3" 
+        class="md:hidden z-50 mr-10 h-12 w-12 flex flex-col justify-center items-center fixed right-2 top-3" 
         on:click={toggleSideMenu}>
     <div class="flex flex-col items-start gap-2 border-2 p-2 border-purple-600 dark:border-purple-900 rounded-lg">
         <div
