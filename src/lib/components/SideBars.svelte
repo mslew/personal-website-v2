@@ -13,12 +13,10 @@
 </script>
 
 {#if sideBarVisible}
-    <div transition:fly="{{ y: 50, duration: 500, easing: quintInOut}}" class="">
-        <div class="fixed flex flex-col justify-end mb-4 ml-8 -md:hidden bottom-0 h-screen">
-            <SocialSideBar />
-        </div>
-        <div class="fixed flex flex-col justify-end mb-4 mr-8 -md:hidden bottom-0 right-0 h-screen">
-            <EmailSideBar />
-        </div>
+    <div transition:fly="{{ y: 50, duration: 500, easing: quintInOut}}" class="fixed flex flex-col justify-end mb-4 ml-8 -md:hidden bottom-0 h-screen">
+        <SocialSideBar />
+    </div>
+    <div transition:fly="{{ y: 50, duration: 500, easing: quintInOut}}" class="fixed flex flex-col justify-end mb-4 mr-8 -md:hidden bottom-0 right-0 h-screen">
+        <EmailSideBar />
     </div>
 {/if}
