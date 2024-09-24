@@ -8,13 +8,13 @@
     onMount(() => {
         setTimeout(() => {
             sideBarVisible = true
-        }, 4500); //4500
+        }, 0); //4500
     });
 </script>
 
 {#if sideBarVisible}
     <div transition:fly="{{ y: 50, duration: 500, easing: quintInOut}}" class="fixed flex flex-col justify-end items-center -md:hidden bottom-0 h-screen w-screen">
-        <div class="flex flex-row w-[95%] justify-between mb-4">
+        <div class="flex flex-row w-[95%] justify-between mb-4 ">
             <SocialSideBar />
             <EmailSideBar />
         </div>

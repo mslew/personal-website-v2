@@ -3,8 +3,8 @@
 </script>
 
 <div class="flex flex-col items-center">
-    <a class="email mr-2" href={"mailto:" + Email.name} target = "_blank" aria-label="Email" title="Email">{Email.name}</a>
-    <div class="border dark:border-white pb-10 mt-2 mr-2 border-black"></div>
+    <a class="email" href={"mailto:" + Email.name} target = "_blank" aria-label="Email" title="Email">{Email.name}</a>
+    <div class="border dark:border-white h-full mt-2 mr-2 border-black pb-14 -xl:pb-10"></div>
 </div>
 
 <style lang="postcss">

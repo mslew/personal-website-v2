@@ -13,7 +13,7 @@
     onMount(() => {
         setTimeout(() => {
             visible = true
-        }, 0) //3000
+        }, 3000) //3000
     });
 
     const dispatch = createEventDispatcher();

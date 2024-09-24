@@ -11,7 +11,7 @@
     <a class="item" href={LinkedInURL.url} target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn height={30}/></a>
     <a class="item" href={XTwitterURL.url} target = "_blank" rel="noreferrer" aria-label="X/Twitter" title="X/Twitter"><X height={30}/></a>
     <a class="item" href={InstagramURL.url} target = "_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Instagram height={30}/></a>
-    <div class="border dark:border-white pb-14 mt-2 border-black wide:landscape:pb-20"></div>
+    <div class="border dark:border-white h-full mt-2 border-black pb-14 -xl:pb-10"></div>
 </div>
 
 <style lang="postcss">
