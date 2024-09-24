@@ -49,8 +49,7 @@
 <LogoAnim />
 
 <main class:load-invisible={onLoadInvisible}
-      class:blur={disableScroll} 
-      class:no-blur={!disableScroll}>
+      class:blur={disableScroll}>
   <Intro />
   <About />
   <Projects />
@@ -61,11 +60,7 @@
 
 <style lang="postcss">
   .blur{
-    @apply blur-sm
-  }
-
-  .no-blur{
-    @apply blur-0
+    @apply -md:blur-sm md:blur-0 
   }
 
   .load-invisible{
