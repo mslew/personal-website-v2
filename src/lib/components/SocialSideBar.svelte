@@ -6,7 +6,7 @@
     import Instagram from './icons/Instagram.svelte';
 </script>
 
-<div class="flex flex-col items-center ml-12">
+<div class="flex flex-col items-center">
     <a class="item" href={GitHubURL.url} target = "_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHub height={30}/></a>
     <a class="item" href={LinkedInURL.url} target = "_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedIn height={30}/></a>
     <a class="item" href={XTwitterURL.url} target = "_blank" rel="noreferrer" aria-label="X/Twitter" title="X/Twitter"><X height={30}/></a>
