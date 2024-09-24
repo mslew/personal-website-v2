@@ -8,7 +8,7 @@
     onMount(() => {
         setTimeout(() => {
             sideBarVisible = true
-        }, 0); //4500
+        }, 4500); //4500
     });
 </script>
 

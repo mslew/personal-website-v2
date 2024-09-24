@@ -89,7 +89,7 @@
 <div class="md:hidden flex flex-row">
     <button class="fixed h-full w-1/4 filter z-40" on:click={handleClickOutside}></button>
     <div transition:fly="{{ x: 200, duration: 500 }}" 
-        class="z-40 dark:bg-gray-800 bg-slate-300 flex flex-col place-items-center justify-center fixed h-screen w-3/4 shadow-lg right-0">
+        class="z-40 dark:bg-gray-800 bg-slate-400 flex flex-col place-items-center justify-center fixed h-screen w-3/4 shadow-lg right-0">
         <div class="flex flex-col flex-wrap place-items-center justify-center gap-6 w-3/4 h-3/4 -sm:h-5/6">
             <a class="flex flex-col place-items-center" href="#about" on:click={toggleSideMenu}><span class="mobile-num">00</span><span class="link-text">About</span></a>
             <a class="flex flex-col place-items-center" href="#projects" on:click={toggleSideMenu}><span class="mobile-num">01</span><span class="">Projects</span></a>
