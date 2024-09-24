@@ -34,9 +34,9 @@
     function disableScrollCheck(){
         disableScroll = !disableScroll
         if(disableScroll){
-            document.documentElement.classList.add('overflow-y-hidden')
+            document.documentElement.classList.add('overflow-hidden')
         }else{
-            document.documentElement.classList.remove('overflow-y-hidden')
+            document.documentElement.classList.remove('overflow-hidden')
         }
         dispatch("disableScroll", {
             value: disableScroll

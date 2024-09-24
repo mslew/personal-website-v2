@@ -48,8 +48,7 @@
 
 <LogoAnim />
 
-<main class:load-visible={!onLoadInvisible} 
-      class:load-invisible={onLoadInvisible}
+<main class:load-invisible={onLoadInvisible}
       class:blur={disableScroll} 
       class:no-blur={!disableScroll}>
   <Intro />
@@ -67,10 +66,6 @@
 
   .no-blur{
     @apply blur-0
-  }
-
-  .load-visible{
-    
   }
 
   .load-invisible{
