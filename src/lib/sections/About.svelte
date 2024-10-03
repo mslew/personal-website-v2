@@ -12,10 +12,9 @@
             </div>
             <div class="text-xl flex flex-col gap-4 -xl:text-lg -md:text-sm">
                 <p>
-                    Growing up in Lockport, Illinois, I have always enjoyed technology. 
+                    Growing up, I have always enjoyed technology. 
                     In high school, I decided to take a couple of coding classes because it would be fun. 
                     Who would have thought the impact it would have had on my life? 
-                    I decided to major in Computer Science!
                 </p>
                 <p> 
                     Studying Computer Science at Lewis University 
