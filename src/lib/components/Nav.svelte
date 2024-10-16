@@ -6,6 +6,7 @@
     import { createEventDispatcher } from 'svelte';
     import Logo from './icons/Logo.svelte';
     import ThemeSwitch from './ThemeSwitch.svelte';
+    import External from './icons/External.svelte';
 	let visible = false;
     let toggleSide: boolean = false; //change this back to false
     export let scroll: boolean;
@@ -13,7 +14,7 @@
     onMount(() => {
         setTimeout(() => {
             visible = true
-        }, 3000) //3000
+        }, 0) //3000
     });
 
     const dispatch = createEventDispatcher();
@@ -52,7 +53,7 @@
         <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 350 }}" class="link" href="#projects"><span class="num">01</span><span class="link-text">Projects</span></a>
         <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 450 }}" class="link" href="#contact"><span class="num">02</span><span class="link-text">Contact</span></a>
         <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 550 }}" class="link" href="https://blog.maxlewis.dev" rel="noreferrer" aria-label="Blog" title="Blog" 
-        target="_blank"><span class="num">03</span><span class="link-text">Blog</span></a>
+        target="_blank"><span class="num">03</span><span class="link-text">Blog</span><span><External class="dark:fill-purple-900 fill-purple-600 pl-1 object-bottom" height={15} /></span></a>
         <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150">
             <a href="content/Resume.pdf" target="_blank">
                 <div transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 650 }}" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
@@ -110,16 +111,16 @@
 
 <style lang="postcss">
     .link{
-        @apply flex flex-auto flex-shrink overflow-x-hidden bg-transparent dark:hover:text-purple-900 hover:text-purple-600 w-min 
+        @apply flex flex-auto flex-shrink flex-row overflow-x-hidden bg-transparent items-center dark:hover:text-purple-900 hover:text-purple-600 w-min 
     }
     .num{
-        @apply text-2xl dark:text-purple-900 p-1 object-bottom text-purple-600 
+        @apply text-2xl dark:text-purple-900 p-1 text-purple-600 
     }
     .mobile-num{
         @apply text-4xl dark:text-purple-900 text-purple-600
     }
     .link-text{
-        @apply bg-transparent mt-2
+        @apply bg-transparent
     }
     .scroll-collapse{
         @apply transform ease-in-out duration-500 -translate-y-full
