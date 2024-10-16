@@ -14,7 +14,7 @@
     onMount(() => {
         setTimeout(() => {
             visible = true
-        }, 0) //3000
+        }, 3000) //3000
     });
 
     const dispatch = createEventDispatcher();
@@ -52,8 +52,8 @@
         <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 250 }}" class="link" href="#about"><span class="num">00</span><span class="link-text">About</span></a>
         <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 350 }}" class="link" href="#projects"><span class="num">01</span><span class="link-text">Projects</span></a>
         <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 450 }}" class="link" href="#contact"><span class="num">02</span><span class="link-text">Contact</span></a>
-        <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 550 }}" class="link" href="https://blog.maxlewis.dev" rel="noreferrer" aria-label="Blog" title="Blog" 
-        target="_blank"><span class="num">03</span><span class="link-text">Blog</span><span><External class="dark:fill-purple-900 fill-purple-600 pl-1 object-bottom" height={15} /></span></a>
+        <a transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 550 }}" class="link group" href="https://blog.maxlewis.dev" rel="noreferrer" aria-label="Blog" title="Blog" 
+        target="_blank"><span class="num">03</span><span class="link-text">Blog</span><span><External class="dark:fill-white fill-black pl-1 group-hover:dark:fill-purple-900 group-hover:fill-purple-600" height={15} /></span></a>
         <div class="block relative rounded-lg transition ease-in-out dark:hover:bg-purple-900 hover:bg-purple-600 duration-300 delay-150">
             <a href="content/Resume.pdf" target="_blank">
                 <div transition:fly="{{ y: -20, duration: 500, easing: quintInOut, delay: 650 }}" class="border-2 p-2 rounded-lg dark:hover:bg-purple-900 hover:bg-purple-400 dark:border-gray-300 border-black transition ease-in-out hover:-translate-y-1 hover:-translate-x-1 duration-300 delay-150">Resume</div>
