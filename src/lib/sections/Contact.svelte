@@ -30,7 +30,7 @@
         </a>
     </div>
     <div class="z-0 mb-6 text-center -sm:text-sm">
-        <a class=" dark:hover:text-purple-900 hover:text-purple-600 group" href="https://github.com/bchiang7/v4" 
+        <a class=" dark:hover:text-purple-900 hover:text-purple-600 group" href="https://v4.brittanychiang.com/" 
         target="_blank" rel="noreferrer" aria-label="Inspo Repo" title="Inspo Repo">
             Design Inspiration from Brittany Chiang
             <span class="underline-hover"></span> 
