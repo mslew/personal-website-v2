@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { draw, fade } from 'svelte/transition';
-    let toDraw = false;
-    let fadeMIn = false;
-    let visible = true;
+    let toDraw = $state(false);
+    let fadeMIn = $state(false);
+    let visible = $state(true);
 
     onMount(() => {
         checkLocal()
@@ -29,12 +29,12 @@
 </script>
 
 {#if visible}
-<svg class="absolute m-auto left-0 right-0 top-0 bottom-0" width="200" height="200" style="stroke-width: 5;" out:fade>
+<svg class="absolute m-auto left-0 right-0 top-0 bottom-0" width="200" height="200" style="stroke-width: 5;" out:fade|global>
     {#if toDraw}
-    <polygon in:draw="{{duration: 1000}}" class="fill-black stroke-purple-800" points="5,100 100,195 195,100 100,5" style="stroke-width:8" fill-opacity="0" out:fade/>
+    <polygon in:draw|global="{{duration: 1000}}" class="fill-black stroke-purple-800" points="5,100 100,195 195,100 100,5" style="stroke-width:8" fill-opacity="0" out:fade/>
     {/if}
     {#if fadeMIn}
-    <svg in:fade="{{duration: 1000}}" x="50" y="50" id="m" xmlns="http://www.w3.org/2000/svg" 
+    <svg in:fade|global="{{duration: 1000}}" x="50" y="50" id="m" xmlns="http://www.w3.org/2000/svg" 
     class="stroke-purple-800" 
     width="100" height="100" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
     <path stroke="none" d="M0 0h24v24H0z" fill="none" out:fade/> 

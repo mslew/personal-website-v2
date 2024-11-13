@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    let darkMode: boolean = false;
+    let darkMode: boolean = $state(false);
     function handleSwitchDarkMode(){
         darkMode = !darkMode;
 
@@ -28,10 +28,10 @@
     })
 </script>
 
-<svelte:window on:resize={checkLocal}/>
+<svelte:window onresize={checkLocal}/>
 
 <div>
-    <button class="flex flex-row rounded-2xl border-2 dark:border-gray-300 border-black mt-1 dark:hover:bg-purple-900 hover:bg-purple-400" on:click={handleSwitchDarkMode}>
+    <button class="flex flex-row rounded-2xl border-2 dark:border-gray-300 border-black mt-1 dark:hover:bg-purple-900 hover:bg-purple-400" onclick={handleSwitchDarkMode}>
         <span class="rounded-full bg-transparent w-8 h-8"> 
             <span class="flex justify-center content-center">
                 {#if darkMode}

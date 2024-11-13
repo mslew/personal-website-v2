@@ -9,11 +9,11 @@
   import { ScrollRevealOptions } from './config';
   import ScrollReveal from 'scrollreveal';
   import { onMount } from 'svelte';
-  let onLoadInvisible: boolean = true;
-  let y: number;
+  let onLoadInvisible: boolean = $state(true);
+  let y: number = $state();
   let yPrev: number;
-  let scroll: boolean;
-  let disableScroll: boolean = false;
+  let scroll: boolean = $state();
+  let disableScroll: boolean = $state(false);
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
     setTimeout(() => {
@@ -34,17 +34,14 @@
     }
   }
 
-  function handleBlur(event){
-    disableScroll = event.detail.value
-  }
 </script>
 
 <svelte:head>
   <link rel="icon" type="image/svg" sizes="any" href="favicon.ico" />
 </svelte:head>
 
-<svelte:window bind:scrollY={y} on:scroll={scrollDirection}/>
-<Nav on:disableScroll={handleBlur} scroll={scroll} disableScroll={disableScroll} />
+<svelte:window bind:scrollY={y} onscroll={scrollDirection}/>
+<Nav bind:disableScroll={disableScroll} scroll={scroll} />
 
 <LogoAnim />
 
