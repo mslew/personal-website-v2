@@ -1,14 +1,27 @@
 <script lang="ts">
     import GitHub from "./icons/GitHub.svelte";
     import External from "./icons/External.svelte";
-    export let title : string;
-    export let techs : string[];
-    export let githubIcon : boolean;
-    export let externalIcon : boolean; 
-    export let github : string;
-    export let link : string;
-    export let description : string[];
-    export let orientation : boolean;
+    interface Props {
+        title: string;
+        techs: string[];
+        githubIcon: boolean;
+        externalIcon: boolean;
+        github: string;
+        link: string;
+        description: string[];
+        orientation: boolean;
+    }
+
+    let {
+        title,
+        techs,
+        githubIcon,
+        externalIcon,
+        github,
+        link,
+        description,
+        orientation
+    }: Props = $props();
 </script>
 
 <div class:orientation-end={orientation} 
@@ -34,10 +47,10 @@
     </div>
     <div class="flex flex-row gap-8 mt-6">
         {#if githubIcon}
-            <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
+            <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="GitHub" title=""><GitHub class="icon" height={30}/></a>
         {/if}
         {#if externalIcon}
-            <a class="icon" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
+            <a class="icon" href={link} target = "_blank" rel="noreferrer" aria-label="External" title=""><External class="icon" height={30}/></a>
         {/if}
     </div>
 </div>

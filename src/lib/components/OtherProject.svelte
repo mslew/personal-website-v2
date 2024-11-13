@@ -2,13 +2,25 @@
     import GitHub from "./icons/GitHub.svelte";
     import External from "./icons/External.svelte";
     import File from "./icons/File.svelte";
-    export let title : string;
-    export let techs : string[];
-    export let githubIcon : boolean;
-    export let externalIcon : boolean; 
-    export let github : string;
-    export let link : string;
-    export let description : string[];
+    interface Props {
+        title: string;
+        techs: string[];
+        githubIcon: boolean;
+        externalIcon: boolean;
+        github: string;
+        link: string;
+        description: string[];
+    }
+
+    let {
+        title,
+        techs,
+        githubIcon,
+        externalIcon,
+        github,
+        link,
+        description
+    }: Props = $props();
 </script>
 
 <div class="transform ease-in-out hover:-translate-y-2 duration-300 z-10">
@@ -17,10 +29,10 @@
             <File class="dark:fill-white fill-black mb-2" height={30}/>
             <div class="flex flex-row gap-4">
                 {#if githubIcon}
-                    <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="" title=""><GitHub class="icon" height={30}/></a>
+                    <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="GitHub" title=""><GitHub class="icon" height={30}/></a>
                 {/if}
                 {#if externalIcon}
-                    <a class="icon" href={link} target = "_blank" rel="noreferrer" aria-label="" title=""><External class="icon" height={30}/></a>
+                    <a class="icon" href={link} target = "_blank" rel="noreferrer" aria-label="External" title=""><External class="icon" height={30}/></a>
                 {/if}
             </div>
         </div>
