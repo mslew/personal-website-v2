@@ -4,11 +4,11 @@
     import { quintInOut } from "svelte/easing";
     import SocialSideBar from "./SocialSideBar.svelte";
     import EmailSideBar from "./EmailSideBar.svelte";
-    let sideBarVisible: boolean = $state(false);
+    let sideBarVisible: boolean = false;
     onMount(() => {
         setTimeout(() => {
             sideBarVisible = true
-        }, 4500); //4500
+        }, 0); //4500
     });
 </script>
 
