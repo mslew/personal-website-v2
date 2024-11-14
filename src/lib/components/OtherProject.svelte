@@ -29,10 +29,10 @@
             <File class="dark:fill-white fill-black mb-2" height={30}/>
             <div class="flex flex-row gap-4">
                 {#if githubIcon}
-                    <a class="icon" href={github} target = "_blank" rel="noreferrer" aria-label="GitHub" title=""><GitHub class="icon" height={30}/></a>
+                    <a class="dark:hover:fill-purple-900 hover:fill-purple-600 dark:fill-white fill-black transition ease-in-out hover:-translate-y-1 duration-300" href={github} target = "_blank" rel="noreferrer" aria-label="GitHub" title=""><GitHub class="" height={30}/></a>
                 {/if}
                 {#if externalIcon}
-                    <a class="icon" href={link} target = "_blank" rel="noreferrer" aria-label="External" title=""><External class="icon" height={30}/></a>
+                    <a class="dark:hover:fill-purple-900 hover:fill-purple-600 dark:fill-white fill-black transition ease-in-out hover:-translate-y-1 duration-300" href={link} target = "_blank" rel="noreferrer" aria-label="External" title=""><External class="" height={30}/></a>
                 {/if}
             </div>
         </div>
@@ -51,9 +51,5 @@
         </ul>
     </div>
 </div>
+<!--NOTE: This is a temporary fix for the tailwindcss bug. @apply does not work with the class attribute in svelte-5-->
 
-<style lang="postcss">
-    .icon{
-        @apply dark:hover:fill-purple-900 hover:fill-purple-600 dark:fill-white fill-black transition ease-in-out hover:-translate-y-1 duration-300
-    }
-</style>
