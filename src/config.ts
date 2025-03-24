@@ -22,12 +22,8 @@ export let LinkedInURL = {
     url: 'https://www.linkedin.com/in/maximuslewis/'
 }
 
-export let XTwitterURL = {
-    url: 'https://twitter.com/maxslewis'
-}
-
-export let InstagramURL = {
-    url: 'https://www.instagram.com/maxslewis/'
+export let GoodReadsURL = {
+    url: 'https://www.goodreads.com/user/show/148888131-max-lewis'
 }
 
 export let Email = {
