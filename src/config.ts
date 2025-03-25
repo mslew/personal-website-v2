@@ -23,7 +23,11 @@ export let LinkedInURL = {
 }
 
 export let GoodReadsURL = {
-    url: 'https://www.goodreads.com/user/show/148888131-max-lewis'
+    url: 'https://www.goodreads.com/user/show/183407509-max-lewis'
+}
+
+export let InstagramURL = {
+    url: 'https://www.instagram.com/maxslewis/'
 }
 
 export let Email = {
