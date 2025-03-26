@@ -10,9 +10,9 @@
   import ScrollReveal from 'scrollreveal';
   import { onMount } from 'svelte';
   let onLoadInvisible: boolean = $state(true);
-  let y: number = $state();
+  let y: number | undefined = $state();
   let yPrev: number;
-  let scroll: boolean = $state();
+  let scroll: boolean | undefined = $state();
   let disableScroll: boolean = $state(false);
   onMount(() => {
     setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
@@ -22,6 +22,7 @@
   })
 
   function scrollDirection(){
+    if (!y) return;
     if (y > yPrev){ 
       yPrev = y > 0 ? y : 0
       scroll = true
