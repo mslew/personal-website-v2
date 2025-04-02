@@ -22,9 +22,9 @@
       "github": "https://github.com/mslew/blog",
       "link": "https://blog.maxlewis.dev/",
       "description": [
-        "A modern personal blog built with Astro.js, featuring a clean dark theme and responsive design.",
-        " The blog includes code syntax highlighting, LaTeX math support, and a tag-based organization system.", 
-        " Content is managed through TinaCMS and deployed on Vercel. This serves as a platform for sharing my thoughts on movies, music, coding, and technology."  
+        "A modern personal blog built with Astro, featuring a clean dark theme and responsive design.",
+        " The blog includes code syntax highlighting, LaTeX math support, and a tag-based organization system.",
+        " Content is managed through TinaCMS and deployed on Vercel. This serves as a platform for sharing my thoughts on movies, music, coding, and technology."
       ]
     },
     {
