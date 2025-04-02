@@ -15,16 +15,16 @@
       ]
     },
     {
-      "title": "In Theaters",
-      "techs": ["Java", "Android Studio"],
+      "title": "Personal Blog",
+      "techs": ["Astro", "Tailwind CSS", "TypeScript"],
       "githubIcon": true,
-      "externalIcon": false,
-      "github": "https://github.com/mslew/in-theaters",
-      "link": "",
+      "externalIcon": true,
+      "github": "https://github.com/mslew/blog",
+      "link": "https://blog.maxlewis.dev/",
       "description": [
-        "Mobile Application Development Final Project. Built an Android application for users to see new movies in theaters that week.",
-        " Designed the application to display information about a movie, resulting in an experience that allows users to browse any new films and gauge their interest.",
-        " Integrated Google services for ticket purchases, providing a holistic movie experience."
+        "A modern personal blog built with Astro.js, featuring a clean dark theme and responsive design.",
+        " The blog includes code syntax highlighting, LaTeX math support, and a tag-based organization system.", 
+        " Content is managed through TinaCMS and deployed on Vercel. This serves as a platform for sharing my thoughts on movies, music, coding, and technology."  
       ]
     },
     {
