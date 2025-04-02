@@ -6,7 +6,7 @@
     onMount(() => {
         setTimeout(() => {
             visible = true
-        }, 0) //3750
+        }, 3750) //3750
     });
 </script>
 
