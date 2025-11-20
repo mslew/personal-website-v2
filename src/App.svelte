@@ -15,10 +15,10 @@
   let scroll: boolean | undefined = $state();
   let disableScroll: boolean = $state(false);
   onMount(() => {
-    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 3750); //this is important to run on 3750ms.
+    setTimeout(() => ScrollReveal().reveal(".reveal", ScrollRevealOptions), 750); //this is important to run on 3750ms.
     setTimeout(() => {
       onLoadInvisible = false
-    }, 3750);
+    }, 750);
   })
 
   function scrollDirection(){
@@ -43,8 +43,6 @@
 
 <svelte:window bind:scrollY={y} onscroll={scrollDirection}/>
 <Nav bind:disableScroll={disableScroll} scroll={scroll} />
-
-<LogoAnim />
 
 <main class:load-invisible={onLoadInvisible}
       class:blur={disableScroll}>

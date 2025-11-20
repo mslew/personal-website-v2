@@ -17,7 +17,7 @@
     onMount(() => {
         setTimeout(() => {
             visible = true
-        }, 3000) //3000
+        }, 0) //3000
     });
 
     function handleClickOutside(){ 
