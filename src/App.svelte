@@ -1,5 +1,4 @@
 <script lang="ts">
-  import LogoAnim from "@components/LogoAnim.svelte";
   import Intro from '@sections/Intro.svelte';
   import About from '@sections/About.svelte';
   import Projects from '@sections/Projects.svelte';
