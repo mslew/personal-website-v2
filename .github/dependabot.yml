@@ -4,3 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    ignore:
+      # v4 requires a config/CSS migration; bump manually
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
